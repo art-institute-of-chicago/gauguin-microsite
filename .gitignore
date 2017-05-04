@@ -1,4 +1,5 @@
 /build_local/
+/build_serve/
 /node_modules/
 /vendor/
 /source/css/

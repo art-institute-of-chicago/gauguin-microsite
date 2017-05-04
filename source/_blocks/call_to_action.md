@@ -1,3 +1,8 @@
+---
+extends: _layouts.call_to_action
+section: contents
+---
+what
 # Come explore Gauguin for yourself.
 ## [LEARN MORE ABOUT HOW TO PLAN YOUR VISIT](http://www.artic.edu/visit)
 
@@ -8,5 +13,5 @@
 
 Member Preview: JUNE 23–24
 
-Open daily 10:30–5:00
+Open daily 10:30–5:00  
 Thursday until 8:00
