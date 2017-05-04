@@ -11,7 +11,112 @@ $color-pink-dark:    #ddb093;
 
 $color-text:    #091336;
 
+
 body {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Elido', sans-serif;
 	color: $color-text;
 }
+
+.btn {
+
+	display: inline-block;
+	background-color: $color-orange;
+
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+
+	text-transform: uppercase;
+	text-align: center;
+
+	line-height: 1;
+
+
+	&.btn-small {
+
+		font-size: 11px;
+
+		letter-spacing: 0.61px;
+		padding: 14px 18px;
+
+		margin: 0px 12px;
+
+	}
+
+	&.btn-large {
+
+		font-size: 11px;
+
+	}
+
+}
+
+
+header {
+	background-color: $color-blue-dark;
+	height: 65px;
+	width: 100%;
+
+	padding: 8px 36px;
+
+	> * {
+		vertical-align: middle;
+	}
+
+	#aic-link {
+		display: inline-block;
+		height: 100%;
+
+		margin-right: 12px;
+	}
+
+	#aic-logo {
+		height: 100%;
+	}
+
+	span.exhibit {
+
+		color: $color-orange;
+
+		span.title {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: bold;
+
+			text-transform: uppercase;
+			letter-spacing: 5px;
+
+			font-size: 13px;
+		}
+
+		span.pipe {
+			padding: 0px 10px;
+		}
+
+		span.subtitle {
+			font-family: 'Sabon', Garamond, serif;
+			font-style: italic;
+
+			letter-spacing: 2px;
+
+			font-size: 15px;
+
+		}
+	}
+
+	span.dates {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+
+		text-transform: uppercase;
+		letter-spacing: 0.76px;
+
+		font-size: 11px;
+
+		color: $color-orange;
+	}
+
+	span.buttons {
+		float: right;
+	}
+
+}
+
