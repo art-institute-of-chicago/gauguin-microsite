@@ -1,7 +1,7 @@
 $color-green:   #c4dac3;
 
 $color-yellow:  #f9f39f;
-$color-orange:  #cc992c;
+$color-orange:  #cc9a2c;
 
 $color-blue-light:   #c4e9fb;
 $color-blue-dark:    #0a142f;
@@ -28,8 +28,15 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 
-	line-height: 1;
+	white-space: nowrap;
 
+	* {
+		line-height: 1;
+	}
+
+	~ .btn {
+		margin-left: 10px;
+	}
 
 	&.btn-small {
 
@@ -37,8 +44,6 @@ body {
 
 		letter-spacing: 0.61px;
 		padding: 14px 18px;
-
-		margin: 0px 12px;
 
 	}
 
@@ -52,70 +57,186 @@ body {
 
 
 header {
+
+	@mixin break-logo {
+		@media (max-width: 960px) {
+			@content;
+		}
+	}
+
+	@mixin break-dates {
+		// @media (max-width: 880px) and (min-width: 581px) {
+		@media (max-width: 880px) {
+			@content;
+		}
+	}
+
+	@mixin break-member {
+		@media (max-width: 770px) {
+			@content;
+		}
+	}
+
+	@mixin break-title {
+		@media (max-width: 580px) {
+			@content;
+		}
+	}
+
+	@mixin break-margins {
+		@media (max-width: 400px) {
+			@content;
+		}
+	}
+
+	@mixin break-ticket {
+		@media (max-width: 380px) {
+			@content;
+		}
+	}
+
 	background-color: $color-blue-dark;
-	height: 65px;
 	width: 100%;
 
-	padding: 8px 36px;
+	padding: 16px 36px;
 
-	> * {
-		vertical-align: middle;
+	@include break-margins {
+		padding: 16px 20px;
 	}
 
-	#aic-link {
-		display: inline-block;
-		height: 100%;
+	justify-content: space-between;
 
-		margin-right: 12px;
+	// Applies to self and immediate child divs
+	&, > div {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
 	}
 
-	#aic-logo {
-		height: 100%;
+	// Disable word-wrapping by default
+	* {
+		white-space: nowrap;
 	}
 
-	span.exhibit {
+	.header-left {
 
-		color: $color-orange;
+		justify-content: flex-start;
 
-		span.title {
+		flex-grow: 2;
+
+		a {
+			display: inline-block;
+			height: 80px;
+
+			img {
+				height: 100%;
+			}
+
+			@include break-logo {
+				display: none;
+			}
+
+		}
+
+		.exhibit {
+
+			color: $color-orange;
+
+			padding: 0px 50px;
+
+			@include break-logo {
+				padding-left: 0px;
+			}
+
+
+			@include break-margins {
+				padding-right: 20px;
+			}
+
+			span {
+				display: inline-block;
+			}
+
+			span.title {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: bold;
+
+				text-transform: uppercase;
+				letter-spacing: 5px;
+
+				font-size: 13px;
+			}
+
+			span.pipe {
+				padding: 0px 10px;
+
+				@include break-title {
+					display: none;
+				}
+			}
+
+			span.subtitle {
+				font-family: 'Sabon', Garamond, serif;
+				font-style: italic;
+
+				letter-spacing: 2px;
+
+				font-size: 15px;
+
+				@include break-title {
+					display: none;
+				}
+
+			}
+		}
+
+	}
+
+	.header-right {
+
+		justify-content: space-between;
+
+		flex-grow: 1;
+
+		span.dates {
 			font-family: 'Montserrat', sans-serif;
 			font-weight: bold;
 
 			text-transform: uppercase;
-			letter-spacing: 5px;
+			letter-spacing: 0.76px;
 
-			font-size: 13px;
+			font-size: 11px;
+
+			color: $color-orange;
+
+			@include break-dates {
+
+				text-align: center;
+
+				.start, .end {
+					display: block;
+				}
+
+				.dash {
+					display: none;
+				}
+
+			}
+
 		}
 
-		span.pipe {
-			padding: 0px 10px;
+		.btn-member {
+			@include break-member {
+				display: none;
+			}
 		}
 
-		span.subtitle {
-			font-family: 'Sabon', Garamond, serif;
-			font-style: italic;
-
-			letter-spacing: 2px;
-
-			font-size: 15px;
-
+		.btn-ticket .verb {
+			@include break-ticket {
+				display: none;
+			}
 		}
-	}
 
-	span.dates {
-		font-family: 'Montserrat', sans-serif;
-		font-weight: bold;
-
-		text-transform: uppercase;
-		letter-spacing: 0.76px;
-
-		font-size: 11px;
-
-		color: $color-orange;
-	}
-
-	span.buttons {
-		float: right;
 	}
 
 }
