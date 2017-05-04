@@ -5,6 +5,8 @@ var elixir = require('laravel-elixir');
 var argv = require('yargs').argv;
 var bin = require('./tasks/bin');
 
+require('laravel-elixir-remove');
+
 elixir.config.assetsPath = 'source/_assets';
 elixir.config.publicPath = 'source';
 elixir.config.sourcemaps = false;
@@ -15,6 +17,7 @@ elixir(function(mix) {
 
     mix.sass('main.scss')
         .sass('reset.scss')
+        .remove('source/**/*~')
         .exec(bin.path() + ' build ' + env, ['./source/*', './source/**/*', '!./source/_assets/**/*'])
         .browserSync({
             port: port,
