@@ -1,7 +1,7 @@
 $color-green:   #c4dac3;
 
 $color-yellow:  #f9f39f;
-$color-orange:  #cc992c;
+$color-orange:  #cc9a2c;
 
 $color-blue-light:   #c4e9fb;
 $color-blue-dark:    #0a142f;
@@ -11,7 +11,239 @@ $color-pink-dark:    #ddb093;
 
 $color-text:    #091336;
 
+
 body {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Elido', sans-serif;
 	color: $color-text;
 }
+
+.btn {
+
+	display: inline-block;
+	background-color: $color-orange;
+
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+
+	text-transform: uppercase;
+	text-align: center;
+
+	white-space: nowrap;
+
+	* {
+		line-height: 1;
+	}
+
+	~ .btn {
+		margin-left: 10px;
+	}
+
+	&.btn-small {
+
+		font-size: 11px;
+
+		letter-spacing: 0.61px;
+		padding: 14px 18px;
+
+	}
+
+	&.btn-large {
+
+		font-size: 11px;
+
+	}
+
+}
+
+
+header {
+
+	@mixin break-logo {
+		@media (max-width: 960px) {
+			@content;
+		}
+	}
+
+	@mixin break-dates {
+		// @media (max-width: 880px) and (min-width: 581px) {
+		@media (max-width: 880px) {
+			@content;
+		}
+	}
+
+	@mixin break-member {
+		@media (max-width: 770px) {
+			@content;
+		}
+	}
+
+	@mixin break-title {
+		@media (max-width: 580px) {
+			@content;
+		}
+	}
+
+	@mixin break-margins {
+		@media (max-width: 400px) {
+			@content;
+		}
+	}
+
+	@mixin break-ticket {
+		@media (max-width: 380px) {
+			@content;
+		}
+	}
+
+	background-color: $color-blue-dark;
+	width: 100%;
+
+	padding: 16px 36px;
+
+	@include break-margins {
+		padding: 16px 20px;
+	}
+
+	justify-content: space-between;
+
+	// Applies to self and immediate child divs
+	&, > div {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+
+	// Disable word-wrapping by default
+	* {
+		white-space: nowrap;
+	}
+
+	.header-left {
+
+		justify-content: flex-start;
+
+		flex-grow: 2;
+
+		a {
+			display: inline-block;
+			height: 80px;
+
+			img {
+				height: 100%;
+			}
+
+			@include break-logo {
+				display: none;
+			}
+
+		}
+
+		.exhibit {
+
+			color: $color-orange;
+
+			padding: 0px 50px;
+
+			@include break-logo {
+				padding-left: 0px;
+			}
+
+
+			@include break-margins {
+				padding-right: 20px;
+			}
+
+			span {
+				display: inline-block;
+			}
+
+			span.title {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: bold;
+
+				text-transform: uppercase;
+				letter-spacing: 5px;
+
+				font-size: 13px;
+			}
+
+			span.pipe {
+				padding: 0px 10px;
+
+				@include break-title {
+					display: none;
+				}
+			}
+
+			span.subtitle {
+				font-family: 'Sabon', Garamond, serif;
+				font-style: italic;
+
+				letter-spacing: 2px;
+
+				font-size: 15px;
+
+				@include break-title {
+					display: none;
+				}
+
+			}
+		}
+
+	}
+
+	.header-right {
+
+		justify-content: space-between;
+
+		flex-grow: 1;
+
+		span.dates {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: bold;
+
+			text-transform: uppercase;
+			letter-spacing: 0.76px;
+
+			font-size: 11px;
+
+			color: $color-orange;
+
+			@include break-dates {
+
+				text-align: center;
+
+				.start, .end {
+					display: block;
+				}
+
+				.dash {
+					display: none;
+				}
+
+			}
+
+		}
+
+		.btn-member {
+			@include break-member {
+				display: none;
+			}
+		}
+
+		.btn-ticket .verb {
+			@include break-ticket {
+				display: none;
+			}
+		}
+
+	}
+
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+}
+
