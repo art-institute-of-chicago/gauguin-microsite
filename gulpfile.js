@@ -5,6 +5,7 @@ var bin = require('./tasks/bin');
 
 elixir.config.assetsPath = 'source/_assets';
 elixir.config.publicPath = 'source';
+elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
     var env = argv.e || argv.env || 'local';
