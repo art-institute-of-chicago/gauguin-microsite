@@ -30,8 +30,8 @@
 		</span>
 
 		<span class="buttons">
-			<a class="btn btn-small btn-member" href="#" >Become a Member</a>
-			<a class="btn btn-small btn-ticket" href="#" ><span class="verb">Get </span>Tickets</a>
+			<a class="btn btn-small btn-member" href="https://sales.artic.edu/memberships">Become a Member</a>
+			<a class="btn btn-small btn-ticket" href="https://sales.artic.edu/admissiondate"><span class="verb">Get </span>Tickets</a>
 		</span>
 
 	</div>
