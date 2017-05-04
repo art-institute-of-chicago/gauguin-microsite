@@ -38,7 +38,7 @@
 
 <body>
 
-@yield('body')
+@include('_content.call_to_action')
 
 </body>
 
