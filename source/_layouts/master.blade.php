@@ -41,3 +41,5 @@
 @yield('body')
 
 </body>
+
+</html>
