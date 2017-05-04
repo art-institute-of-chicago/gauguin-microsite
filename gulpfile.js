@@ -1,3 +1,5 @@
+process.env.DISABLE_NOTIFIER = true;
+
 var gulp = require('gulp');
 var elixir = require('laravel-elixir');
 var argv = require('yargs').argv;
@@ -18,7 +20,9 @@ elixir(function(mix) {
             port: port,
             server: { baseDir: 'build_' + env },
             proxy: null,
-            files: [ 'build_' + env + '/**/*' ]
+            files: [ 'build_' + env + '/**/*' ],
+            notify: false,
+            open: false,
         });
 });
 
