@@ -3,6 +3,8 @@
 @section('body')
 
 <!-- Sticky Header -->
+<div id="header-placeholder"></div>
+
 <header>
 
 	<div class="header-left">

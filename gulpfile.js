@@ -15,6 +15,7 @@ elixir(function(mix) {
 
     mix.sass('main.scss')
         .sass('reset.scss')
+        .scripts(['main.js'], './source/js/main.js')
         .exec(bin.path() + ' build ' + env, ['./source/*', './source/**/*', '!./source/_assets/**/*'])
         .browserSync({
             port: port,
