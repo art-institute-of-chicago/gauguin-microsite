@@ -3,5 +3,9 @@
 return [
     'baseUrl' => '',
     'production' => false,
-    'collections' => [ 'blocks' ],
+    'collections' => [
+    	'blocks' => [
+    		'sort' => 'weight'
+    	]
+    ],
 ];

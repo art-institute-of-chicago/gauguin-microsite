@@ -1,13 +1,11 @@
 ---
-extends: _layouts.call_to_action
-section: contents
+extends: _partials.call_to_action
+weight: 1000
 ---
-what
-# Come explore Gauguin for yourself.
-## [LEARN MORE ABOUT HOW TO PLAN YOUR VISIT](http://www.artic.edu/visit)
 
-[BECOME A MEMBER](http://www.artic.edu)
-[BUY TICKETS](http://www.artic.edu)
+# Come explore Gauguin for yourself.
+
+## [Learn more about how to plan your visit](http://www.artic.edu/visit)
 
 ### JUNE 25 – SEPT 10
 
