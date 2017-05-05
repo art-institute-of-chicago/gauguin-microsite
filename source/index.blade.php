@@ -2,40 +2,20 @@
 
 @section('body')
 
-<!-- Sticky Header -->
-<div id="header-placeholder"></div>
+{{-- Define sort order in config.php --}}
+@foreach ($blocks as $block)
 
-<header>
+	{{-- Markdown file's "body" contents will be accessible in the block, --}}
+	{{-- either via the section defined in the YAML, or via $contents --}}
+	<?php $section = $block->section ?: 'content'; ?>
 
-	<div class="header-left">
+	{{-- Block will be accesible in partial via the $page variable --}}
+	{{-- Hashes in YAML frontmatter are parsed to arrays, not objects  --}}
+	@include( $block->extends, [
+		'page' => $page->merge($block),
+		$section => $block->getContent()
+	])
 
-		<a href="http://www.artic.edu/">
-			<img src="images/logo.svg">
-		</a>
-
-		<span class="exhibit">
-			<span class="title">Gauguin</span>
-			<span class="pipe">|</span>
-			<span class="subtitle">Artist as Alchemist</span>
-		</span>
-
-	</div>
-
-	<div class="header-right">
-
-		<span class="dates">
-			<span class="start">June 25</span>
-			<span class="dash">–</span>
-			<span class="end">Sept 10</span>
-		</span>
-
-		<span class="buttons">
-			<a class="btn btn-small btn-member" href="https://sales.artic.edu/memberships">Become a Member</a>
-			<a class="btn btn-small btn-ticket" href="https://sales.artic.edu/admissiondate"><span class="verb">Get </span>Tickets</a>
-		</span>
-
-	</div>
-
-</header>
+@endforeach
 
 @endsection
