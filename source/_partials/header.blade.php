@@ -20,9 +20,9 @@
 	<div class="header-right">
 
 		<span class="dates">
-			<span class="start">{{ $block->dates['start'] }}</span>
+			<span class="start">{{ $page->dates['start'] }}</span>
 			<span class="dash">–</span>
-			<span class="end">{{ $block->dates['end'] }}</span>
+			<span class="end">{{ $page->dates['end'] }}</span>
 		</span>
 
 		<span class="buttons">
