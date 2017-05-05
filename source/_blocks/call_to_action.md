@@ -8,6 +8,9 @@ section: content
 
 ## [Learn more about how to plan your visit](http://www.artic.edu/visit)
 
+* [Become a member](https://sales.artic.edu/memberships)
+* [Buy tickets](https://sales.artic.edu/admissiondate)
+
 ### JUNE 25 – SEPT 10
 
 Member Preview: JUNE 23–24

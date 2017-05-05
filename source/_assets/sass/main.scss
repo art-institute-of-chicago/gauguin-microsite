@@ -2,6 +2,7 @@ $color-green:   #c4dac3;
 
 $color-yellow:  #f9f39f;
 $color-orange:  #cc9a2c;
+$color-white:   #ffffff;
 
 $color-blue-light:   #c4e9fb;
 $color-blue-dark:    #0a142f;
@@ -17,7 +18,8 @@ body {
 	color: $color-text;
 }
 
-.btn {
+.btn,
+section.call-to-action ul a {
 
 	display: inline-block;
 	background-color: $color-orange;
@@ -30,6 +32,8 @@ body {
 
 	white-space: nowrap;
 
+	color: $color-blue-dark;
+	
 	* {
 		line-height: 1;
 	}
@@ -246,4 +250,87 @@ header {
 	}
 
 }
+
+section.slideshow {}
+
+section.video {}
+
+section.theme-one-image {}
+
+section.theme-two-images {}
+
+section.theme-four-images {}
+
+section.quote {}
+
+section.events {}
+
+section.resources {}
+
+section.shop {}
+
+section.call-to-action {
+	background-color: $color-blue-dark;
+
+	width: 100%;
+
+	padding: 16px 36px;
+
+	text-align: center;
+
+	color: $color-orange;
+
+	h1 {
+		font-family: Sabon-ItalicOsF, Garamond, serif;
+		font-style: italic;
+		font-size: 45px;
+		letter-spacing: 2px;
+		margin-bottom: 38px;
+	}
+
+	h2 {
+	    font-family: Montserrat-Bold;
+	    font-size: 17px;
+	    color: $color-white;
+	    letter-spacing: 2px;
+	    text-transform: uppercase;
+
+	    margin-bottom: 50px;
+	    
+	    a {
+		border-bottom: 2px solid $color-white;
+		padding-bottom: 7px;
+	    }
+	}
+
+	ul {
+	    list-style-type: none;
+	    margin-bottom: 34px;
+	    
+	    li {
+		display: inline;
+		margin: 0 16px;
+	    }
+	    a {
+		font-size: 11px;
+
+		letter-spacing: 0.61px;
+		padding: 14px 18px;
+	    }
+	}
+
+	h3 {
+	    font-family: Montserrat-Bold;
+	    text-transform: uppercase;
+	    font-size: 19px;
+	    letter-spacing: 2px;
+	    margin-bottom: 17px;
+	}
+
+	p {
+	    margin-bottom: 15px;
+	}
+}
+
+section.footer {}
 
