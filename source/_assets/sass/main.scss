@@ -20,6 +20,10 @@ body {
 	color: $color-text;
 }
 
+section {
+	min-height: calc(90vh - 80px);
+}
+
 .btn,
 section.call-to-action ul a {
 
@@ -35,7 +39,7 @@ section.call-to-action ul a {
 	white-space: nowrap;
 
 	color: $color-blue-dark;
-	
+
 	* {
 		line-height: 1;
 	}
@@ -100,6 +104,9 @@ header {
 			@content;
 		}
 	}
+
+	position: relative;
+	z-index: 2;
 
 	background-color: $color-blue-dark;
 	width: 100%;
@@ -298,7 +305,7 @@ section.call-to-action {
 	    text-transform: uppercase;
 
 	    margin-bottom: 50px;
-	    
+
 	    a {
 		border-bottom: 2px solid $color-white;
 		padding-bottom: 7px;
@@ -308,7 +315,7 @@ section.call-to-action {
 	ul {
 	    list-style-type: none;
 	    margin-bottom: 34px;
-	    
+
 	    li {
 		display: inline;
 		margin: 0 16px;
@@ -372,3 +379,68 @@ footer {
 }
 
 
+section.quote {
+
+	background-color: #4A4A4A;
+
+	position: relative;
+	overflow: hidden;
+
+	.background, blockquote {
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate( -50%, -50%)
+	}
+
+	.background {
+
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		height: 100%;
+		width: 100%;
+
+		opacity: 0.53;
+
+	}
+
+	blockquote {
+
+		font-family: 'Knockout', sans-serif;
+
+		text-align: center;
+
+		font-size: 18px;
+		line-height: 2;
+
+		border: 1vw solid white;
+		color: white;
+
+		padding: 30px;
+		width: 80%;
+
+		@media (min-width: 520px) {
+			font-size: 4.2vw;
+			padding: 4vw 10vw;
+			width: 70%;
+		}
+
+		@media (min-width: 800px) {
+			border: 8px solid white;
+			font-size: 4.2vw;
+		}
+
+
+		p:first-of-type:before {
+			content: "“";
+		}
+
+		p:last-of-type:after {
+			content: "”";
+		}
+
+	}
+
+
+}
