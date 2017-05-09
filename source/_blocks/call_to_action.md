@@ -2,6 +2,7 @@
 extends: _partials.call_to_action
 weight: 1000
 section: content
+hide: true
 ---
 
 # Come explore Gauguin for yourself.
