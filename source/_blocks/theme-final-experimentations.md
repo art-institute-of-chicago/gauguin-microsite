@@ -1,5 +1,6 @@
 ---
-extends: "_partials.theme.1_landscape"
+extends: "_partials.theme.1"
+orientation: "landscape"
 weight: 600
 theme: "Final Experimentations"
 title: "Gauguin was radically creative to the very end"

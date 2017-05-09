@@ -1,5 +1,6 @@
 ---
-extends: "_partials.theme.1_portrait"
+extends: "_partials.theme.1"
+orientation: "portrait"
 weight: 300
 theme: "Becoming Gauguin"
 title: "An artist searching for  a new direction"
