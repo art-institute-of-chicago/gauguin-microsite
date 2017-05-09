@@ -20,13 +20,25 @@ elixir(function(mix) {
         .scripts(['main.js'], './source/js/main.js')
         .remove('source/**/*~')
         .exec(bin.path() + ' build ' + env, ['./source/*', './source/**/*', '!./source/_assets/**/*'])
+
+        // TODO: Run synchronously or put this logic into the upload script.
+        // This removes Jigsaws direct-access to blocks as pages.
+        // .remove('build_' + env + '/blocks/**')
+
         .browserSync({
             port: port,
             server: { baseDir: 'build_' + env },
             proxy: null,
             files: [ 'build_' + env + '/**/*' ],
+
+            // https://github.com/BrowserSync/browser-sync/issues/344
             notify: false,
             open: false,
+
+            // https://github.com/tightenco/jigsaw/issues/86
+            // reloadDebounce: 500,
+            // reloadOnRestart: true,
+
         });
 });
 
