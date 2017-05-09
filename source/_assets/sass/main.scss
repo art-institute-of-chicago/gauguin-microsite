@@ -456,6 +456,9 @@ section.theme {
 		line-height: 29px;
 		font-size: 18px;
 
+	}
+
+	h1, .content {
 		margin: 30px 0;
 	}
 
@@ -480,7 +483,24 @@ section.theme-1-portrait {
 
 }
 
-section.theme-1-landscape {}
+section.theme-1-landscape {
+
+	.wrapper {
+
+		background: #E5F0DA;
+
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+
+	}
+
+	.content {
+		align-self: flex-end;
+		max-width: 50%; // between() me!
+	}
+
+}
 
 section.theme-2 {}
 

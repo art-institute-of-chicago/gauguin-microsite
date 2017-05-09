@@ -1,4 +1,4 @@
-<section class="theme theme-1-portrait">
+<section class="theme theme-1-landscape">
 
 	<h2>{{ $page->theme }}</h2>
 
