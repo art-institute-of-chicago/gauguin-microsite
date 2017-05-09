@@ -14,11 +14,32 @@
 
 		</div>
 
-		<!-- If we need pagination -->
+		<!-- Pagination -->
 		<div class="swiper-pagination"></div>
 
 	</div>
 
-	{!! $content !!}
+	<div class="title-card">
+
+		<h2>Defy Definition</h2>
+		<h1>Gauguin</h1>
+
+		<div class="events">
+
+			<div class="event event-exhibit">
+				<span class="title">Artist as Alchemist</span>
+				<span class="date">Jun 25 • Sept 10</span>
+			</div>
+
+			<div class="event event-preview">
+				<span class="title">Member Preview</span>
+				<span class="date">Jun 22</span>
+			</div>
+
+		</div>
+
+	</div>
+
+	{{-- {!! $content !!} --}}
 
 </section>
