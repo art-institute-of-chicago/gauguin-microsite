@@ -6,8 +6,9 @@
 		<!-- Additional required wrapper -->
 		<div class="swiper-wrapper">
 
-			@foreach ($page->images as $image)
-				<div class="swiper-slide" style="background-image: url('{{$image}}')">
+			<!-- Slides -->
+			@foreach ($page->images as $index => $image)
+				<div class="swiper-slide" style="background-image: url('{{$image}}')" data-hash="{{ ++$index }}">
 				</div>
 			@endforeach
 

@@ -42,6 +42,9 @@ $(document).ready(function() {
 		direction: 'horizontal',
 		loop: true,
 
+		hashnav: true,
+		replaceState: true,
+
 		autoplay: 2000,
 		speed: 650,
 
