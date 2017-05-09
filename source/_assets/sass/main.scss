@@ -404,11 +404,109 @@ section.video {
 
 }
 
-section.theme-one-image {}
+// Common styles shared by all the themes
+section.theme {
 
-section.theme-two-images {}
+	position: relative;
 
-section.theme-four-images {}
+	display: flex;
+
+	h2 {
+
+		position: absolute;
+		bottom: 70px;
+		left: 35px;
+
+		text-transform: uppercase;
+
+		font-family: 'Futura', sans-serif;
+		font-weight: bold;
+		color: #CC9A2C;
+
+		font-size: 16px;
+		line-height: 35px;
+		letter-spacing: 3.54px;
+
+		max-width: 10%;
+
+	}
+
+	.wrapper {
+
+		align-self: stretch;
+
+		background: #DAEFE3; // override me!
+		margin-left: 120px; // between() me!
+		padding: 60px;  // between() me!
+
+	}
+
+	h1 {
+		font-family: 'Futura', sans-serif;
+		letter-spacing: 0.6px;
+		line-height: 1.43;
+		font-size: 28px;
+	}
+
+	p {
+		font-family: 'Amiri', serif;
+		color: #0B1333;
+
+		letter-spacing: 0.04px;
+		line-height: 29px;
+		font-size: 18px;
+
+	}
+
+	h1, .content {
+		margin: 30px 0;
+	}
+
+}
+
+section.theme-1-portrait {
+
+	.wrapper {
+
+		background: #DAEFE3;
+
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+
+	img {
+		max-width: 50%;
+	}
+
+}
+
+section.theme-1-landscape {
+
+	.wrapper {
+
+		background: #E5F0DA;
+
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+
+	}
+
+	.content {
+		align-self: flex-end;
+		max-width: 50%; // between() me!
+	}
+
+}
+
+section.theme-2 {}
+
+section.theme-3 {}
+
+section.theme-4 {}
 
 section.quote {}
 
