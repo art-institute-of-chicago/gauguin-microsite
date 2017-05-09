@@ -13,8 +13,7 @@
 	<script src="//code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 
 	<!-- Fonts -->
-	<!-- Using Open Sans until designs are completed -->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700" rel="stylesheet">
 
 	<!-- Swiper -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
