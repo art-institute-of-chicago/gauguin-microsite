@@ -35,4 +35,22 @@ $(document).ready(function() {
 	$window.scroll( stickyNavigation );
 	$window.resize( stickyNavigation );
 
+	// Initialize the slideshow
+	var slideshow = new Swiper ('.swiper-container', {
+
+		// Optional parameters
+		direction: 'horizontal',
+		loop: true,
+
+		hashnav: true,
+		replaceState: true,
+
+		autoplay: 2000,
+		speed: 650,
+
+		// If we need pagination
+		pagination: '.swiper-pagination',
+
+	});
+
 });

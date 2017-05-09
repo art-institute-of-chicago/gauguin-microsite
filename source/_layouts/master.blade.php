@@ -16,6 +16,10 @@
 	<!-- Using Open Sans until designs are completed -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
 
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+
 	<!-- video.js -->
 	<link href="//vjs.zencdn.net/5.11/video-js.min.css" rel="stylesheet">
 	<script src="//vjs.zencdn.net/5.11/video.min.js"></script>
