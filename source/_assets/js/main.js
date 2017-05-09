@@ -42,6 +42,9 @@ $(document).ready(function() {
 		direction: 'horizontal',
 		loop: true,
 
+		autoplay: 2000,
+		speed: 650,
+
 		// If we need pagination
 		pagination: '.swiper-pagination',
 

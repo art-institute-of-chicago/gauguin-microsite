@@ -278,6 +278,23 @@ section.slideshow {
 		background-size: cover;
 	}
 
+	.swiper-pagination-bullet {
+		background-color: white;
+		opacity: 1;
+
+    	box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+
+		width: 10px;
+		height: 10px;
+
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: #9B9B9B
+	}
+
+
+
 }
 
 section.video {}
