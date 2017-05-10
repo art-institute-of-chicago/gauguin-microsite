@@ -1,5 +1,4 @@
 ---
 extends: _partials.footer
-weight: 1100
-hide: true
+weight: 1500
 ---
