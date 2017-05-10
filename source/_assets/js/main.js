@@ -36,15 +36,33 @@ $(document).ready(function() {
 	$window.resize( stickyNavigation );
 
 	// Initialize the slideshow
-	var slideshow = new Swiper ('.swiper-container', {
+
+        // Get initial slide number
+        function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
+    var initial = getParameterByName('q') ? getParameterByName('q') : 0;
+
+        var slideshow = new Swiper ('.swiper-container', {
 
 		// Optional parameters
 		direction: 'horizontal',
 		loop: true,
 
-		hashnav: true,
-		replaceState: true,
-
+                initialSlide: 1,
+   	        onInit: function(swipper) {
+		    if (initial > 1) {
+			mySwiper.swipeTo(initial);
+		    }
+	        },
+	    
 		autoplay: 2000,
 		speed: 650,
 
