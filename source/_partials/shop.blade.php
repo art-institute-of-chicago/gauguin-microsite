@@ -1,13 +1,13 @@
 <section class="shop">
 
    	<div class="title">
+	    <h2>Shop</h2>
 
-	    <h3>Shop</h3>
-
-	    <a href="{{ $page->link }}">See all products</a>
-
+	    <p><a href="{{ $page->link }}">See all products</a></p>
 	</div>
 	
+   	<div class="wrapper">
+
 @foreach ($shop as $item)
 
     <?php $section = $item->section ?: 'content'; ?>
@@ -19,5 +19,7 @@
 
 @endforeach
 
+    	</div>
+	
 	
 </section>

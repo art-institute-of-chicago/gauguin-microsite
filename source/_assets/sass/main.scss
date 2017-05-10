@@ -1,4 +1,5 @@
 $color-green:   #c4dac3;
+$color-green-light: #c2d9cc;
 
 $color-yellow:  #f9f39f;
 $color-orange:  #cc9a2c;
@@ -24,7 +25,8 @@ section {
 }
 
 .btn,
-section.call-to-action ul a {
+section.call-to-action ul a,
+section.shop p a {
 
 	display: inline-block;
 	background-color: $color-orange;
@@ -396,6 +398,12 @@ section.video {
 		background-color: rgba(0,0,0,0);
 	}
 
+	.video-js:hover {
+	    .vjs-big-play-button {
+		background-color: rgba(0,0,0,.3);
+	    }
+	}
+
 	.vjs-icon-play:before,
 	.video-js .vjs-big-play-button:before,
 	.video-js .vjs-play-control:before {
@@ -508,13 +516,47 @@ section.theme-3 {}
 
 section.theme-4 {}
 
-section.quote {}
-
 section.events {}
 
 section.resources {}
 
-section.shop {}
+section.shop {
+    position: relative;
+    background-color: $color-green-light;
+
+    width: 100%;
+
+    padding: 16px 36px;
+
+    border-bottom: 10px solid $color-orange;
+
+    display: flex;
+    
+    h2 {
+	font-size: 32px;
+	color: $color-blue-dark;
+	/* Undo properties set by `section.theme h3` */
+	position: relative;
+	bottom: initial;
+	left: inherit;
+	text-transform: initial;
+	font-weight: initial;
+	clear: both;
+    }
+
+    a {
+	display: flex;
+    }
+    
+    .wrapper {
+
+	background: #E5F0DA;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    }
+}
 
 section.call-to-action {
 	background-color: $color-blue-dark;
