@@ -5,6 +5,7 @@ $color-yellow:  #f9f39f;
 $color-orange:  #cc9a2c;
 
 $color-white:   #ffffff;
+$color-grey-light: #f8f8f8;
 $color-black:   #000000;
 
 $color-blue-light:   #c4e9fb;
@@ -31,8 +32,8 @@ section.shop p a {
 	display: inline-block;
 	background-color: $color-orange;
 
-	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
+	font-family: 'Futura', sans-serif;
+	/*font-weight: bold;*/
 
 	text-transform: uppercase;
 	text-align: center;
@@ -531,30 +532,57 @@ section.shop {
     border-bottom: 10px solid $color-orange;
 
     display: flex;
-    
-    h2 {
-	font-size: 32px;
-	color: $color-blue-dark;
-	/* Undo properties set by `section.theme h3` */
-	position: relative;
-	bottom: initial;
-	left: inherit;
-	text-transform: initial;
-	font-weight: initial;
-	clear: both;
-    }
 
-    a {
-	display: flex;
+    .title {
+	width: 25%;
+	h2 {
+	    font-size: 32px;
+	    color: $color-blue-dark;
+	    margin-top: 30px;
+	}
+
+	p {
+	    margin-top: 40px;
+	    a {
+		font-size: 11px;
+		
+		letter-spacing: 0.61px;
+		padding: 14px 18px;
+	    }
+	}
     }
     
     .wrapper {
-
-	background: #E5F0DA;
-
 	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
+	padding: 16px 36px 16px 0;
+
+	.shop-item {
+	    margin-right: 20px;
+	    padding: 20px;
+	    max-width: 240px;	    
+	    .image-container {
+		background-color: $color-grey-light;
+		min-height: 200px;
+		min-width: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 10px;
+  	    }
+	    h4 {
+		font-family: 'Futura', sans-serif;
+		font-size: 24px;
+	    }
+	    p {
+		font-family: 'Futura', sans-serif;
+		font-weight: bold;
+		color: $color-white;
+
+		font-size: 12px;
+		line-height: 35px;
+		letter-spacing: 3.54px;
+	    }
+	}
     }
 }
 

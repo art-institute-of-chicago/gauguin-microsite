@@ -1,11 +1,14 @@
 <div class="shop-item">
-          <a href="{{ $page->link }}">
-                 <img src="{{ $page->image }}"/>
+    <div class="image-container">
+        <a href="{{ $page->link }}">
+            <img src="{{ $page->image }}"/>
+	</a>
+    </div>
+    <a href="{{ $page->link }}">
+        <h4>{{ $page->title }}</h4>
+    </a>
 
-                 <h4>{{ $page->title }}</h4>
-          </a>
-
-          ${{ $page->price }}
+    <p>${{ $page->price }}</p>
 </div>
 
            
