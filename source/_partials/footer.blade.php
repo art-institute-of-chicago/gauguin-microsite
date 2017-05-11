@@ -1,4 +1,5 @@
 <footer>
+
 	<div class="footer-left">
 
 	</div>
@@ -13,4 +14,5 @@
 		</span>
 
 	</div>
+
 </footer>

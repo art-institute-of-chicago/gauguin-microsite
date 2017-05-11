@@ -35,38 +35,29 @@ $(document).ready(function() {
 	$window.scroll( stickyNavigation );
 	$window.resize( stickyNavigation );
 
-	// Initialize the slideshow
-
-        // Get initial slide number
-        function getParameterByName(name, url) {
-	    if (!url) url = window.location.href;
-	    name = name.replace(/[\[\]]/g, "\\$&");
-	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-		results = regex.exec(url);
-	    if (!results) return null;
-	    if (!results[2]) return '';
-	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	// Helper function to get query string, sufficient for our purpose
+	function param(name) {
+		return (location.search.split(name + '=')[1] || '').split('&')[0];
 	}
 
-    var initial = getParameterByName('q') ? getParameterByName('q') : 0;
+	// Get initial slide number
+	var initial = param('q') || 0;
 
-        var slideshow = new Swiper ('.swiper-container', {
+	// Initialize the slideshow
+	var slideshow = new Swiper ('.swiper-container', {
 
-		// Optional parameters
-		direction: 'horizontal',
 		loop: true,
 
-                initialSlide: 1,
-   	        onInit: function(swipper) {
-		    if (initial > 1) {
-			mySwiper.swipeTo(initial);
-		    }
-	        },
-	    
+		initialSlide: 0, // zero-indexed, default is 0
+
+		onInit: function( swiper ) {
+			swiper.slideTo(initial, 0);
+		},
+
+		autoplayDisableOnInteraction: false,
 		autoplay: 2000,
 		speed: 650,
 
-		// If we need pagination
 		pagination: '.swiper-pagination',
 
 	});

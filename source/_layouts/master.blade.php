@@ -22,7 +22,8 @@
 	<!-- video.js -->
 	<link href="//vjs.zencdn.net/5.11/video-js.min.css" rel="stylesheet">
 	<script src="//vjs.zencdn.net/5.11/video.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.3.2/Youtube.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.3.2/Youtube.min.js"></script>
+
 	<!-- Site-specific -->
 	<link href="css/main.css" rel="stylesheet">
 	<script src="js/main.js" type="text/javascript"></script>

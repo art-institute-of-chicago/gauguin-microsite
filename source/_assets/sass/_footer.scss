@@ -1,0 +1,36 @@
+footer {
+
+	background-color: $color-black;
+	width: 100%;
+
+	padding: 16px 36px;
+
+	justify-content: space-between;
+
+	// Applies to self and immediate child divs
+	&, > div {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+
+	// Disable word-wrapping by default
+	* {
+		white-space: nowrap;
+	}
+
+	.header-left {
+
+		justify-content: flex-start;
+
+		flex-grow: 2;
+	}
+
+	.header-right {
+
+		justify-content: space-between;
+
+		flex-grow: 1;
+	}
+
+}

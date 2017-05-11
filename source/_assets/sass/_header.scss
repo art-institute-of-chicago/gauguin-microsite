@@ -1,0 +1,196 @@
+// Header's breakpoints are mostly independent of the other sections
+
+header {
+
+	@mixin break-logo {
+		@media (max-width: 960px) {
+			@content;
+		}
+	}
+
+	@mixin break-dates {
+		// @media (max-width: 880px) and (min-width: 581px) {
+		@media (max-width: 880px) {
+			@content;
+		}
+	}
+
+	@mixin break-member {
+		@media (max-width: 770px) {
+			@content;
+		}
+	}
+
+	@mixin break-title {
+		@media (max-width: 580px) {
+			@content;
+		}
+	}
+
+	@mixin break-margins {
+		@media (max-width: 400px) {
+			@content;
+		}
+	}
+
+	@mixin break-ticket {
+		@media (max-width: 380px) {
+			@content;
+		}
+	}
+
+	position: relative;
+	z-index: 2;
+
+	background-color: $color-blue-dark;
+	width: 100%;
+
+	padding: 16px 36px;
+
+	@include break-margins {
+		padding: 16px 20px;
+	}
+
+	// Applies to self and immediate child divs
+	// TODO: Wrap this in .container
+	justify-content: space-between;
+
+	&, > div {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+
+	// Disable word-wrapping by default
+	* {
+		white-space: nowrap;
+	}
+
+	.header-left {
+
+		justify-content: flex-start;
+
+		flex-grow: 2;
+
+		a {
+			display: inline-block;
+			height: 80px;
+
+			img {
+				height: 100%;
+			}
+
+			@include break-logo {
+				display: none;
+			}
+
+		}
+
+		.exhibit {
+
+			color: $color-orange;
+
+			padding: 0px 50px;
+
+			@include break-logo {
+				padding-left: 0px;
+			}
+
+
+			@include break-margins {
+				padding-right: 20px;
+			}
+
+			span {
+				display: inline-block;
+			}
+
+			span.title {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: bold;
+
+				text-transform: uppercase;
+				letter-spacing: 5px;
+
+				font-size: 13px;
+			}
+
+			span.pipe {
+				padding: 0px 10px;
+
+				@include break-title {
+					display: none;
+				}
+			}
+
+			span.subtitle {
+				font-family: 'Sabon', Garamond, serif;
+				font-style: italic;
+
+				letter-spacing: 2px;
+
+				font-size: 15px;
+
+				@include break-title {
+					display: none;
+				}
+
+			}
+		}
+
+	}
+
+	.header-right {
+
+		justify-content: space-between;
+
+		flex-grow: 1;
+
+		span.dates {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: bold;
+
+			text-transform: uppercase;
+			letter-spacing: 0.76px;
+
+			font-size: 11px;
+
+			color: $color-orange;
+
+			@include break-dates {
+
+				text-align: center;
+
+				.start, .end {
+					display: block;
+				}
+
+				.dash {
+					display: none;
+				}
+
+			}
+
+		}
+
+		.btn-member {
+			@include break-member {
+				display: none;
+			}
+		}
+
+		.btn-ticket .verb {
+			@include break-ticket {
+				display: none;
+			}
+		}
+
+	}
+
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+}
