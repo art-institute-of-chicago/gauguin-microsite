@@ -1,9 +1,11 @@
 $color-green:   #c4dac3;
+$color-green-light: #c2d9cc;
 
 $color-yellow:  #f9f39f;
 $color-orange:  #cc9a2c;
 
 $color-white:   #ffffff;
+$color-grey-light: #f8f8f8;
 $color-black:   #000000;
 
 $color-blue-light:   #c4e9fb;
@@ -24,13 +26,14 @@ section {
 }
 
 .btn,
-section.call-to-action ul a {
+section.call-to-action ul a,
+section.shop p a {
 
 	display: inline-block;
 	background-color: $color-orange;
 
-	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
+	font-family: 'Futura', sans-serif;
+	/*font-weight: bold;*/
 
 	text-transform: uppercase;
 	text-align: center;
@@ -396,6 +399,12 @@ section.video {
 		background-color: rgba(0,0,0,0);
 	}
 
+	.video-js:hover {
+	    .vjs-big-play-button {
+		background-color: rgba(0,0,0,.3);
+	    }
+	}
+
 	.vjs-icon-play:before,
 	.video-js .vjs-big-play-button:before,
 	.video-js .vjs-play-control:before {
@@ -508,13 +517,74 @@ section.theme-3 {}
 
 section.theme-4 {}
 
-section.quote {}
-
 section.events {}
 
 section.resources {}
 
-section.shop {}
+section.shop {
+    position: relative;
+    background-color: $color-green-light;
+
+    width: 100%;
+
+    padding: 16px 36px;
+
+    border-bottom: 10px solid $color-orange;
+
+    display: flex;
+
+    .title {
+	width: 25%;
+	h2 {
+	    font-size: 32px;
+	    color: $color-blue-dark;
+	    margin-top: 30px;
+	}
+
+	p {
+	    margin-top: 40px;
+	    a {
+		font-size: 11px;
+		
+		letter-spacing: 0.61px;
+		padding: 14px 18px;
+	    }
+	}
+    }
+    
+    .wrapper {
+	display: flex;
+	padding: 16px 36px 16px 0;
+
+	.shop-item {
+	    margin-right: 20px;
+	    padding: 20px;
+	    max-width: 240px;	    
+	    .image-container {
+		background-color: $color-grey-light;
+		min-height: 200px;
+		min-width: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 10px;
+  	    }
+	    h4 {
+		font-family: 'Futura', sans-serif;
+		font-size: 24px;
+	    }
+	    p {
+		font-family: 'Futura', sans-serif;
+		font-weight: bold;
+		color: $color-white;
+
+		font-size: 12px;
+		line-height: 35px;
+		letter-spacing: 3.54px;
+	    }
+	}
+    }
+}
 
 section.call-to-action {
 	background-color: $color-blue-dark;

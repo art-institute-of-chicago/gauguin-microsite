@@ -6,6 +6,9 @@ return [
     'collections' => [
     	'blocks' => [
     		'sort' => 'weight'
+    	],
+    	'shop' => [
+    		'sort' => 'weight'
     	]
     ],
 ];

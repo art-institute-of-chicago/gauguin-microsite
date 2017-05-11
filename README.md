@@ -46,3 +46,14 @@ You can now view your site at http://localhost:8000 in your browser.
 Please note that these instructions assume that Jigsaw is installed locally, via `composer.json`. If you installed Jigsaw globally, you can substitute calls to `./vendor/bin/jigsaw` with just `jigsaw`. See its [installation guide](http://jigsaw.tighten.co/docs/installation/) for more details.
 
 You can alternatively use `gulp watch` to run a development server and access your site at http://localhost:3000. This will compile all the CSS, and the browser will automatically update when you make changes.
+
+
+## Features
+
+To start the slideshow on a given slide, use the `q` parameter value:
+
+```
+http://localhost:3000/?q=2
+```
+
+This will start the slideshow on the second slide.

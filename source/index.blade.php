@@ -18,6 +18,7 @@
 		'page' => $page->merge($block),
 		$section => $block->getContent()
 	])
+	<?php if( !is_null($block->showOnly) && $block->showOnly ) break; ?>
 
 @endforeach
 
