@@ -10,7 +10,11 @@ $(document).ready(function() {
 	var heightHeader;
 
 	var updateHeaderStats = function() {
-		offsetHeader = $header.offset().top;
+		if( $placeholder.is(":visible") ) {
+			offsetHeader = $placeholder.offset().top;
+		} else {
+			offsetHeader = $header.offset().top;
+		}
 		heightHeader = $header.outerHeight();
 		$placeholder.height( heightHeader );
 	};
