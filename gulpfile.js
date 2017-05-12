@@ -19,7 +19,11 @@ elixir(function(mix) {
         .sass('reset.scss')
         .scripts(['main.js'], './source/js/main.js')
         .remove('source/**/*~')
-        .exec(bin.path() + ' build ' + env, ['./source/*', './source/**/*', '!./source/_assets/**/*'])
+        .exec(bin.path() + ' build ' + env, [
+            './source/*',
+            './source/**/*',
+            '!./source/_assets/**/*'
+        ])
 
         // TODO: Run synchronously or put this logic into the upload script.
         // This removes Jigsaws direct-access to blocks as pages.

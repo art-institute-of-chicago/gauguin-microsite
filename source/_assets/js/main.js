@@ -5,6 +5,11 @@ $(document).ready(function() {
 	var $header = $('header');
 	var $placeholder = $('#header-placeholder');
 
+	// For development, exit if the header is hidden
+	if( $header.length < 1 ) {
+		return false;
+	}
+
 	// "Sticky" the navigation when the user scrolls below the header
 	var offsetHeader;
 	var heightHeader;
@@ -38,6 +43,10 @@ $(document).ready(function() {
 
 	$window.scroll( stickyNavigation );
 	$window.resize( stickyNavigation );
+
+});
+
+$(document).ready( function() {
 
 	// Helper function to get query string, sufficient for our purpose
 	function param(name) {

@@ -5,7 +5,7 @@
 {{-- Define sort order in config.php --}}
 @foreach ($blocks as $block)
 
-	{{-- Skip of the block if hide is true --}}
+	{{-- Skip this block if hide is true --}}
 	<?php if( !is_null($block->hide) && $block->hide ) continue; ?>
 
 	{{-- Markdown file's "body" contents will be accessible in the block, --}}
@@ -18,6 +18,8 @@
 		'page' => $page->merge($block),
 		$section => $block->getContent()
 	])
+
+	{{-- Set `showOnly: true` and `weight: 0` in YAML to ease development --}}
 	<?php if( !is_null($block->showOnly) && $block->showOnly ) break; ?>
 
 @endforeach
