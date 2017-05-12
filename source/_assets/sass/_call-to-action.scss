@@ -1,40 +1,49 @@
 section.call-to-action {
-	background-color: $color-blue-dark;
 
-	width: 100%;
-
-	padding: 16px 36px;
+	background-color: $color-blue;
+	color: $color-orange;
 
 	text-align: center;
 
-	color: $color-orange;
+	padding: 16px 36px;
 
 	h1 {
-		font-family: Sabon-ItalicOsF, Garamond, serif;
+
+		@include font-copy();
 		font-style: italic;
-		font-size: 45px;
-		letter-spacing: 2px;
-		margin-bottom: 38px;
+
+		letter-spacing: em(0.07);
+		color: $color-orange;
+
+		font-size: em(30px); // 30 @ 1024
+
+		margin: em(15) 0;
+
 	}
 
 	h2 {
-		font-family: Montserrat-Bold;
-		font-size: 17px;
-		color: $color-white;
-		letter-spacing: 2px;
-		text-transform: uppercase;
 
-		margin-bottom: 50px;
+		@include font-heading();
+		line-height: 1.2;
+		font-size: 1em;
+
+		text-transform: uppercase;
+		letter-spacing: em(0.84);
+		color: white;
+
+		margin: em(15) 0;
 
 		a {
-			border-bottom: 2px solid $color-white;
+			display: inline-block;
+			border-bottom: 2px solid white;
 			padding-bottom: 7px;
 		}
 	}
 
 	ul {
+
 		list-style-type: none;
-		margin-bottom: 34px;
+		margin: em(30);
 
 		li {
 			display: inline;

@@ -2,8 +2,12 @@
 
 	<div class="background" style="background-image: url('{{ $page->image }}');"></div>
 
-	<blockquote class="balance-text">
-		{!! $content !!}
-	</blockquote>
+	<div class="container">
+
+		<blockquote class="balance-text">
+			{!! $content !!}
+		</blockquote>
+
+	</div>
 
 </section>

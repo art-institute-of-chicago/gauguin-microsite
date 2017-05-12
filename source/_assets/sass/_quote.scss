@@ -5,10 +5,16 @@ section.quote {
 	position: relative;
 	overflow: hidden;
 
+	.container {
+		@include container-absolute( 83%, 62% );
+	}
+
+	// Some browsers bug out when you mix flex + absolute
+
 	.background, blockquote {
 		position: absolute;
 		top: 50%; left: 50%;
-		transform: translate( -50%, -50%)
+		transform: translate( -50%, -50%);
 	}
 
 	.background {
@@ -26,30 +32,56 @@ section.quote {
 
 	blockquote {
 
-		font-family: 'Knockout', sans-serif;
+		@include font-copy();
+		letter-spacing: em(0.09px);
+		line-height: 1.3;
 
 		text-align: center;
-
-		font-size: 18px;
-		line-height: 2;
-
-		border: 1vw solid white;
 		color: white;
 
-		padding: 30px;
-		width: 80%;
+		border-color: white;
+		border-style: solid;
 
-		@media (min-width: 520px) {
-			font-size: 4.2vw;
-			padding: 4vw 10vw;
-			width: 70%;
+		// @320px, horizontal padding is 24px
+		// @1024px, horizontal padding is 50px
+		// We need to between() these values,
+		//   and adjust font size to match.
+
+		$border-width: 4px;
+
+		// $font-min: 16px; // TODO: Scale?
+		$font-max: 40px;
+
+		$pad-min: 25px;
+		$pad-max: 50px;
+
+		$width-min: 85%;
+		$width-max: 66%;
+
+		// The rest is automated calculation...
+		border-width: get-vw($border-width, $bp-smallest);
+		font-size: get-vw($font-max, $bp-smallest);
+		padding: get-vw($pad-min, $bp-smallest);
+		width: $width-min;
+
+		@media #{$mq-medium} {
+			border-width: get-vw($border-width, $bp-medium);
+			font-size: get-vw($font-max, $bp-medium);
+			padding: get-vw($pad-max, $bp-medium);
+			width: $width-max;
 		}
 
-		@media (min-width: 800px) {
-			border: 8px solid white;
-			font-size: 4.2vw;
+		@media #{$mq-large} {
+			border-width: get-vw($border-width, $bp-large);
+			font-size: get-vw($font-max, $bp-large);
+			padding: get-vw($pad-max, $bp-large);
 		}
 
+		@media #{$mq-xlarge} {
+			border-width: get-vw($border-width, $bp-xlarge);
+			font-size: get-vw($font-max, $bp-xlarge);
+			padding: get-vw($pad-max, $bp-xlarge);
+		}
 
 		p:first-of-type:before {
 			content: "“";

@@ -1,94 +1,128 @@
+// Mixin for the partial background
+@mixin theme-background( $color ) {
+
+	background: $color;
+
+	.wrapper {
+		background: $color;
+	}
+
+	@media #{$mq-small} {
+		background: linear-gradient(90deg, white 50%, $color 50%);
+	}
+
+}
+
 // Common styles shared by all the themes
 section.theme {
 
-	position: relative;
-
-	display: flex;
-
-	background: linear-gradient(90deg, white 50%, #DAEFE3 50%); // override me!
-
-	h2 {
-
-		position: absolute;
-		bottom: 70px;
-		left: 35px;
-
-		text-transform: uppercase;
-
-		font-family: 'Futura', sans-serif;
-		font-weight: bold;
-		color: #CC9A2C;
-
-		font-size: 16px;
-		line-height: 35px;
-		letter-spacing: 3.54px;
-
-		max-width: 10%;
-
+	.container {
+		position: relative;
+		display: flex;
 	}
 
-	.wrapper {
+	h2 {
+		@include font-accent();
+		letter-spacing: em(3.54);
+		line-height: 2.1;
 
-		align-self: stretch;
+		text-transform: uppercase;
+		color: #CC9A2C;
 
-		background: #DAEFE3; // override me!
-		margin-left: 120px; // between() me!
-		padding: 60px;  // between() me!
-
+		// Hidden on mobile
+		display: none;
 	}
 
 	h1 {
-		font-family: 'Futura', sans-serif;
-		letter-spacing: 0.6px;
-		line-height: 1.43;
-		font-size: 28px;
+		@include font-heading();
+		letter-spacing: em(0.6px);
+		line-height: 1.48;
 	}
 
 	p {
-		font-family: 'Amiri', serif;
-		color: #0B1333;
-
-		letter-spacing: 0.04px;
-		line-height: 29px;
-		font-size: 18px;
-
+		@include font-copy();
+		letter-spacing: em(0.04px);
 	}
 
-	h1, .content {
+	h1, img, .content {
 		margin: 30px 0;
 	}
 
+	img {
+		// TODO: Add min-height @media?
+		max-height: 80vh;
+	}
+
+	@media #{$mq-small} {
+
+		.wrapper {
+			align-self: stretch;
+			margin-left: 10%; // between() me!
+			padding-left: 10%;
+		}
+
+		h2 {
+			display: block;
+
+			position: absolute;
+			bottom: 2em;
+			left: 5%;
+
+			transform: translateX(-50%);
+
+			// Force it to wrap
+			max-width: 10%;
+		}
+	}
+
+
+	@media #{$mq-xlarge} {
+		h2 {
+			left: 10%;
+		}
+	}
+
 }
+
 
 section.theme-1-portrait {
 
+	@include theme-background(#DAEFE3);
+
 	.wrapper {
-
-		background: #DAEFE3;
-
 		display: flex;
-		flex-wrap: nowrap;
 		align-items: center;
+		flex-direction: column;
 		justify-content: space-between;
-
 	}
 
 	img {
-		max-width: 50%;
+		// TODO: Reconcile this with height
+		width: 100%;
+	}
+
+	@media #{$mq-smaller} {
+		.wrapper {
+			flex-direction: row;
+		}
+
+		img {
+			width: auto;
+			max-width: 50%;
+		}
 	}
 
 }
 
+
 section.theme-1-landscape {
 
+	@include theme-background(#E5F0DA);
+
 	.wrapper {
-
-		background: #E5F0DA;
-
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
-
 	}
 
 	.content {
@@ -100,10 +134,17 @@ section.theme-1-landscape {
 		max-width: 100%;
 	}
 
+
 }
 
-section.theme-2 {}
+section.theme-2 {
+	@include theme-background(#F9F5D3);
+}
 
-section.theme-3 {}
+section.theme-3 {
+	@include theme-background(#EEE0F1);
+}
 
-section.theme-4 {}
+section.theme-4 {
+	@include theme-background(#DFF5F3);
+}
