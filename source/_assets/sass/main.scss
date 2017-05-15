@@ -95,12 +95,11 @@ section {
 }
 
 
-
 // Buttons are used throughout the blocks
 // We can't specify classes in Markdown
 header a.btn,
-section.call-to-action ul a,
-section.shop p a {
+section.shop p a,
+section.call-to-action ul a {
 
 	display: inline-block;
 	background-color: $color-orange;
@@ -114,6 +113,10 @@ section.shop p a {
 	white-space: nowrap;
 
 	color: $color-blue;
+
+	// Non-header buttons
+	font-size: 0.7em;
+	padding: 0.7em 1.5em;
 
 	* {
 		line-height: 1;
@@ -132,11 +135,6 @@ section.shop p a {
 
 	}
 
-	&.btn-large {
-
-		font-size: 11px;
-
-	}
 
 }
 

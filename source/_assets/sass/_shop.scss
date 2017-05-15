@@ -3,50 +3,90 @@ section.shop {
 	position: relative;
 	background-color: #C2D9CC;
 
-	padding: 36px 0;
+	padding-bottom: 2em;
+
+	@media #{$mq-medium} {
+		padding-top: 2em;
+	}
 
 	.container {
-		display: flex;
-		justify-content: space-between;
+
+		@media #{$mq-medium} {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
 	}
 
 	.title {
 
 		flex-grow: 1;
 
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+
 		h2 {
-			font-size: 2em;
 			color: $color-blue;
+			font-size: 2em;
+			line-height: 1;
+			padding: 1em 0;
 		}
 
-		p {
-
-			a {
-				font-size: 0.8em;
-				letter-spacing: em(0.61px);
-				padding: 14px 18px;
-			}
+		@media #{$mq-medium} {
+			display: block;
+			margin-right: 2em;
 		}
+
 	}
 
 	.wrapper {
 
-		flex-grow: 1;
+		flex-grow: 3;
 
 		display: flex;
 		flex-wrap: wrap;
 
+		margin: -#{$mg-smallest};
+
+		@media #{$mq-medium} {
+			margin: -1em;
+		}
+
 		.shop-item {
 
-			width: 25%;
-			padding: 20px;
+			padding: $mg-smallest;
+
+			@media #{$mq-medium} {
+				padding: 1em;
+			}
+
+			width: 50%;
+
+			@media #{$mq-small} {
+				width: percentage(1/3);
+			}
+
+			@media #{$mq-smallish} {
+				width: percentage(1/4);
+			}
+
+			@media #{$mq-medium} {
+				width: percentage(1/3);
+			}
+
+			@media #{$mq-large} {
+				width: percentage(1/4);
+			}
 
 			a {
 
 				display: inline-block;
 				width: 100%;
 
-				.image {
+				.item-image {
 
 					background-color: #F8F8F8;
 					width: 100%;
@@ -58,26 +98,35 @@ section.shop {
 					background-size: contain;
 					background-repeat: no-repeat;
 
+					margin-bottom: 0.5em;
+
 				}
 
-				h4 {
+				.item-title {
 					font-family: 'Futura', sans-serif;
-					font-size: 24px;
+					font-size: 0.85em; // ~10px
+
+					@media #{$mq-medium} {
+						font-size: 1em;
+					}
+
 				}
 
 			}
 
-
-
-			p {
+			.item-price {
 				font-family: 'Futura', sans-serif;
 				font-weight: bold;
 				color: white;
 
-				font-size: 12px;
-				line-height: 35px;
-				letter-spacing: 3.54px;
+				font-size: 0.65em;
+				line-height: 3;
+
+				letter-spacing: em(1.59);
+
 			}
 		}
+
+
 	}
 }
