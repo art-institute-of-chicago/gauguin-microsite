@@ -1,4 +1,8 @@
 // Header's breakpoints are mostly independent of the other sections
+#header-placeholder {
+	background-color: $color-blue;
+	width: 100%;
+}
 
 header {
 
@@ -42,23 +46,26 @@ header {
 	position: relative;
 	z-index: 2;
 
-	background-color: $color-blue-dark;
+	background-color: $color-blue;
 	width: 100%;
 
-	padding: 16px 36px;
+	padding: 1em 0;
 
 	@include break-margins {
 		padding: 16px 20px;
 	}
 
-	// Applies to self and immediate child divs
-	// TODO: Wrap this in .container
-	justify-content: space-between;
+	.container {
 
-	&, > div {
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: center;
+		justify-content: space-between;
+
+		// Applies to self and immediate child divs
+		&, > div {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+
 	}
 
 	// Disable word-wrapping by default
@@ -74,6 +81,9 @@ header {
 
 		a {
 			display: inline-block;
+
+			// transition: height 0.25s;
+			width: 80px;
 			height: 80px;
 
 			img {
@@ -188,9 +198,18 @@ header {
 	}
 
 	&.sticky {
+
 		position: fixed;
 		top: 0;
 		left: 0;
+
+		padding-top: 6px;
+		padding-bottom: 6px;
+
+		.header-left a {
+			height: 44px;
+			width: 44px;
+		}
 	}
 
 }

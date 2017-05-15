@@ -1,3 +1,7 @@
 <section class="call-to-action">
-	{!! $content !!}
+	<div class="container">
+
+		{!! $content !!}
+
+	</div>
 </section>

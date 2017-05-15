@@ -1,6 +1,6 @@
 section.slideshow {
 
-	position: relative;
+	@include container-absolute( 90%, 45%, false );
 
 	.swiper-container {
 		position: absolute;
@@ -11,6 +11,7 @@ section.slideshow {
 	}
 
 	.swiper-slide {
+		// TODO: Change this depending @media
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -38,6 +39,8 @@ section.slideshow {
 		bottom: 80px;
 
 		width: 250px;
+		width: 550px;
+		height: 170px;
 
 		z-index: 2;
 

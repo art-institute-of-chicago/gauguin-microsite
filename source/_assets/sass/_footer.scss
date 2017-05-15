@@ -1,17 +1,21 @@
 footer {
 
-	background-color: $color-black;
-	width: 100%;
+	background-color: black;
+	color: white;
 
-	padding: 16px 36px;
+	padding: 50px 0;
 
-	justify-content: space-between;
+	.container {
 
-	// Applies to self and immediate child divs
-	&, > div {
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: center;
+		justify-content: space-between;
+
+		// Applies to self and immediate child divs
+		&, > div {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+
 	}
 
 	// Disable word-wrapping by default
@@ -19,18 +23,27 @@ footer {
 		white-space: nowrap;
 	}
 
-	.header-left {
+	.footer-left {
 
 		justify-content: flex-start;
-
-		flex-grow: 2;
 	}
 
-	.header-right {
+	.footer-right {
 
-		justify-content: space-between;
+		justify-content: flex-end;
 
-		flex-grow: 1;
+	}
+
+	// Social media icons
+	a {
+		display: inline-block;
+		font-size: 1em;
+		line-height: 1;
+
+		img {
+			height: 2em
+		}
+
 	}
 
 }
