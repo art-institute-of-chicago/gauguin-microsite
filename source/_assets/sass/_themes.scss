@@ -35,13 +35,13 @@ section.theme {
 
 	h1 {
 		@include font-heading();
-		letter-spacing: em(0.6px);
+		letter-spacing: em(0.6);
 		line-height: 1.48;
 	}
 
 	p {
 		@include font-copy();
-		letter-spacing: em(0.04px);
+		letter-spacing: em(0.04);
 	}
 
 	h1, img, .content {
@@ -97,7 +97,7 @@ section.theme-1-portrait {
 	}
 
 	img {
-		// TODO: Reconcile this with height
+		// TODO: Reconcile this with height?
 		width: 100%;
 	}
 
@@ -121,19 +121,31 @@ section.theme-1-landscape {
 
 	.wrapper {
 		display: flex;
+		align-items: center;
 		flex-direction: column;
-		flex-wrap: nowrap;
-	}
-
-	.content {
-		align-self: flex-end;
-		max-width: 50%; // between() me!
+		justify-content: space-between;
 	}
 
 	img {
-		max-width: 100%;
+		width: 100%;
 	}
 
+	@media #{$mq-small} {
+		.wrapper {
+			flex-wrap: nowrap;
+		}
+
+		.content {
+			align-self: flex-end;
+			max-width: 65%;
+		}
+	}
+
+	@media #{$mq-smallish} {
+		.content {
+			max-width: 50%;
+		}
+	}
 
 }
 
