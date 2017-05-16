@@ -17,7 +17,11 @@ elixir(function(mix) {
 
     mix.sass('main.scss')
         .sass('reset.scss')
-        .scripts(['main.js'], './source/js/main.js')
+        .scripts([
+            'slideshow.js',
+            'header.js',
+            'lightbox.js',
+        ], './source/js/main.js')
         .remove('source/**/*~')
         .exec(bin.path() + ' build ' + env, [
             './source/*',

@@ -24,6 +24,9 @@
 	<script src="//vjs.zencdn.net/5.11/video.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.3.2/Youtube.min.js"></script>
 
+	<!-- OpenSeadragon -->
+	<script src="https://cdn.jsdelivr.net/npm/openseadragon@2.2/build/openseadragon/openseadragon.min.js"></script>
+
 	<!-- Site-specific -->
 	<link href="css/main.css" rel="stylesheet">
 	<script src="js/main.js" type="text/javascript"></script>
