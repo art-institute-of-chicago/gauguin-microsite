@@ -47,15 +47,17 @@ elixir(function(mix) {
         '!./source/_assets/**/*'
     ]);
 
-    // Run a simple HTTP server on `port`
-    var server = httpServer.createServer({
-        root: './build_' + env
-    });
+    if (env != 'production') {
+	// Run a simple HTTP server on `port`
+	var server = httpServer.createServer({
+            root: './build_' + env
+	});
 
-    server.listen(port);
+	server.listen(port);
 
-    // Open the site in browser
-    open('http://localhost:' + port);
+	// Open the site in browser
+	open('http://localhost:' + port);
+    }
 
 
     // TODO: Add LiveReload?
