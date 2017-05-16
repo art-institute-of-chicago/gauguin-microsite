@@ -15,7 +15,6 @@ section.related {
 
 		@media #{$mq-medium} {
 			display: flex;
-			flex-wrap: wrap;
 			justify-content: space-between;
 		}
 
@@ -23,7 +22,7 @@ section.related {
 
 	.title {
 
-		flex-grow: 1;
+		flex-basis: 20%;
 
 		display: flex;
 		flex-wrap: wrap;
@@ -46,7 +45,7 @@ section.related {
 
 	.wrapper {
 
-		flex-grow: 3;
+		flex-basis: 80%;
 
 		display: flex;
 		flex-wrap: wrap;
