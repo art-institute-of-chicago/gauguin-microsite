@@ -59,6 +59,9 @@ function LightboxManager( ) {
 		$body.css('overflow-y','hidden');
 		$lightbox.addClass('opened');
 
+		// Scroll to the top of lightbox
+		$lightbox[0].scrollTop = 0;
+
 	}
 
 
