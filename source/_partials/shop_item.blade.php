@@ -1,4 +1,4 @@
-<div class="related-item shop-item">
+<div class="shop-item">
 
 	<a href="{{ $page->link }}">
 

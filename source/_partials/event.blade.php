@@ -1,4 +1,4 @@
-<div class="related-item event">
+<div class="event">
 
 	<h5>{{ $page->type }}</h5>
 
