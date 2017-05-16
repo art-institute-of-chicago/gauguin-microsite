@@ -1,107 +1,30 @@
 section.events {
 
-	position: relative;
 	background-color: #F9D3C2;
 
-	padding-bottom: 2em;
-	
-	@media #{$mq-medium} {
-		padding-top: 2em;
-	}
+	.event {
 
-	.container {
-
-		@media #{$mq-medium} {
-		        display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
+		h4 {
+			font-family: 'Futura', sans-serif;
+			font-size: 1.35em;
+			margin-bottom: 1.25em;
 		}
 
-	}
+		h5 {
+			font-family: 'Futura', sans-serif;
+			font-weight: bold;
+			color: #ffffff;
 
-	.title {
-
-		flex-grow: 1;
-
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-
-		h2 {
-			color: $color-blue;
-			font-size: 2em;
-			line-height: 1;
-			padding: 1em 0;
+			font-size: 0.66em;
+			height: 3em;
+			line-height: 1.5;
+			letter-spacing: 0.3em;
+			text-transform: uppercase;
 		}
 
-		@media #{$mq-medium} {
-			display: block;
-			margin-right: 2em;
-		}
-
-	}
-
-	.wrapper {
-
-		flex-grow: 3;
-
-		display: flex;
-		flex-wrap: wrap;
-
-		margin: -#{$mg-smallest};
-
-		@media #{$mq-medium} {
-			margin: -1em;
-		}
-
-		.event {
-
-			padding: $mg-smallest;
-
-			@media #{$mq-medium} {
-				padding: 1em;
-			}
-
-			width: 50%;
-
-			@media #{$mq-small} {
-				width: percentage(1/3);
-			}
-
-			@media #{$mq-smallish} {
-				width: percentage(1/4);
-			}
-
-			@media #{$mq-medium} {
-				width: percentage(1/3);
-			}
-
-			@media #{$mq-large} {
-				width: percentage(1/4);
-			}
-
-			h4 {
-				font-family: 'Futura', sans-serif;
-				font-size: 1.35em;
-				margin-bottom: 1.25em;
-			}
-
-			h5 {
-				font-family: 'Futura', sans-serif;
-				font-weight: bold;
-				color: #ffffff;
-
-				font-size: 0.66em;
-				height: 3em;
-				line-height: 1.5;
-				letter-spacing: 0.3em;
-				text-transform: uppercase;
-			}
-
-			strong {
-			    font-weight: bold;
-			}
+		strong {
+			font-weight: bold;
 		}
 	}
+
 }

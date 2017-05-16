@@ -1,4 +1,4 @@
-<section class="events">
+<section class="related events">
 	<div class="container">
 
 		<div class="title">
@@ -14,8 +14,8 @@
 				<?php $section = $event->section ?: 'content'; ?>
 
 				@include( $event->extends, [
-				'page' => $page->merge($event),
-				$section => $event->getContent()
+					'page' => $page->merge($event),
+					$section => $event->getContent()
 				])
 
 			@endforeach
