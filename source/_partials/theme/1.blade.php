@@ -5,7 +5,12 @@
 
 		<div class="wrapper">
 
-			<img src="images/content/{{ $page->image }}">
+			{{-- TODO: Add an @if --}}
+			<div class="image">
+				<a href="javascript:Lightbox.load('{{ $page->lightbox }}');" class="lightbox">
+					<img src="images/content/{{ $page->image }}"/>
+				</a>
+			</div>
 
 			<div class="content">
 
