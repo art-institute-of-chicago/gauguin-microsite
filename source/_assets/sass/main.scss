@@ -98,6 +98,7 @@ section {
 // Buttons are used throughout the blocks
 // We can't specify classes in Markdown
 header a.btn,
+section.events p a,
 section.shop p a,
 section.call-to-action ul a {
 
@@ -168,9 +169,12 @@ section.shop {
 @import 'video';
 @import 'themes';
 @import 'quote';
+
+@import 'related';
 @import 'events';
 @import 'resources';
 @import 'shop';
+
 @import 'call-to-action';
 @import 'footer';
 @import 'lightbox';

@@ -7,14 +7,12 @@ $(document).ready( function() {
 	}
 
 	// Get initial slide number
-	var initial = param('q') || 0;
+	var initial = param('q') || 1;
 
 	// Initialize the slideshow
 	var slideshow = new Swiper ('.swiper-container', {
 
 		loop: true,
-
-		initialSlide: 0, // zero-indexed, default is 0
 
 		onInit: function( swiper ) {
 			swiper.slideTo(initial, 0);

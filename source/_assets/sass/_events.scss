@@ -1,3 +1,32 @@
 section.events {
+
 	background-color: #F9D3C2;
+
+	.event {
+
+		@include related-item( 1, 2, 2, 3, 3, 3 );
+
+		h4 {
+			font-family: 'Futura', sans-serif;
+			font-size: 1.35em;
+			margin-bottom: 1.25em;
+		}
+
+		h5 {
+			font-family: 'Futura', sans-serif;
+			font-weight: bold;
+			color: #ffffff;
+
+			font-size: 0.66em;
+			height: 3em;
+			line-height: 1.5;
+			letter-spacing: 0.3em;
+			text-transform: uppercase;
+		}
+
+		strong {
+			font-weight: bold;
+		}
+	}
+
 }
