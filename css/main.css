@@ -1084,5 +1084,6 @@ footer a img {
   #lightbox #content {
     width: 33%;
     margin: 0;
+    padding: 0 1em;
   }
 }
