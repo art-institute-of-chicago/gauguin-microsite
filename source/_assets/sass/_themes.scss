@@ -33,30 +33,38 @@ section.theme {
 		display: none;
 	}
 
-	h1 {
-		@include font-heading();
-		letter-spacing: em(0.6);
-		line-height: 1.48;
+	.image {
+
+		img {
+			max-height: 80vh;
+		}
+
 	}
 
-	p {
-		@include font-copy();
-		letter-spacing: em(0.04);
+	.content {
+
+		// Weird, but needed for flexbox
+		width: 100%;
+
+		h1 {
+			@include font-heading();
+			letter-spacing: em(0.6);
+			line-height: 1.48;
+		}
+
+		p {
+			@include font-copy();
+			letter-spacing: em(0.04);
+		}
+
 	}
 
-	h1, img, .content {
-		margin: 30px 0;
+	// Spacing stuff... rethink this?
+	// Needs margin-top on "unfold" from column
+	h1, .image, .content {
+		margin-bottom: 30px;
 	}
 
-	// All images should be lightboxed, but just in case...
-	a.image {
-		display: block;
-	}
-
-	img {
-		// TODO: Add min-height @media?
-		max-height: 80vh;
-	}
 
 	@media #{$mq-small} {
 
@@ -101,20 +109,21 @@ section.theme-1-portrait {
 		justify-content: space-between;
 	}
 
-	img {
-		// TODO: Reconcile this with height?
+	.image, img {
 		width: 100%;
 	}
 
 	@media #{$mq-smaller} {
+
+		// TODO: Rethink spacing
+		h1, .image, .content {
+			margin-top: 30px;
+		}
+
 		.wrapper {
 			flex-direction: row;
 		}
 
-		img {
-			width: auto;
-			max-width: 50%;
-		}
 	}
 
 }

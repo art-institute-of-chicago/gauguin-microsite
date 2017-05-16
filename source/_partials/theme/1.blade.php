@@ -6,9 +6,11 @@
 		<div class="wrapper">
 
 			{{-- TODO: Add an @if --}}
-			<a href="javascript:Lightbox.load('{{ $page->lightbox }}');" class="image">
-				<img src="images/content/{{ $page->image }}"/>
-			</a>
+			<div class="image">
+				<a href="javascript:Lightbox.load('{{ $page->lightbox }}');" class="lightbox">
+					<img src="images/content/{{ $page->image }}"/>
+				</a>
+			</div>
 
 			<div class="content">
 
