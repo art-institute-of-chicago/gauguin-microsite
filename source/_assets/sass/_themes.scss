@@ -217,6 +217,68 @@ section.theme-2 {
 
 section.theme-3 {
 	@include theme-background(#EEE0F1);
+
+	.image, img {
+		max-height: 30vh;
+		max-width: 100%;
+		width: auto;
+	}
+
+	.image-1 {
+		order: 1;
+	}
+
+	.image-2 {
+		order: 2;
+	}
+
+	.content {
+		order: 3;
+	}
+
+	.image-3 {
+		order: 4;
+	}
+
+	@media #{$mq-smaller} {
+
+		.wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.image {
+			padding: 0 $theme-gutter/2;
+			align-self: flex-end;
+		}
+
+		.image-1 {
+			flex-basis: 35%;
+			order: 1;
+		}
+
+		.image-2 {
+			flex-basis: 42%;
+			order: 2;
+		}
+
+		.image-3 {
+			flex-basis: 23%;
+			order: 3;
+		}
+
+		.content {
+			flex-basis: 60%;
+			order: 4;
+		}
+
+		// TODO: Fix stretching
+		img {
+			width: 100%;
+		}
+
+	}
+
 }
 
 section.theme-4 {
