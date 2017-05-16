@@ -181,6 +181,20 @@ header {
 
 			}
 
+			@media #{$mq-medium} {
+
+				text-align: center;
+
+				.start, .end {
+					display: block;
+				}
+
+				.dash {
+					display: none;
+				}
+
+			}
+
 		}
 
 		.btn-member {

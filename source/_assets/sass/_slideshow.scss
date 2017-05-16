@@ -38,25 +38,25 @@ section.slideshow {
 		right: 0;
 		bottom: 80px;
 
-		width: 250px;
-		width: 550px;
-		height: 170px;
-
 		z-index: 2;
 
 		background-color: #D1E5D9;
 
-		padding: 24px;
+		padding: 1em 1.5em;
+
+		// TODO: Change this!
+		padding-right: 20%;
+		width: 45%;
 
 		h2 {
 			font-family: 'Montserrat', sans-serif;
 			font-weight: bold;
 
 			text-transform: uppercase;
-			letter-spacing: 5px;
+			letter-spacing: em(4);
 
 			line-height: 1.2;
-			font-size: 16px;
+			font-size: 1.6em;
 
 			color: #649D8E;
 		}
@@ -66,12 +66,12 @@ section.slideshow {
 			font-weight: bold;
 
 			text-transform: uppercase;
-			letter-spacing: 5px;
+			letter-spacing: em(5);
 
 			line-height: 1;
-			font-size: 11px;
+			font-size: 1em;
 
-			margin: 15px 0;
+			margin: 0.9em 0;
 
 			color: #F889A6;
 		}
@@ -94,7 +94,7 @@ section.slideshow {
 					font-family: 'Sabon', Garamond, serif;
 					font-style: italic;
 
-					font-size: 11px;
+					font-size: 0.8em;
 
 				}
 
@@ -103,9 +103,9 @@ section.slideshow {
 					font-family: 'Knockout', sans-serif;
 
 					text-transform: uppercase;
-					letter-spacing: 1.1px;
+					letter-spacing: em(1.1);
 
-					font-size: 9px;
+					font-size: 0.7em;
 
 				}
 

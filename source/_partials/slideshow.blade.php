@@ -21,7 +21,7 @@
 
 	<div class="title-card">
 
-		<h2>Defy Definition</h2>
+		<h2>Defy<br/>Definition</h2>
 		<h1>Gauguin</h1>
 
 		<div class="events">
