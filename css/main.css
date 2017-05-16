@@ -1071,6 +1071,12 @@ footer a img {
   }
 }
 
+#lightbox #content a.collection {
+  text-decoration: underline;
+  color: #03568B;
+  font-size: 1.6em;
+}
+
 @media (min-width: 48em) {
   #lightbox.opened {
     -webkit-box-orient: horizontal;
