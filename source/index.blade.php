@@ -31,6 +31,9 @@
 
 	<script id="artwork-{{ $artwork->id }}" type="text/template">
 	{!! $artwork->getContent() !!}
+
+	<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
+
 	</script>
 
 @endforeach
