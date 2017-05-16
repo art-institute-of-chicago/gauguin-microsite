@@ -144,7 +144,14 @@ section.theme-1-landscape {
 		width: 100%;
 	}
 
+	// TODO: Rethink spacing?
+	.image {
+		margin-top: 30px;
+		width: 100%;
+	}
+
 	@media #{$mq-small} {
+
 		.wrapper {
 			flex-wrap: nowrap;
 		}
