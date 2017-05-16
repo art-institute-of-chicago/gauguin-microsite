@@ -1,9 +1,7 @@
 ---
 extends: "_partials.theme.1"
 orientation: "portrait"
-#weight: 300
-weight: 0
-showOnly: true
+weight: 300
 theme: "Becoming Gauguin"
 title: "An artist searching for  a new direction"
 image: "casket.png"
