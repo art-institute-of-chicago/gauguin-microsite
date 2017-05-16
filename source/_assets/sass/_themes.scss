@@ -1,14 +1,16 @@
+// General spacing b/w elements
+$theme-gutter: 30px;
+
+// Gap on the left on non-mobile screens
+$theme-offset: 10%;
+
 // Mixin for the partial background
 @mixin theme-background( $color ) {
 
 	background: $color;
 
-	.wrapper {
-		background: $color;
-	}
-
 	@media #{$mq-small} {
-		background: linear-gradient(90deg, white 50%, $color 50%);
+		background: linear-gradient(90deg, white $theme-offset, $color $theme-offset);
 	}
 
 }
@@ -18,9 +20,12 @@ section.theme {
 
 	.container {
 		position: relative;
-		display: flex;
+
+		// Spacing stuff... should be 2x .wrapper's margin
+		padding: $theme-gutter 0;
 	}
 
+	// Thematic topic
 	h2 {
 		@include font-accent();
 		letter-spacing: em(3.54);
@@ -33,11 +38,26 @@ section.theme {
 		display: none;
 	}
 
-	.image {
+	// Everything collapses into a column on mobile
+	.wrapper {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
 
-		img {
-			max-height: 80vh;
+		// More spacing stuff...
+		margin: $theme-gutter/-2 0;
+
+		> * {
+			margin: $theme-gutter/2 0;
 		}
+	}
+
+
+	.image, img {
+
+		max-height: 80vh;
+		width: 100%;
 
 	}
 
@@ -50,6 +70,9 @@ section.theme {
 			@include font-heading();
 			letter-spacing: em(0.6);
 			line-height: 1.48;
+
+			// Last spacing stuff...
+			margin-bottom: $theme-gutter;
 		}
 
 		p {
@@ -59,19 +82,12 @@ section.theme {
 
 	}
 
-	// Spacing stuff... rethink this?
-	// Needs margin-top on "unfold" from column
-	h1, .image, .content {
-		margin-bottom: 30px;
-	}
-
-
 	@media #{$mq-small} {
 
 		.wrapper {
 			align-self: stretch;
-			margin-left: 10%; // between() me!
-			padding-left: 10%;
+			margin-left: $theme-offset;
+			padding-left: $theme-offset;
 		}
 
 		h2 {
@@ -102,23 +118,7 @@ section.theme-1-portrait {
 
 	@include theme-background(#DAEFE3);
 
-	.wrapper {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-
-	.image, img {
-		width: 100%;
-	}
-
 	@media #{$mq-smaller} {
-
-		// TODO: Rethink spacing
-		h1, .image, .content {
-			margin-top: 30px;
-		}
 
 		.wrapper {
 			flex-direction: row;
@@ -132,23 +132,6 @@ section.theme-1-portrait {
 section.theme-1-landscape {
 
 	@include theme-background(#E5F0DA);
-
-	.wrapper {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-
-	img {
-		width: 100%;
-	}
-
-	// TODO: Rethink spacing?
-	.image {
-		margin-top: 30px;
-		width: 100%;
-	}
 
 	@media #{$mq-small} {
 
@@ -180,4 +163,50 @@ section.theme-3 {
 
 section.theme-4 {
 	@include theme-background(#DFF5F3);
+
+	.image, img {
+		max-height: 30vh;
+		max-width: 100%;
+		width: auto;
+	}
+
+	.image-1 {
+		order: 1;
+	}
+
+	.image-2 {
+		order: 2;
+	}
+
+	.content {
+		order: 3;
+	}
+
+	.image-3 {
+		order: 4;
+	}
+
+	.image-4 {
+		order: 5;
+	}
+
+
+	@media #{$mq-smaller} {
+
+		.wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.image {
+			flex-basis: 50%;
+			padding: 0 $theme-gutter/2;
+		}
+
+		img {
+			width: 100%;
+		}
+
+	}
+
 }
