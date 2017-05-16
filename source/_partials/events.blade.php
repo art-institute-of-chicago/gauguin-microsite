@@ -1,24 +1,26 @@
 <section class="events">
+	<div class="container">
 
-	<div class="title">
-		<h2>Upcoming Events</h2>
+		<div class="title">
+			<h2>Upcoming Events</h2>
 
-		<p><a href="{{ $page->link }}">See all events</a></p>
-	</div>
+			<p><a href="{{ $page->link }}">See all events</a></p>
+		</div>
 
-	<div class="wrapper">
+		<div class="wrapper">
 
-		@foreach ($events->slice(0,6) as $event)
+			@foreach ($events->slice(0,6) as $event)
 
-			<?php $section = $event->section ?: 'content'; ?>
+				<?php $section = $event->section ?: 'content'; ?>
 
-			@include( $event->extends, [
+				@include( $event->extends, [
 				'page' => $page->merge($event),
 				$section => $event->getContent()
-			])
+				])
 
-		@endforeach
+			@endforeach
+
+		</div>
 
 	</div>
-
 </section>
