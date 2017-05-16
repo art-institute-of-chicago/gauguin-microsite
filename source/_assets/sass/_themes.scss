@@ -85,7 +85,6 @@ section.theme {
 	@media #{$mq-small} {
 
 		.wrapper {
-			align-self: stretch;
 			margin-left: $theme-offset;
 			padding-left: $theme-offset;
 		}
@@ -155,6 +154,65 @@ section.theme-1-landscape {
 
 section.theme-2 {
 	@include theme-background(#F9F5D3);
+
+	.image-1 {
+		order: 1;
+	}
+
+	.image-2 {
+		order: 2;
+	}
+
+	.content {
+		order: 3;
+	}
+
+	@media #{$mq-smaller} {
+
+		.wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.image {
+			flex-basis: 50%;
+			padding: 0 $theme-gutter/2;
+		}
+
+		// TODO: Fix stretching
+		img {
+			width: 100%;
+		}
+
+	}
+
+	@media #{$mq-medium} {
+
+		.image, .content {
+			padding: 0 $theme-gutter/2;
+		}
+
+		.image {
+			align-self: flex-start;
+		}
+
+		.image-1 {
+			flex-basis: percentage(1/3);
+		}
+
+		.image-2 {
+			flex-basis: percentage(1/4);
+		}
+
+		.content {
+			flex-basis: percentage(1 - 1/3 - 1/4);
+
+			// A bit of an ugly fix...
+			padding-top: 25%;
+		}
+
+	}
+
 }
 
 section.theme-3 {
@@ -203,6 +261,7 @@ section.theme-4 {
 			padding: 0 $theme-gutter/2;
 		}
 
+		// TODO: Fix stretching
 		img {
 			width: 100%;
 		}
