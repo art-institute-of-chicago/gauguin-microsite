@@ -114,8 +114,8 @@ section.theme {
 
 // Single-image themes default to portrait,
 // Unless `variant` is set to "landscape"
-section.theme-1:not(.theme-1-landscape),
-section.theme-1-portrait {
+section.theme-1:not(.theme-landscape),
+section.theme-1.theme-portrait {
 
 	@include theme-background(#DAEFE3);
 
@@ -130,7 +130,7 @@ section.theme-1-portrait {
 }
 
 
-section.theme-1-landscape {
+section.theme-1.theme-landscape {
 
 	@include theme-background(#E5F0DA);
 
