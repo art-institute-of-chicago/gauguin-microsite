@@ -37,7 +37,6 @@ elixir(function(mix) {
     );
 
     // Remove any emacs backup files
-
     mix.remove('source/**/*~');
 
     // Run Jigsaw
@@ -47,16 +46,19 @@ elixir(function(mix) {
         '!./source/_assets/**/*'
     ]);
 
+    // Don't run the server in production
     if (env != 'production') {
-	// Run a simple HTTP server on `port`
-	var server = httpServer.createServer({
+
+        // Run a simple HTTP server on `port`
+        var server = httpServer.createServer({
             root: './build_' + env
-	});
+        });
 
-	server.listen(port);
+        server.listen(port);
 
-	// Open the site in browser
-	open('http://localhost:' + port);
+        // Open the site in browser
+        open('http://localhost:' + port);
+
     }
 
 
