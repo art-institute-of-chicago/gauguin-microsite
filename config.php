@@ -10,6 +10,9 @@ return [
 		'shop' => [
 			'sort' => 'weight'
 		],
+		'resources' => [
+			'sort' => 'weight'
+		],
 		'artworks',
 		'events',
 	],
