@@ -1,4 +1,13 @@
-<section class="theme theme-4">
+<?php
+
+	// For single-image themes, `variant` is required in YAML.
+	// Set it to either "portrait" or "landscape"
+	// If it's omitted, CSS will default it to "portrait"
+	$variant = $page->variant ? ' theme-' . $page->variant : '';
+
+?>
+
+<section class="theme theme-{{ count($page->images) }}{{ $variant }}">
 	<div class="container">
 
 		<h2>{{ $page->theme }}</h2>

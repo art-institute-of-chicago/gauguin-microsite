@@ -1,5 +1,5 @@
 ---
-extends: "_partials.theme.2"
+extends: "_partials.theme"
 weight: 600
 theme: "Tahiti: First Explorations"
 title: "Gauguin is known for his images of Tahiti as a paradise"
