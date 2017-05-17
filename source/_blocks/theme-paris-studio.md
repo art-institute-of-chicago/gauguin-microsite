@@ -1,5 +1,5 @@
 ---
-extends: "_partials.theme.3"
+extends: "_partials.theme"
 weight: 700
 theme: "Gauguin's Paris Studio"
 title: "In Paris, Gauguin had to teach his audience to understand"
