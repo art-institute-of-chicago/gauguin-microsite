@@ -1,6 +1,6 @@
 section.slideshow {
 
-	@include container-absolute( 90%, 45%, false );
+	@include container-absolute( 45%, 45%, false );
 
 	.swiper-container {
 		position: absolute;
@@ -33,20 +33,34 @@ section.slideshow {
 	}
 
 	.title-card {
+		background-color: #D1E5D9;
 
+		// Balance out .swiper-pagination
 		position: absolute;
 		right: 0;
-		bottom: 80px;
+		bottom: 41px;
 
 		z-index: 2;
 
-		background-color: #D1E5D9;
-
 		padding: 1em 1.5em;
 
-		// TODO: Change this!
+		width: 20.5em;
+
+		@media #{$mq-smallest} {
+			width: between(20.5em, 26em, $bp-smallest, $mq-medium);
+		}
+
+		@media #{$mq-medium} {
+			width: 26em;
+		}
+
+
+		// TODO: Change this?
 		padding-right: 20%;
-		width: 45%;
+
+
+
+		// width: 45%; // On desktop
 
 		h2 {
 			font-family: 'Montserrat', sans-serif;
