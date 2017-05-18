@@ -36,10 +36,12 @@ section.call-to-action {
 		letter-spacing: em(0.84);
 		color: white;
 
-		margin: 1em 0;
-		width: 75%;
+		// Margins don't collapse in flex...
+		// We'll assume h1 and ul have margins!
 
+		// Adjust these for larger screens
 		font-size: 1em;
+		width: 75%;
 
 		a {
 			display: inline-block;
@@ -51,17 +53,21 @@ section.call-to-action {
 	// Buttons! See also main.scss
 	ul {
 
+		display: flex;
+		flex-direction: column;
+
 		list-style-type: none;
-		margin: 2em 0;
+		margin: 1.5em 0;
 
 		li {
 			display: block;
-			margin: 1.5em 0;
+			margin: 0.75em;
 		}
 
 		a {
-			// letter-spacing: em(0.61);
-			// padding: 14px 18px;
+			letter-spacing: em(0.92);
+			font-size: 1em;
+			padding: 1em 2em;
 		}
 	}
 
@@ -69,14 +75,38 @@ section.call-to-action {
 	h3 {
 		font-family: 'Didact Gothic', sans-serif;
 		text-transform: uppercase;
-		font-size: 19px;
-		letter-spacing: 2px;
-		margin-bottom: 17px;
+		letter-spacing: em(1.1);
+
+		font-size: 1.165em;
+		margin-bottom: 1em;
 	}
 
 	// Museum hours
 	p {
-		margin-bottom: 15px;
+		font-size: 1em;
+		margin-bottom: 1em;
+	}
+
+	@media #{$mq-smallish} {
+
+		ul {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		ul a {
+			font-size: 0.875em;
+			padding: 0.875em 1.5em;
+		}
+
+	}
+
+	@media #{$mq-medium} {
+
+		h2 {
+			font-size: 1.1em;
+		}
+
 	}
 
 }
