@@ -43,7 +43,7 @@ $base-font-size: 1em;
 // Fonts - calibrated to theme blocks
 // heading is 1.4 of copy @ 320, 1.5555 @ 1024
 @mixin font-heading() {
-	font-family: 'Futura', sans-serif;
+	font-family: 'Didact Gothic', sans-serif;
 	font-weight: normal;
 	font-size: 1.4em;
 
@@ -57,7 +57,7 @@ $base-font-size: 1em;
 }
 
 @mixin font-accent() {
-	font-family: 'Futura', sans-serif;
+	font-family: 'Didact Gothic', sans-serif;
 	font-weight: bold;
 	font-size: (16/18) * 1em;
 }
