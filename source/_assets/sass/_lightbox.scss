@@ -85,7 +85,6 @@
 		// Top part of tombstone
 		> p:first-of-type {
 			font-size: 0.85em;
-			// margin: 0.75em 0;
 		}
 
 		// Title of the artwork
@@ -100,7 +99,6 @@
 
 		// Curatorial description
 		blockquote {
-
 
 			p {
 				font-size: 0.75em;
@@ -198,7 +196,6 @@
 				// Determines how long it takes for the lightbox to expand!
 				transition: max-height 0.25s cubic-bezier(0, 0.18, 1, -0.2), margin 0.25s cubic-bezier(0, 0.18, 1, 0.04);
 				max-height: 20em;
-				// margin: 1.2em 0;
 				margin-bottom: 0.75em;
 			}
 
@@ -209,10 +206,6 @@
 
 			blockquote {
 				margin: 0;
-			}
-
-			blockquote p {
-				// margin: 1em 0;
 			}
 
 			h1 {
