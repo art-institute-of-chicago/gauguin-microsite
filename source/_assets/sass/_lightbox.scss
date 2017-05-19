@@ -1,24 +1,3 @@
-// Lightbox needs a scrollbar for cases where the description is too long,
-//   but we don't want a double-scroll bar w/ html/body
-// Typically we'd disable body overflow-y on Lightbox.open(),
-//   but if we want the lightbox to transition,
-//   that'd cause the body to "jump" as its scroll is toggled.
-// So instead, we are abusing the fact that fixed elements
-//   should ignore underlying scrollbars.
-
-html, body {
-	overflow-y: hidden;
-	height: 100%;
-}
-
-#not-a-lightbox {
-	overflow-y: scroll;
-	height: 100%;
-
-	// https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
-	-webkit-overflow-scrolling: touch;
-}
-
 #lightbox {
 
 	position: fixed;
@@ -37,9 +16,6 @@ html, body {
 	// main.js will show the lightbox
 	pointer-events: none;
 	opacity: 0;
-
-	// TODO: Rethink these transition styles? Matrix transform?
-	transition: opacity 0.25s ease-in, transform 0.25s ease-in;
 	transform: scale(0);
 
 	// Toggle when the lightbox is opened

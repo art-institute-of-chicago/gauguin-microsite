@@ -11,6 +11,7 @@ $(document).ready(function() {
 function LightboxManager( ) {
 
 	// Capture elements
+	$body = $('body');
 	$lightbox = $('#lightbox');
 
 	$viewer = $('#viewer');
@@ -53,6 +54,7 @@ function LightboxManager( ) {
 		});
 
 	    // Show the lightbox
+		$body.css('overflow-y','hidden');
 		$lightbox.addClass('opened');
 
 		// Scroll to the top of lightbox
@@ -64,6 +66,7 @@ function LightboxManager( ) {
 	function close() {
 
 		// Hide the lightbox
+		$body.css('overflow-y','');
 		$lightbox.removeClass('opened');
 
 	}

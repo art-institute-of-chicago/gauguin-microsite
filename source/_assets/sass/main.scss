@@ -5,6 +5,12 @@
 @import 'func';
 
 // Some reasonable global settings...
+html, body {
+
+	overflow-x: hidden;
+
+}
+
 body {
 
 	@include font-copy();
