@@ -33,12 +33,10 @@ function LightboxManager( ) {
 		// zoomPerScroll: Math.pow(maxZoomLevel, 1/6),
 		// maxZoomLevel: maxZoomLevel,
 
-		showFullPageControl: false,
+		// TODO: Replace w/ custom buttons on desktop
+		showNavigationControl: false,
 
 	});
-
-
-	// tileSources:
 
 
 	function open( id ) {
@@ -73,10 +71,17 @@ function LightboxManager( ) {
 
 	}
 
+
+	function expand( ) {
+		$lightbox.toggleClass('expanded');
+	}
+
+
 	// Expose public methods
 	return {
 		load: open,
 		unload: close,
+		expand: expand,
 	}
 
 }
