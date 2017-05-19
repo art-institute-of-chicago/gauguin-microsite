@@ -229,6 +229,10 @@
 
 		}
 
+		.btn-close {
+			visibility: hidden;
+		}
+
 	}
 
 	@media #{$mq-smallish} {
