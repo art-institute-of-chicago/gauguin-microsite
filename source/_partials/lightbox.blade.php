@@ -49,10 +49,6 @@
 		{{-- OpenSeadragon viewer --}}
 	</div>
 
-	{{-- This is just the white faded-out background --}}
-	{{-- On "Read More", its height animates to cover the whole screen --}}
-	<div id="overlay"></div>
-
 	{{-- This is in a separate div b/c it needs to be relative to wrapper  --}}
 	<div id="content">
 		{{-- Content of the _artworks will be inserted here --}}
