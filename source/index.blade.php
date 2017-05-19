@@ -34,6 +34,14 @@
 
 	<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
 
+	<a href="javascript:Lightbox.expand()" class="btn-expand btn-show">
+		<span>Read More</span>
+	</a>
+
+	<a href="javascript:Lightbox.expand()" class="btn-expand btn-hide">
+		<span>Hide</span>
+	</a>
+
 	</script>
 
 @endforeach
@@ -65,8 +73,15 @@
 		{{-- OpenSeadragon viewer --}}
 	</div>
 
+	{{-- This is just the white faded-out background --}}
+	{{-- On "Read More", its height animates to cover the whole screen --}}
+	<div id="overlay"></div>
+
+	{{-- This is in a separate div b/c it needs to be relative to wrapper  --}}
 	<div id="content">
 		{{-- Content of the _artworks will be inserted here --}}
+		{{-- Don't hard-code any other elements inside here, they'll be replaced --}}
+		{{-- Instead, put them in the <script> tag in @foreach $artworks --}}
 	</div>
 
 </div>
