@@ -192,6 +192,11 @@
 				margin-bottom: 0.75em;
 			}
 
+			// Special margins for the Collections link
+			> p:last-of-type {
+				margin-bottom: 1.65em;
+			}
+
 			blockquote {
 				margin: 0;
 			}
