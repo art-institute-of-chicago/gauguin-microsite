@@ -204,27 +204,32 @@
 				margin-top: 0.75em;
 			}
 
+			a.collection {
+				position: relative;
+				z-index: 10;
+			}
+
 			.btn-expand {
 
-				width: auto;
-				height: auto;
+				// width: auto;
+				// height: auto;
 
 				span, &:after {
-					// visibility: hidden;
+					visibility: hidden;
 				}
 
 				&.btn-hide {
-					visibility: visible;
+					// visibility: visible;
 				}
 
 				&.btn-show {
-					visibility: hidden;
+					// visibility: hidden;
 				}
 
 			}
 
 			.btn-expand-invisible {
-				flex-grow: 1;
+				// flex-grow: 1;
 			}
 
 		}
