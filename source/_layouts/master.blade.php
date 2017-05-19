@@ -46,7 +46,17 @@
 
 <body>
 
-@yield('body')
+
+{{-- We need this to prevent a jump on scrollbar transition w/ overflow-y --}}
+<div id="not-a-lightbox">
+
+	@yield('body')
+
+</div>
+
+{{-- Add templates for lightbox and artworks --}}
+@include('_partials.lightbox')
+
 
 </body>
 

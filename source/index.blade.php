@@ -24,7 +24,4 @@
 
 @endforeach
 
-{{-- Add templates for lightbox and artworks --}}
-@include('_partials.lightbox')
-
 @endsection
