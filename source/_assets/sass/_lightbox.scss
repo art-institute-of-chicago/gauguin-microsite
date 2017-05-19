@@ -55,10 +55,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 
-		// Also used to align absolute elements..?
-		$padding: 0.75em;
-
-		padding: $padding;
+		padding: 0.75em;
 
 		// Override this for desktop
 		position: absolute;
@@ -193,10 +190,17 @@
 			height: 100%;
 
 			p {
+
 				// Determines how long it takes for the lightbox to expand!
-				transition: max-height 0.25s cubic-bezier(0, 0.18, 1, -0.2), margin 0.25s cubic-bezier(0, 0.18, 1, 0.04);
+				// Has interesting interactions w/ max-height proportion to actual height
+				$curve: cubic-bezier(0, 0.2, 1, 0);
+				$time: 0.25s;
+
+				transition: max-height #{$time} #{$curve}, margin #{$time} #{$curve};
+
 				max-height: 20em;
 				margin-bottom: 0.75em;
+
 			}
 
 			// Special margins for the Collections link
@@ -221,10 +225,6 @@
 
 				width: auto;
 				height: auto;
-
-				span, &:after {
-					// visibility: hidden;
-				}
 
 				&.btn-hide {
 					visibility: visible;
