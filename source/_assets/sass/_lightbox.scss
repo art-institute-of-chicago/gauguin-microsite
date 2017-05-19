@@ -35,12 +35,15 @@ html, body {
 	pointer-events: none;
 	opacity: 0;
 
-	transition: opacity 0.5s ease-in;
+	// TODO: Rethink these transition styles? Matrix transform?
+	transition: opacity 0.25s ease-in, transform 0.25s ease-in;
+	transform: scale(0);
 
 	// Toggle when the lightbox is opened
 	&.opened {
 		pointer-events: auto;
 		opacity: 1;
+		transform: scale(1);
 
 		display: flex;
 		align-items: center;
