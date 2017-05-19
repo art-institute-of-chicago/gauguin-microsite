@@ -1,3 +1,21 @@
+// Lightbox needs a scrollbar for cases where the description is too long,
+//   but we don't want a double-scroll bar w/ html/body
+// Typically we'd disable body overflow-y on Lightbox.open(),
+//   but if we want the lightbox to transition,
+//   that'd cause the body to "jump" as its scroll is toggled.
+// So instead, we are abusing the fact that fixed elements
+//   should ignore underlying scrollbars.
+
+html, body {
+	overflow-y: hidden;
+	height: 100%;
+}
+
+#not-a-lightbox {
+	overflow-y: scroll;
+	height: 100%;
+}
+
 #lightbox {
 
 	position: fixed;
@@ -14,15 +32,18 @@
 	overflow-y: scroll;
 
 	// main.js will show the lightbox
-	visibility: hidden;
+	pointer-events: none;
 	opacity: 0;
 
-	transition: opacity 0.5s ease-in;
+	// TODO: Rethink these transition styles? Matrix transform?
+	transition: opacity 0.25s ease-in, transform 0.25s ease-in;
+	transform: scale(0);
 
 	// Toggle when the lightbox is opened
 	&.opened {
-		visibility: visible;
+		pointer-events: auto;
 		opacity: 1;
+		transform: scale(1);
 
 		display: flex;
 		align-items: center;
@@ -85,7 +106,6 @@
 		// Top part of tombstone
 		> p:first-of-type {
 			font-size: 0.85em;
-			// margin: 0.75em 0;
 		}
 
 		// Title of the artwork
@@ -99,15 +119,24 @@
 		}
 
 		// Curatorial description
-		blockquote p {
+		blockquote {
 
-			font-size: 0.75em;
+			p {
+				font-size: 0.75em;
+				margin: 0;
 
-			// Show only the first 2 lines
-			// Based on line-height: 1.5em
-			display: block;
-			max-height: 3em;
-			margin: 0;
+				// Hide all non-first paragraphs
+				// For multi-paragraph descriptions
+				max-height: 0em;
+			}
+
+			p:first-of-type {
+
+				// Show only the first 2 lines
+				// Based on line-height: 1.5em
+				max-height: 3em;
+
+			}
 
 			// Alas, this doesn't work:
 			// word-wrap: break-word;
@@ -188,16 +217,16 @@
 				// Determines how long it takes for the lightbox to expand!
 				transition: max-height 0.25s cubic-bezier(0, 0.18, 1, -0.2), margin 0.25s cubic-bezier(0, 0.18, 1, 0.04);
 				max-height: 20em;
-				// margin: 1.2em 0;
 				margin-bottom: 0.75em;
+			}
+
+			// Special margins for the Collections link
+			> p:last-of-type {
+				margin-bottom: 1.65em;
 			}
 
 			blockquote {
 				margin: 0;
-			}
-
-			blockquote p {
-				// margin: 1em 0;
 			}
 
 			h1 {
@@ -211,25 +240,25 @@
 
 			.btn-expand {
 
-				// width: auto;
-				// height: auto;
+				width: auto;
+				height: auto;
 
 				span, &:after {
-					visibility: hidden;
+					// visibility: hidden;
 				}
 
 				&.btn-hide {
-					// visibility: visible;
+					visibility: visible;
 				}
 
 				&.btn-show {
-					// visibility: hidden;
+					visibility: hidden;
 				}
 
 			}
 
 			.btn-expand-invisible {
-				// flex-grow: 1;
+				flex-grow: 1;
 			}
 
 		}
