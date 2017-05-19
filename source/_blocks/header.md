@@ -1,5 +1,5 @@
 ---
-extends: _partials.header
+extends: "_partials.header"
 weight: 100
 dates:
   start: "June 25"

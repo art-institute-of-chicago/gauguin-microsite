@@ -1,7 +1,7 @@
 ---
-extends: _partials.resource
+extends: "_partials.resource"
 weight: 10
-title: Title for this resource
-type: OSCI
-link: http://publications.artic.edu
+title: "Title for this resource"
+type: "OSCI"
+link: "http://publications.artic.edu"
 ---

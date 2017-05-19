@@ -1,5 +1,5 @@
 ---
-extends: _partials.events
+extends: "_partials.events"
 weight: 1100
-link: http://www.artic.edu/calendar?keyword=gauguin
+link: "http://www.artic.edu/calendar?keyword=gauguin"
 ---

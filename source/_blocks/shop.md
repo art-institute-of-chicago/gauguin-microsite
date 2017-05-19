@@ -1,5 +1,5 @@
 ---
-extends: _partials.shop
+extends: "_partials.shop"
 weight: 1300
-link: http://www.artinstituteshop.org/browse.aspx?view=bestSellers#!/products
+link: "http://www.artinstituteshop.org/browse.aspx?view=bestSellers#!/products"
 ---

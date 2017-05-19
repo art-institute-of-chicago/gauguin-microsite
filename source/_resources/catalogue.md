@@ -1,7 +1,7 @@
 ---
-extends: _partials.resource
+extends: "_partials.resource"
 weight: 40
-title: Gauguin Catalogue
-type: Catalogue
-link: http://www.artinstituteshop.org
+title: "Gauguin Catalogue"
+type: "Catalogue"
+link: "http://www.artinstituteshop.org"
 ---

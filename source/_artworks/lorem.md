@@ -1,5 +1,5 @@
 ---
-id: lorem
+id: "lorem"
 link: "http://www.artic.edu/aic/collections/artwork/60812"
 image: "http://bit.ly/2qwRSvn"
 ---

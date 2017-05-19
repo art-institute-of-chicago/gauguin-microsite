@@ -1,8 +1,8 @@
 section.resources {
 
-    background-color: #DDB195;
+	background-color: #DDB195;
 
-    	.resource {
+		.resource {
 
 		@include related-item( 1, 2, 2, 3, 3, 3 );
 

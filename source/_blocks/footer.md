@@ -1,4 +1,4 @@
 ---
-extends: _partials.footer
+extends: "_partials.footer"
 weight: 1500
 ---

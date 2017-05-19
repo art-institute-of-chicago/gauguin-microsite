@@ -7,13 +7,13 @@
 	</a>
 
 	@if ($page->image)
-        @if ($page->link)
-            <a href="{{ $page->link }}">
-        @endif
-        <img src="{{ $page->image }}"/></a>
-        @if ($page->link)
-            </a>
-        @endif
+		@if ($page->link)
+			<a href="{{ $page->link }}">
+		@endif
+		<img src="{{ $page->image }}"/></a>
+		@if ($page->link)
+			</a>
+		@endif
 	@endif
 
 	</p>
