@@ -5,6 +5,10 @@
 @import 'func';
 
 // Some reasonable global settings...
+html {
+	overflow-y: scroll;
+}
+
 html, body {
 
 	overflow-x: hidden;
