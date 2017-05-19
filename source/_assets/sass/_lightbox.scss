@@ -49,6 +49,8 @@
 
 	#content {
 
+		overflow-y: scroll;
+
 		@include font-copy();
 
 		display: flex;
@@ -210,6 +212,12 @@
 
 			blockquote {
 				margin: 0;
+
+
+				p:first-of-type {
+					max-height: initial;
+				}
+
 			}
 
 			h1 {
@@ -240,6 +248,10 @@
 				flex-grow: 1;
 			}
 
+			> * {
+				flex-shrink: 0;
+			}
+
 		}
 
 		.btn-close {
@@ -260,12 +272,69 @@
 		}
 
 		#content {
+
 			position: relative;
-			width: 33%;
+			width: 40%;
 			margin: 0;
 			padding: 0 1em;
+
+			// Undo all of the "hide" stuff
+			background: none;
+
+			.btn-expand-invisible,
+			.btn-expand {
+				display: none;
+			}
+
+			p {
+
+				transition: none;
+				max-height: initial;
+
+				font-size: 0.85em;
+				margin: 1.2em 0;
+
+			}
+
+			> p:first-of-type {
+				margin: 0.75em 0;
+			}
+
+			blockquote {
+
+				p:first-of-type {
+					max-height: initial;
+				}
+
+				p {
+					max-height: initial;
+					font-size: 1em;
+					margin: 1em 0;
+				}
+			}
+
+			h1 {
+				font-size: 1.2em;
+				margin: 1em 0;
+				line-height: 1.5;
+			}
+
+			a.collection {
+				font-size: 1.2em;
+			}
+
 		}
 
+		.btn-close {
+			visibility: visible;
+		}
+
+	}
+
+	@media #{$mq-medium} {
+		#content {
+			width: 33%;
+		}
 	}
 
 }
