@@ -30,6 +30,9 @@
 @foreach ($artworks as $artwork)
 
 	<script id="artwork-{{ $artwork->id }}" type="text/template">
+
+	<a href="javascript:Lightbox.expand()" class="btn-expand-invisible"></a>
+
 	{!! $artwork->getContent() !!}
 
 	<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
