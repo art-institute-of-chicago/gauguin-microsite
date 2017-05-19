@@ -99,15 +99,25 @@
 		}
 
 		// Curatorial description
-		blockquote p {
+		blockquote {
 
-			font-size: 0.75em;
 
-			// Show only the first 2 lines
-			// Based on line-height: 1.5em
-			display: block;
-			max-height: 3em;
-			margin: 0;
+			p {
+				font-size: 0.75em;
+				margin: 0;
+
+				// Hide all non-first paragraphs
+				// For multi-paragraph descriptions
+				max-height: 0em;
+			}
+
+			p:first-of-type {
+
+				// Show only the first 2 lines
+				// Based on line-height: 1.5em
+				max-height: 3em;
+
+			}
 
 			// Alas, this doesn't work:
 			// word-wrap: break-word;
