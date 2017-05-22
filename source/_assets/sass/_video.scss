@@ -2,6 +2,11 @@ section.video {
 
 	background-color: #F8E2E8;
 
+	.container img.unpublished {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
 	.video-js {
 		width: 100%;
 		position: relative;

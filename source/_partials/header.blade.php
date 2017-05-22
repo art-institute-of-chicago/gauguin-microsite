@@ -7,7 +7,7 @@
 		<div class="header-left">
 
 			<a href="http://www.artic.edu/">
-				<img src="images/logo.svg">
+				<img src="images/logo.svg" alt="Art Institute of Chicago">
 			</a>
 
 			<span class="exhibit">

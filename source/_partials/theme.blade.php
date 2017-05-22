@@ -22,7 +22,7 @@
 
 					{{-- We need an <a> wrapper regardless for layout! --}}
 					<a class="lightbox" href="javascript:Lightbox.load('{{ $image['lightbox'] }}');">
-						<img src="images/content/{{ $image['image'] }}"/>
+						<img src="images/content/{{ $image['image'] }}" alt="{{ $image['alt'] }}"/>
 					</a>
 
 				</div>

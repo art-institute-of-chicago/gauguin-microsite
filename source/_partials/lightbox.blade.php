@@ -29,8 +29,7 @@
 	<a href="javascript:Lightbox.unload()" class="btn-close">
 
 		<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-			<desc>Created with Sketch.</desc>
+			<desc>Close lightbox</desc>
 			<defs></defs>
 			<g id="Welcome" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
 				<g id="Desktop-Copy-6" transform="translate(-974.000000, -12.000000)" stroke="#979797">
