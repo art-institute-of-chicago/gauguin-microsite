@@ -2,7 +2,7 @@
 	<div class="container">
 
 		<div class="title">
-			<h2>Upcoming Events</h2>
+			<h2 tabindex="0">Upcoming Events</h2>
 
 			<p><a href="{{ $page->link }}">See all events</a></p>
 		</div>

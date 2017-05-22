@@ -11,9 +11,9 @@
 			</a>
 
 			<span class="exhibit">
-				<span class="title">Gauguin</span>
-				<span class="pipe">|</span>
-				<span class="subtitle">Artist as Alchemist</span>
+				<span class="title" tabindex="0">Gauguin</span>
+				<span class="pipe" tabindex="-1">|</span>
+				<span class="subtitle" tabindex="0">Artist as Alchemist</span>
 			</span>
 
 		</div>
@@ -21,9 +21,9 @@
 		<div class="header-right">
 
 			<span class="dates">
-				<span class="start">{{ $page->dates['start'] }}</span>
-				<span class="dash">–</span>
-				<span class="end">{{ $page->dates['end'] }}</span>
+				<span class="start"tabindex="0">{{ $page->dates['start'] }}</span>
+				<span class="dash" tabindex="-1">–</span>
+				<span class="end"tabindex="0">{{ $page->dates['end'] }}</span>
 			</span>
 
 			<span class="buttons">

@@ -2,7 +2,7 @@
 	<div class="container">
 
 		<div class="title">
-			<h2>Shop</h2>
+			<h2 tabindex="0">Shop</h2>
 
 			<p><a href="{{ $page->link }}">See all products</a></p>
 		</div>

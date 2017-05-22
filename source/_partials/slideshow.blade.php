@@ -21,19 +21,19 @@
 
 	<div class="title-card">
 
-		<h2>Defy<br/>Definition</h2>
-		<h1>Gauguin</h1>
+		<h2 tabindex="0">Defy<br/>Definition</h2>
+		<h1 tabindex="0">Gauguin</h1>
 
 		<div class="events">
 
 			<div class="event event-exhibit">
-				<span class="title">Artist as Alchemist</span>
-				<span class="date">Jun 25 • Sept 10</span>
+				<span class="title" tabindex="0">Artist as Alchemist</span>
+				<span class="date" tabindex="0">Jun 25 • Sept 10</span>
 			</div>
 
 			<div class="event event-preview">
-				<span class="title">Member Preview</span>
-				<span class="date">Jun 22</span>
+				<span class="title" tabindex="0">Member Preview</span>
+				<span class="date" tabindex="0">Jun 22</span>
 			</div>
 
 		</div>

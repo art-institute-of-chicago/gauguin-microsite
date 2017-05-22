@@ -4,7 +4,7 @@
 
 	<div class="container">
 
-		<blockquote class="balance-text">
+		<blockquote class="balance-text" tabindex="0">
 			{!! $content !!}
 		</blockquote>
 

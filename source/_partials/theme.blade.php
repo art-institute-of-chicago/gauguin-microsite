@@ -10,7 +10,7 @@
 <section class="theme theme-{{ count($page->images) }}{{ $variant }}">
 	<div class="container">
 
-		<h2>{{ $page->theme }}</h2>
+		<h2 tabindex="0">{{ $page->theme }}</h2>
 
 		<div class="wrapper">
 
@@ -31,8 +31,8 @@
 
 			<div class="content">
 
-				<h1>{{ $page->title }}</h1>
-				<div>{!! $content !!}</div>
+				<h1 tabindex="0">{{ $page->title }}</h1>
+				<div tabindex="0">{!! $content !!}</div>
 
 			</div>
 
