@@ -6,7 +6,22 @@
 
 		<a href="javascript:Lightbox.expand()" class="btn-expand-invisible"></a>
 
-		{!! $artwork->getContent() !!}
+		<p id="lightbox-start" tabindex="0">
+			{{ $artwork->artistName}}<br/>
+			{{ $artwork->artistPlaceDates}}
+		</p>
+
+		<h1 tabindex="0">{{ $artwork->title }}</h1>
+
+		<p tabindex="0">
+			{{ $artwork->date }}<br/>
+			{{ $artwork->materialDimensions }}<br/>
+			{{ $artwork->creditAccessionNumber }}
+		</p>
+
+		<blockquote tabindex="0">
+			{!! $artwork->getContent() !!}
+		</blockquote>
 
 		<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
 
@@ -24,7 +39,7 @@
 
 
 {{-- main.js manages this magic --}}
-<div id="lightbox"/>
+<div id="lightbox" role="dialog" aria-labelledby="lightbox-start">
 
 	<a href="javascript:Lightbox.unload()" class="btn-close">
 
