@@ -1,4 +1,4 @@
-<section class="call-to-action">
+<section class="call-to-action" role="landmark">
 	<div class="container">
 
 		<h1>{{ $page->title }}</h1>

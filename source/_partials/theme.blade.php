@@ -7,7 +7,7 @@
 
 ?>
 
-<section class="theme theme-{{ count($page->images) }}{{ $variant }}">
+<section class="theme theme-{{ count($page->images) }}{{ $variant }}" role="landmark">
 	<div class="container">
 
 		<h2>{{ $page->theme }}</h2>

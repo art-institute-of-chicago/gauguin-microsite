@@ -1,4 +1,4 @@
-<section class="video">
+<section class="video" role="landmark">
 	<div class="container">
 
 	@if ($page->publish)

@@ -1,4 +1,4 @@
-<section class="slideshow">
+<section class="slideshow" role="landmark">
 
 	<!-- Slider main container -->
 	<div class="swiper-container">
