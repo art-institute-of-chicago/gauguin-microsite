@@ -10,7 +10,7 @@
 		@if ($page->link)
 			<a href="{{ $page->link }}">
 		@endif
-		<img src="{{ $page->image }}" alt="{{ $page->alt }}"/></a>
+		<img src="{{ $page->image }}" alt="{{ $page->alt }}"/>
 		@if ($page->link)
 			</a>
 		@endif
