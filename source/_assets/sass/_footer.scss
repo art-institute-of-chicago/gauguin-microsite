@@ -1,49 +1,29 @@
 footer {
 
-	background-color: black;
+	background-color: #000000;
 	color: white;
 
-	padding: 50px 0;
+	padding: 50px;
 
-	.container {
-
-		justify-content: space-between;
-
-		// Applies to self and immediate child divs
-		&, > div {
-			display: flex;
-			flex-wrap: nowrap;
-			align-items: center;
-		}
-
+	font-size: 0.8em;
+	
+	.text {
+	    columns: 1;
+	    margin-bottom: 2em;
 	}
 
-	// Disable word-wrapping by default
-	* {
-		white-space: nowrap;
+	@media #{$mq-small} {
+	    .text {
+		columns: 2;
+	    }
 	}
 
-	.footer-left {
-
-		justify-content: flex-start;
+	p {
+	    padding-bottom: 1em;
 	}
 
-	.footer-right {
-
-		justify-content: flex-end;
-
-	}
-
-	// Social media icons
-	a {
-		display: inline-block;
-		font-size: 1em;
-		line-height: 1;
-
-		img {
-			height: 2em
-		}
-
+	img {
+	    margin-top: 1em;
 	}
 
 }
