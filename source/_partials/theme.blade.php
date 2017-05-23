@@ -18,7 +18,7 @@
 			@foreach ($page->images as $key => $image)
 
 				{{-- .image-* will be used to order elements using flexbox --}}
-				<div class="image image-{{ $key + 1 }}">
+				<div class="image image-{{ $key + 1 }}" role="figure">
 
 					{{-- We need an <a> wrapper regardless for layout! --}}
 					<a class="lightbox" href="javascript:Lightbox.load('{{ $image['lightbox'] }}', '{{ $page->getFilename() }}-{{ $key + 1 }}');" aria-haspopup="true">
