@@ -6,20 +6,20 @@
 
 		<a href="javascript:Lightbox.expand()" class="btn-expand-invisible"></a>
 
-		<p id="lightbox-start" tabindex="0">
+		<p id="lightbox-start">
 			{{ $artwork->artistName}}<br/>
 			{{ $artwork->artistPlaceDates}}
 		</p>
 
 		<h1 tabindex="0">{{ $artwork->title }}</h1>
 
-		<p tabindex="0">
+		<p>
 			{{ $artwork->date }}<br/>
 			{{ $artwork->materialDimensions }}<br/>
 			{{ $artwork->creditAccessionNumber }}
 		</p>
 
-		<blockquote tabindex="0">
+		<blockquote>
 			{!! $artwork->getContent() !!}
 		</blockquote>
 

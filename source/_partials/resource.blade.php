@@ -1,6 +1,6 @@
 <div class="resource">
 
-	<h5 tabindex="0">{{ $page->type }}</h5>
+	<h5>{{ $page->type }}</h5>
 
 	<a href="{{ $page->link }}">
 		<h4>{{ $page->title }}</h4>

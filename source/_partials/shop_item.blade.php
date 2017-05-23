@@ -8,7 +8,7 @@
 
 	</a>
 
-	<p class="item-price" tabindex="0">${{ $page->price }}</p>
+	<p class="item-price">${{ $page->price }}</p>
 
 </div>
 
