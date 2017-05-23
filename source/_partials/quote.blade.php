@@ -1,6 +1,6 @@
 <section class="quote">
 
-	<div class="background" style="background-image: url('{{ $page->image }}');"></div>
+	<div class="background" style="background-image: url('{{ $page->image }}');" role="presentation"></div>
 
 	<div class="container">
 

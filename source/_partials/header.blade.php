@@ -1,18 +1,18 @@
 <!-- Sticky Header -->
-<div id="header-placeholder"></div>
+<div id="header-placeholder" role="presentation"></div>
 
-<header>
+<header role="banner">
 	<div class="container">
 
 		<div class="header-left">
 
 			<a href="http://www.artic.edu/">
-				<img src="images/logo.svg">
+				<img src="images/logo.svg" alt="Art Institute of Chicago">
 			</a>
 
 			<span class="exhibit">
 				<span class="title">Gauguin</span>
-				<span class="pipe">|</span>
+				<span class="pipe" role="presentation">|</span>
 				<span class="subtitle">Artist as Alchemist</span>
 			</span>
 
@@ -26,9 +26,9 @@
 				<span class="end">{{ $page->dates['end'] }}</span>
 			</span>
 
-			<span class="buttons">
-				<a class="btn btn-small btn-member" href="https://sales.artic.edu/memberships">Become a Member</a>
-				<a class="btn btn-small btn-ticket" href="https://sales.artic.edu/admissiondate"><span class="verb">Get </span>Tickets</a>
+			<span class="buttons" role="menu">
+				<a class="btn btn-small btn-member" href="https://sales.artic.edu/memberships" role="menuitem">Become a Member</a>
+				<a class="btn btn-small btn-ticket" href="https://sales.artic.edu/admissiondate" role="menuitem"><span class="verb">Get </span>Tickets</a>
 			</span>
 
 		</div>

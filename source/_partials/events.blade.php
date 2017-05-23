@@ -1,4 +1,4 @@
-<section class="related events">
+<section class="related events" role="landmark">
 	<div class="container">
 
 		<div class="title">

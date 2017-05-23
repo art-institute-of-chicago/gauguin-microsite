@@ -38,37 +38,93 @@ function LightboxManager( ) {
 
 	});
 
+	function open( id, returnTo ) {
 
-	function open( id ) {
+		// Find our data source container
+		var $data = $('#artwork-' + id );
 
-	    // Find our data source container
-	    var $data = $('#artwork-' + id );
+		// Load the data contents into lightbox
+		$content.html( $data.html() );
 
-	    // Load the data contents into lightbox
-	    $content.html( $data.html() );
-
-	    // Load the image into OSD!
-	    viewer.open({
+		// Load the image into OSD!
+		viewer.open({
 			type: 'image',
 			url:  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Paul_Gauguin_-_The_Ancestors_of_Tehamana_OR_Tehamana_Has_Many_Parents_%28Merahi_metua_no_Tehamana%29_-_Google_Art_Project.jpg/1200px-Paul_Gauguin_-_The_Ancestors_of_Tehamana_OR_Tehamana_Has_Many_Parents_%28Merahi_metua_no_Tehamana%29_-_Google_Art_Project.jpg'
 		});
 
-	    // Show the lightbox
+		// Show the lightbox
 		$html.css('overflow-y','hidden');
 		$lightbox.addClass('opened');
+		$lightbox.show();
 
 		// Scroll to the top of lightbox
 		$lightbox[0].scrollTop = 0;
 
+		// Press ESC to close lightbox
+		// TODO: Unbind this after close
+		$( document ).keyup( function( event ) {
+
+			if ( event.keyCode == 27 ) {
+
+				if ( $lightbox.hasClass('opened')) {
+					Lightbox.unload(returnTo);
+				}
+
+			}
+
+		});
+
+		// Jump keyboard focus to the lightbox
+		$('#lightbox h1').focus();
+
+		// Get all, first and last focusable elements from the Menu.
+		var focusable, firstFocusable, lastFocusable;
+
+		focusable      = $lightbox.find( '*' ).filter( ':visible' );
+		firstFocusable = focusable.first();
+		lastFocusable  = focusable.last();
+
+		// For debugging:
+		// console.log(firstFocusable, lastFocusable);
+
+		// Redirect last tab to first input.
+		// Set focus on first element - that's actually close menu button.
+		lastFocusable.on( 'keydown', function ( e ) {
+
+			if ( e.keyCode === 9 && !e.shiftKey ) {
+
+				e.preventDefault();
+				firstFocusable.focus();
+
+			}
+
+		});
+
+		// Redirect first shift+tab to last input.
+		// Set focus on last element.
+		firstFocusable.on( 'keydown', function ( e ) {
+
+			if ( e.keyCode === 9 && e.shiftKey ) {
+
+				e.preventDefault();
+				lastFocusable.focus();
+
+			}
+
+		});
+
+		$('#btn-close').attr("href", "javascript:Lightbox.unload('" + returnTo + "')");
 	}
 
 
-	function close() {
+	function close(returnTo) {
 
 		// Hide the lightbox
 		$html.css('overflow-y','');
 		$lightbox.removeClass('opened');
+		$lightbox.hide();
 
+		$(returnTo).focus();
 	}
 
 

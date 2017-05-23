@@ -6,7 +6,22 @@
 
 		<a href="javascript:Lightbox.expand()" class="btn-expand-invisible"></a>
 
-		{!! $artwork->getContent() !!}
+		<p id="lightbox-start">
+			{{ $artwork->artistName}}<br/>
+			{{ $artwork->artistPlaceDates}}
+		</p>
+
+		<h1 tabindex="0">{{ $artwork->title }}</h1>
+
+		<p>
+			{{ $artwork->date }}<br/>
+			{{ $artwork->materialDimensions }}<br/>
+			{{ $artwork->creditAccessionNumber }}
+		</p>
+
+		<blockquote>
+			{!! $artwork->getContent() !!}
+		</blockquote>
 
 		<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
 
@@ -24,13 +39,12 @@
 
 
 {{-- main.js manages this magic --}}
-<div id="lightbox"/>
+<div id="lightbox" role="dialog" aria-labelledby="lightbox-start">
 
 	<a href="javascript:Lightbox.unload()" class="btn-close">
 
 		<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-			<desc>Created with Sketch.</desc>
+			<desc>Close lightbox</desc>
 			<defs></defs>
 			<g id="Welcome" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
 				<g id="Desktop-Copy-6" transform="translate(-974.000000, -12.000000)" stroke="#979797">

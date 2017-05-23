@@ -13,6 +13,7 @@ $(document).ready( function() {
 	var slideshow = new Swiper ('.swiper-container', {
 
 		loop: true,
+		a11y: true,
 
 		onInit: function( swiper ) {
 			swiper.slideTo(initial, 0);

@@ -18,6 +18,9 @@
 	opacity: 0;
 	transform: scale(0);
 
+	// Screenreaders will read text from visibility: hidden
+	display: none;
+
 	// Toggle when the lightbox is opened
 	&.opened {
 		pointer-events: auto;

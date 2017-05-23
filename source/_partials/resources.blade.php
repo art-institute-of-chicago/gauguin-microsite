@@ -1,4 +1,4 @@
-<section class="related resources">
+<section class="related resources" role="landmark">
 	<div class="container">
 
 		<div class="title">

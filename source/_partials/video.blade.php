@@ -1,5 +1,7 @@
-<section class="video">
+<section class="video" role="landmark">
 	<div class="container">
+
+	@if ($page->publish)
 
 		<video
 			id="{{ $page->getFilename() }}"
@@ -8,6 +10,12 @@
 			poster="{{ $page->poster }}"
 			data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "{{ $page->video }}"}] }'
 		></video>
+
+	@else
+
+		<img src="{{ $page->poster }}" class="unpublished" alt="{{ $page->posterAlt }}"/>
+
+	@endif
 
 	</div>
 </section>

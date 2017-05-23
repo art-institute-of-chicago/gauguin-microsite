@@ -7,7 +7,7 @@
 
 ?>
 
-<section class="theme theme-{{ count($page->images) }}{{ $variant }}">
+<section class="theme theme-{{ count($page->images) }}{{ $variant }}" role="landmark">
 	<div class="container">
 
 		<h2>{{ $page->theme }}</h2>
@@ -18,11 +18,11 @@
 			@foreach ($page->images as $key => $image)
 
 				{{-- .image-* will be used to order elements using flexbox --}}
-				<div class="image image-{{ $key + 1 }}">
+				<div class="image image-{{ $key + 1 }}" role="figure">
 
 					{{-- We need an <a> wrapper regardless for layout! --}}
-					<a class="lightbox" href="javascript:Lightbox.load('{{ $image['lightbox'] }}');">
-						<img src="images/content/{{ $image['image'] }}"/>
+					<a class="lightbox" href="javascript:Lightbox.load('{{ $image['lightbox'] }}', '{{ $page->getFilename() }}-{{ $key + 1 }}');" aria-haspopup="true">
+						<img id="{{ $page->getFilename() }}-{{ $key + 1 }}" src="images/content/{{ $image['image'] }}" alt="{{ $image['alt'] }}"/>
 					</a>
 
 				</div>
@@ -32,7 +32,9 @@
 			<div class="content">
 
 				<h1>{{ $page->title }}</h1>
-				<div>{!! $content !!}</div>
+
+				{!! $content !!}
+
 
 			</div>
 
