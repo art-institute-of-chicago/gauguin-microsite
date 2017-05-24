@@ -3,7 +3,7 @@
 
 		<div class="links">
 
-			<span class="buttons">
+			<div>
 
 				<a href="http://www.facebook.com/artic">
 					<img src="images/social_icons/facebook.png" alt="Facebook">
@@ -21,7 +21,7 @@
 					<img src="images/social_icons/youtube.png" alt="YouTube">
 				</a>
 
-			</span>
+			</div>
 
         </div>
 
@@ -51,7 +51,9 @@
 
             <h5>Major support is provided by</h5>
 
-            <h3>Lesley and Janice Lederer</h3>
+            <div>
+            	<h3>Lesley and Janice Lederer</h3>
+            </div>
 
         </div>
 

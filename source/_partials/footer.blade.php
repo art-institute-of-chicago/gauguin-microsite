@@ -1,10 +1,14 @@
 <footer>
-  <div class="text">
-	{!! $content !!}
-  </div>
+	<div class="container">
 
-  <div class="sponsor">
-    Digital engagement support by<br/>
-    <img src="images/sponsors/bloomberg.png" alt="Bloomberg Philanthropies" />
-  </div>
+		<div class="text">
+			{!! $content !!}
+		</div>
+
+		<div class="sponsor">
+			Digital engagement support by<br/>
+			<img src="images/sponsors/bloomberg.png" alt="Bloomberg Philanthropies" />
+		</div>
+
+	</div>
 </footer>
