@@ -33,6 +33,7 @@
 			<span>Hide</span>
 		</a>
 
+        <div id="artwork-{{ $artwork->id }}-image" data-image="{{ $artwork->image }}" />
 	</script>
 
 @endforeach
@@ -42,7 +43,6 @@
 <div id="lightbox" role="dialog" aria-labelledby="lightbox-start">
 
 	<a href="javascript:Lightbox.unload()" class="btn-close">
-
 		<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<desc>Close lightbox</desc>
 			<defs></defs>
@@ -56,7 +56,6 @@
 				</g>
 			</g>
 		</svg>
-
 	</a>
 
 	<div id="viewer">

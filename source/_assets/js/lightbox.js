@@ -38,19 +38,16 @@ function LightboxManager( ) {
 
 	});
 
-	function open( id, returnTo ) {
+        function open( id, returnTo ) {
 
 		// Find our data source container
 		var $data = $('#artwork-' + id );
 
 		// Load the data contents into lightbox
 		$content.html( $data.html() );
-
+	    console.log($('#artwork-' + id + '-image').data("image"));
 		// Load the image into OSD!
-		viewer.open({
-			type: 'image',
-			url:  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Paul_Gauguin_-_The_Ancestors_of_Tehamana_OR_Tehamana_Has_Many_Parents_%28Merahi_metua_no_Tehamana%29_-_Google_Art_Project.jpg/1200px-Paul_Gauguin_-_The_Ancestors_of_Tehamana_OR_Tehamana_Has_Many_Parents_%28Merahi_metua_no_Tehamana%29_-_Google_Art_Project.jpg'
-		});
+		viewer.open($('#artwork-' + id + '-image').data("image"));
 
 		// Show the lightbox
 		$html.css('overflow-y','hidden');

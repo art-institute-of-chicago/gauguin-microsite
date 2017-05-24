@@ -6,7 +6,7 @@ theme: "Becoming Gauguin"
 title: "An artist searching for  a new direction"
 images:
   - image: "casket.png"
-    lightbox: "lorem"
+    lightbox: "casket"
     alt: "A birdseye view of an open casket carved out of worn wood, with torn pieces of leather on the inside cover. A small human figure is carved out of the inside of the casket, and a large crack is visible running through the length of the casket bottom."
 ---
 
