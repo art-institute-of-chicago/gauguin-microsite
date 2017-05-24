@@ -1,5 +1,5 @@
 // General spacing b/w elements
-$theme-gutter: 30px;
+$theme-gutter: 1.65em;
 
 // Gap on the left on non-mobile screens
 $theme-offset: 10%;
@@ -54,10 +54,43 @@ section.theme {
 	}
 
 
-	.image, img {
+	.image {
 
-		max-height: 80vh;
-		width: 100%;
+		text-align: center;
+
+		&, img {
+
+			display: block;
+
+			max-height: 80vh;
+			width: 100%;
+
+		}
+
+		a.lightbox {
+
+			display: block;
+
+			position: relative;
+
+			&:after {
+				$size: 2em;
+
+				content: '+';
+				line-height: $size;
+
+				position: absolute;
+				bottom: -$size/8;
+				right: -$size/8;
+
+				width: $size;
+				height: $size;
+
+				background: $color-orange;
+
+			}
+
+		}
 
 	}
 
