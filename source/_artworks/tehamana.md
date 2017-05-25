@@ -1,6 +1,6 @@
 ---
 id: "tehamana"
-link: ""
+link: "http://www.artic.edu/aic/collections/artwork/60812"
 image: "images/dzis/PG_212R2_51J.dzi"
 artistName: Paul Gauguin
 artistPlaceDates: "French, 1848–1903"

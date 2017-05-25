@@ -23,7 +23,12 @@
 			{!! $artwork->getContent() !!}
 		</blockquote>
 
-		<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
+		{{-- For some reason,empty() or isset() always return false here --}}
+		{{-- Must be something to do with getters and setters--}}
+
+		@if( strlen( $artwork->link ) > 0 )
+			<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
+		@endif
 
 		<a href="javascript:Lightbox.expand()" class="btn-expand btn-show">
 			<span>Read More</span>
@@ -33,7 +38,8 @@
 			<span>Hide</span>
 		</a>
 
-        <div id="artwork-{{ $artwork->id }}-image" data-image="{{ $artwork->image }}" />
+		<div id="artwork-{{ $artwork->id }}-image" data-image="{{ $artwork->image }}" />
+
 	</script>
 
 @endforeach
