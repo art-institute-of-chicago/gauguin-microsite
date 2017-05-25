@@ -103,7 +103,7 @@ header {
 
 		.exhibit {
 
-			color: $color-orange;
+			color: $color-yellow;
 
 			padding: 0 0.5em;
 
@@ -151,7 +151,7 @@ header {
 
 			font-size: 0.8em;
 
-			color: $color-orange;
+			color: $color-yellow;
 
 			@include break-dates {
 
@@ -185,7 +185,7 @@ header {
 
 	.sub-header {
 
-		background-color: #CC9A2C;
+		background-color: $color-orange;
 		text-align: center;
 
 		font-family: 'Didact Gothic', sans-serif;
