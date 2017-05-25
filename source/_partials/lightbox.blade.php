@@ -15,7 +15,7 @@
 
 		<p>
 			{{ $artwork->date }}<br/>
-			{{ $artwork->materialDimensions }}<br/>
+            {{ $artwork->materialDimensions }}, 
 			{{ $artwork->creditAccessionNumber }}
 		</p>
 
