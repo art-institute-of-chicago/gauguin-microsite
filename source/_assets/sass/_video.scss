@@ -13,23 +13,36 @@ section.video {
 		width: 100%;
 	}
 	.video-js {
-		width: 100%;
 		position: relative;
+		width: 100%;
 		z-index: 0;
 	}
 
 	.vjs-big-play-centered .vjs-big-play-button {
+
 		background-image: url('../images/play.png');
-		margin-top: -66px;
-		margin-left: -66px;
+		background-position: center center;
+		background-size: cover;
+
+		margin-top: 0;
+		margin-left: 0;
+
+		transform: translate(-50%, -50%);
 	}
 
 	.video-js .vjs-big-play-button {
-		height: 132px;
-		width: 132px;
-		border-radius: 68px;
-		border: 0;
 		background-color: rgba(0,0,0,0);
+
+		border-radius: 50%;
+		border: 0;
+
+		height: 3em;
+		width: 3em;
+
+		@media #{$mq-smallish} {
+			height: 5em;
+			width: 5em;
+		}
 	}
 
 	.video-js:hover .vjs-big-play-button {
