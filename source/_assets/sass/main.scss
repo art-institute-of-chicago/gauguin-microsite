@@ -184,21 +184,6 @@ section.shop {
 
 }
 
-.sticky {
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    padding-top: 6px;
-    padding-bottom: 6px;
-
-    .header-left a {
-	height: 44px;
-	width: 44px;
-    }
-}
-
 // Import the block sections
 @import 'header';
 @import 'slideshow';

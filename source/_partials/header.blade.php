@@ -33,10 +33,12 @@
 		</div>
 
 	</div>
-</header>
 
-      @if ($page->subHeader)
-          <section class="sub-header">
-              {{ $page->subHeader }}
-          </section>
-      @endif
+
+	@if ($page->subHeader)
+		<div class="sub-header">
+			{{ $page->subHeader }}
+		</div>
+	@endif
+
+</header>

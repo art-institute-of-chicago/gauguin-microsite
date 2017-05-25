@@ -13,7 +13,6 @@ header {
 	}
 
 	@mixin break-dates {
-		// @media (max-width: 880px) and (min-width: 581px) {
 		@media (max-width: 880px) {
 			@content;
 		}
@@ -49,8 +48,6 @@ header {
 	background-color: $color-blue;
 	width: 100%;
 
-	padding: 1em 0;
-
 	.container {
 
 		justify-content: space-between;
@@ -62,13 +59,10 @@ header {
 			align-items: center;
 		}
 
-		margin: 0;
-	}
+		// decrease padding on sticky
+		transition: padding 0.25s;
+		padding: 1em 0;
 
-	@media #{$mq-smallest} {
-	    .container {
-		padding: 0 4%;
-	    }
 	}
 
 	// Disable word-wrapping by default
@@ -84,24 +78,26 @@ header {
 
 		a {
 			display: inline-block;
+			position: relative;
 
-			// transition: height 0.25s;
-			width: 4em;
-			height: 4em;
+			transition: height 0.25s, width 0.25s;
+
+			height: calc( 28px + 0.8em );
+			width: calc( 28px + 0.8em );
+
+			@media (min-width: 420px) {
+				width: 4em;
+				height: 4em;
+			}
 
 			img {
-			    height: 50%;
-			    margin: auto;
-			    position: absolute;
-			    top: 0;
-			    bottom: 0;
+				position: absolute;
+				top: 0;	left: 0;
+
+				height: 100%;
+				margin: auto;
 			}
 
-			@media #{$mq-small} {
-			    img {
-				height: 70%;
-			    }
-			}
 
 		}
 
@@ -132,9 +128,9 @@ header {
 		}
 
 		@media #{$mq-small} {
-		    .exhibit {
-			padding: 0 1em;
-		    }
+			.exhibit {
+				padding: 0 1em;
+			}
 		}
 
 
@@ -151,7 +147,7 @@ header {
 			font-weight: bold;
 
 			text-transform: uppercase;
-			letter-spacing: 0.76px;
+			letter-spacing: em(0.76);
 
 			font-size: 0.8em;
 
@@ -186,17 +182,40 @@ header {
 		}
 
 	}
-}
 
-section.sub-header {
-    background-color: #CC9A2C;
-    text-align: center;
-    padding: 0.2em;
-    font-size: 0.75em;
-    font-family: 'Didact Gothic', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    width: 100%;
-    z-index: 2;
-}
+	.sub-header {
 
+		background-color: #CC9A2C;
+		text-align: center;
+
+		font-family: 'Didact Gothic', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: em(0.04);
+		font-size: 0.75em;
+
+		padding: 0.2em;
+		width: 100%;
+		z-index: 2;
+
+		white-space: normal;
+
+	}
+
+
+	&.sticky {
+
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		.container {
+			padding: 0.5em 0;
+		}
+
+		// Match buttons w/ constant padding
+		.header-left a {
+			height: calc( 28px + 0.8em );
+			width: calc( 28px + 0.8em );
+		}
+	}
+}
