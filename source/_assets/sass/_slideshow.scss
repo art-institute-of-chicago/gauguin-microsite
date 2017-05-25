@@ -1,6 +1,6 @@
 section.slideshow {
 
-	@include container-absolute( 90%, 45%, false );
+	@include container-absolute( 20em, 30em, false );
 
 	.swiper-container {
 		position: absolute;
@@ -33,47 +33,65 @@ section.slideshow {
 	}
 
 	.title-card {
+		background-color: #D1E5D9;
 
+		// Balance out .swiper-pagination
+		// Pagination is positioned in pixels, not em's
 		position: absolute;
 		right: 0;
-		bottom: 80px;
+		bottom: 41px;
 
 		z-index: 2;
 
-		background-color: #D1E5D9;
+		// padding-right changes w/ screen-size
+		padding-top: 1.125em;
+		padding-bottom: 1.125em;
+		padding-left: 1.65em;
 
-		padding: 1em 1.5em;
+		// values are between()'d $bp-smallest and $bp-medium
+		$width-min: 18em;
+		$width-max: 26em;
 
-		// TODO: Change this!
-		padding-right: 20%;
-		width: 45%;
+		$pad-min: 2em;
+		$pad-max: 5em;
 
-		h2 {
-			font-family: 'Montserrat', sans-serif;
-			font-weight: bold;
+		$logo-min: 3em;
+		$logo-max: 3.5em;
 
-			text-transform: uppercase;
-			letter-spacing: em(4);
+		$logo-pad-min: 1em;
+		$logo-pad-max: 1.125em;
 
-			line-height: 1.2;
-			font-size: 1.6em;
+		width: $width-min;
+		padding-right: $pad-min;
 
-			color: #649D8E;
+		img {
+			height: $logo-min;
+			margin-bottom: $logo-pad-min;
 		}
 
-		h1 {
-			font-family: 'Montserrat', sans-serif;
-			font-weight: bold;
+		@media #{$mq-smallest} {
 
-			text-transform: uppercase;
-			letter-spacing: em(5);
+			width: between($width-min, $width-max, $bp-smallest, $bp-medium);
+			padding-right: between($pad-min, $pad-max, $bp-smallest, $bp-medium);
 
-			line-height: 1;
-			font-size: 1em;
+			img {
+				height: between($logo-min, $logo-max, $bp-smallest, $bp-medium);
+				margin-bottom: between($logo-pad-min, $logo-pad-max, $bp-smallest, $bp-medium);
+			}
 
-			margin: 0.9em 0;
+		}
 
-			color: #F889A6;
+		@media #{$mq-medium} {
+
+			width: $width-max;
+			padding-right: $pad-max;
+
+
+			img {
+				height: $logo-max;
+				margin-bottom: $logo-pad-max;
+			}
+
 		}
 
 		.events {
@@ -85,6 +103,12 @@ section.slideshow {
 
 			.event {
 
+				$font-title-min: 0.8em;
+				$font-title-max: 1em;
+
+				$font-date-min: 0.7em;
+				$font-date-max: 0.9em;
+
 				span {
 					display: block;
 				}
@@ -94,7 +118,7 @@ section.slideshow {
 					font-family: 'Amiri', serif;
 					font-style: italic;
 
-					font-size: 0.8em;
+					font-size: $font-title-min;
 
 				}
 
@@ -105,7 +129,31 @@ section.slideshow {
 					text-transform: uppercase;
 					letter-spacing: em(1.1);
 
-					font-size: 0.7em;
+					font-size: $font-date-min;
+
+				}
+
+				@media #{$mq-smallest} {
+
+					.title {
+						font-size: between($font-title-min, $font-title-max, $bp-smallest, $bp-medium);
+					}
+
+					.date {
+						font-size: between($font-date-min, $font-date-max, $bp-smallest, $bp-medium);
+					}
+
+				}
+
+				@media #{$mq-medium} {
+
+					.title {
+						font-size: $font-title-max;
+					}
+
+					.date {
+						font-size: $font-date-max;
+					}
 
 				}
 
