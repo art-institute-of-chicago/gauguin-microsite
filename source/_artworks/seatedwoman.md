@@ -1,6 +1,6 @@
 ---
 id: "seatedwoman"
-link: ""
+link: "http://www.artic.edu/aic/collections/artwork/15860"
 image: "images/dzis/PG_049R2_51A.dzi"
 artistName: Paul Gauguin
 artistPlaceDates: "French, 1848–1903"
