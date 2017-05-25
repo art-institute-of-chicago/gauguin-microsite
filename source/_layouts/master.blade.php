@@ -10,7 +10,7 @@
 
 	<!-- Includes -->
 	<link href="css/reset.css" rel="stylesheet">
-	<script src="//code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+	<script src="//code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700" rel="stylesheet">
