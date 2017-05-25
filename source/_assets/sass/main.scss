@@ -121,7 +121,8 @@ section {
 header a.btn,
 section.events p a,
 section.shop p a,
-section.call-to-action ul a {
+section.call-to-action p a,
+section.call-to-action ul li a {
 
 	display: inline-block;
 	background-color: $color-orange;

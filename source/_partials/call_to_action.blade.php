@@ -3,16 +3,17 @@
 
 		<h1>{{ $page->title }}</h1>
 
-		<h2><a href="{{ $page->subtitleLink }}">{{ $page->subtitle }}</a></h2>
-
 		<ul>
-			<li><a href="{{ $page->buttonOneLink }}">{{ $page->buttonOne }}</a></li>
-			<li><a href="{{ $page->buttonTwoLink }}">{{ $page->buttonTwo }}</a></li>
+			<li><a href="{{ $page->buttonOneLink }}" class="btn-small">{{ $page->buttonOne }}</a></li>
+			<li><a href="{{ $page->buttonTwoLink }}" class="btn-small">{{ $page->buttonTwo }}</a></li>
 		</ul>
 
 		<h3>{{ $page->dates }}</h3>
 
 		{!! $content !!}
+
+        <p><a href="{{ $page->buttonThreeLink }}" class="btn-small">{{ $page->buttonThree }}</a></p>
+
 
 	</div>
 </section>
