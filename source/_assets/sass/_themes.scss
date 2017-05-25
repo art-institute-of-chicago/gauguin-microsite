@@ -314,7 +314,14 @@ section.theme-4 {
 
 	.content {
 		order: 3;
+
 		display: flex;
+		flex-wrap: wrap;
+
+		p, h1 {
+			flex-basis: 100%;
+		}
+
 	}
 
 	.image-3 {
@@ -335,6 +342,14 @@ section.theme-4 {
 		.image {
 			flex-basis: 50%;
 			padding: 0 $theme-gutter/2;
+		}
+
+		.content {
+
+			p, h1 {
+				flex-basis: 50%;
+			}
+
 		}
 
 	}
