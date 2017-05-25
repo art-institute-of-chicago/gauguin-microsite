@@ -10,4 +10,4 @@ materialDimensions: "Oil on canvas; 60.4 × 73.3 cm (23 3/4 × 28 7/8 in.)"
 creditAccessionNumber: "Laing Art Gallery, Tyne & Wear Archives & Museums, Newcastle upon Tyne"
 ---
 
-Gauguin focused on specific images while in Brittany, such as cows, geese, sheep, and young women in traditional Breton dress. He repeated these motifs in his work in all media.
+Gauguin focused on specific subjects while in Brittany, such as cows, geese, sheep, and young women in traditional Breton dress. He repeated these images in his work in all media.
