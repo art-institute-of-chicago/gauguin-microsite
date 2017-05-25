@@ -74,10 +74,11 @@ section.theme {
 			position: relative;
 
 			&:after {
-				$size: 2em;
+				$size: 1.9em;
 
+				font-size: 1.2em;
 				content: '+';
-				line-height: $size;
+				line-height: $size - 0.1;
 
 				position: absolute;
 				bottom: -$size/8;
@@ -88,6 +89,8 @@ section.theme {
 
 				background: $color-orange;
 
+				font-weight: bold;
+				font-family: 'Didact Gothic', sans-serif;
 			}
 
 		}
