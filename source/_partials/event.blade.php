@@ -1,4 +1,4 @@
-<div class="event">
+<div class="event item">
 
 	<h5>{{ $page->type }}</h5>
 
@@ -12,7 +12,7 @@
 			{{ $page->summary }}<br/>
 		@endif
 
-		<strong>{{ $page->date }}<br/>{{ $page->time }}</strong>
+		{{ $page->date }}<br/>{{ $page->time }}
 
 	</p>
 

@@ -4,7 +4,7 @@
 		<div class="title">
 			<h2>Upcoming Events</h2>
 
-			<p><a href="{{ $page->link }}">See all events</a></p>
+			<p><a href="{{ $page->link }}" class="btn-small">See all events</a></p>
 		</div>
 
 		<div class="wrapper">

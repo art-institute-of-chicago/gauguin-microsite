@@ -1,4 +1,4 @@
-<div class="resource">
+<div class="resource item">
 
 	<h5>{{ $page->type }}</h5>
 
