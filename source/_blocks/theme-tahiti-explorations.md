@@ -12,4 +12,4 @@ images:
     alt: "A small cylinder of shiny, dark brown wood. Carved on it is a woman styled to look like an ancient cave drawing."
 ---
 
-When he reached the island, he was dismayed to find that local culture and traditions had been lost to colonization. The works he created there are not historically accurate representations but rather his fantasies of what the island might have once been.
+When he reached Tahiti, Gauguin was dismayed to find that much of the island’s local culture and traditions had been lost to colonization. The works he created there are not historically accurate representations but rather reimaginings of what the island might have once been.
