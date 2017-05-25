@@ -15,4 +15,4 @@ images:
     alt: "A stone carving of a figure standing with slightly bent knees. A large reptilian figure sits on the ground next to them with a wide open mouth. They stand on a pedestal entitled 'Oviri.'"
 ---
 
-Between his two trips to the South Pacific, Gauguin returned to Paris. There he kept a studio to display his radical art and wrote a memoir about his time in Tahiti that he called _Noa Noa_.
+Between his two trips to the South Pacific, Gauguin returned to Paris. There he kept a studio to display his radical art and wrote and illustrated a memoir about his time in Tahiti, which he titled _Noa Noa_. 
