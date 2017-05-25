@@ -2,6 +2,8 @@
 extends: "_partials.footer"
 weight: 1600
 ---
+Major support is provided by Lesley and Janice Lederer.
+
 Additional funding is contributed by anonymous donors, the Alice M. La Pert Fund for French Impressionism, Juliette F. Bacon, the Kemper Educational and Charitable Fund, Ann C. Cooluris, Katherine L. Olson Charitable Foundation, Margot Levin Schiff and the Harold Schiff Foundation, Barbara and Marc Posner, the Robert Lehman Foundation, and David and Mary Winton Green Research Fund.
 
 This exhibition is supported by an indemnity from the Federal Council on the Arts and the Humanities.

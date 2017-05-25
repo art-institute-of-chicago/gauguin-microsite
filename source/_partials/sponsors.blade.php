@@ -3,6 +3,8 @@
 
 		<div class="links">
 
+            <h5>&nbsp;</h5>
+
 			<div>
 
 				<a href="http://www.facebook.com/artic">
@@ -43,16 +45,6 @@
 
             <div>
                 <img src="images/sponsors/bom_white.png" alt="Bank of America" />
-            </div>
-
-        </div>
-
-        <div class="support">
-
-            <h5>Major support is provided by</h5>
-
-            <div>
-            	<h3>Lesley and Janice Lederer</h3>
             </div>
 
         </div>
