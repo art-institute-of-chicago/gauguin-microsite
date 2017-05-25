@@ -20,7 +20,7 @@ $(document).ready( function() {
 		},
 
 		autoplayDisableOnInteraction: false,
-		autoplay: 2000,
+		autoplay: 5000,
 		speed: 650,
 
 		pagination: '.swiper-pagination',

@@ -10,4 +10,4 @@ materialDimensions: "Black fabricated chalk with pastel on ivory laid paper; 329
 creditAccessionNumber: "The Art Institute of Chicago, Mr. and Mrs. Carter H. Harrison Collection, 1933.910"
 ---
 
-Wherever he traveled, Gauguin would make drawn studies to fix the character of the region and its people in his mind. These sketches were often the starting point for future projects. 
+Wherever he traveled, Gauguin would make drawn studies to fix the character of the region and its people in his mind. These sketches were often the starting point for future projects.

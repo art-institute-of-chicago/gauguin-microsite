@@ -21,13 +21,12 @@
 
 	<div class="title-card">
 
-		<h2>Defy<br/>Definition</h2>
-		<h1>Gauguin</h1>
+		<img src="images/gauguin-logo.svg" />
 
 		<div class="events">
 
 			<div class="event event-exhibit">
-				<span class="title">Artist as Alchemist</span>
+				<span class="title">Exhibition</span>
 				<span class="date">Jun 25 • Sept 10</span>
 			</div>
 
