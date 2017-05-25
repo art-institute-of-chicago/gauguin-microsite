@@ -1,6 +1,6 @@
 section.slideshow {
 
-	@include container-absolute( 45%, 45%, false );
+	@include container-absolute( 20em, 30em, false );
 
 	.swiper-container {
 		position: absolute;
@@ -36,58 +36,62 @@ section.slideshow {
 		background-color: #D1E5D9;
 
 		// Balance out .swiper-pagination
+		// Pagination is positioned in pixels, not em's
 		position: absolute;
 		right: 0;
 		bottom: 41px;
 
 		z-index: 2;
 
-		padding: 1em 1.5em;
+		// padding-right changes w/ screen-size
+		padding-top: 1.125em;
+		padding-bottom: 1.125em;
+		padding-left: 1.65em;
 
-		width: 20.5em;
+		// values are between()'d $bp-smallest and $bp-medium
+		$width-min: 18em;
+		$width-max: 26em;
+
+		$pad-min: 2em;
+		$pad-max: 5em;
+
+		$logo-min: 3em;
+		$logo-max: 3.5em;
+
+		$logo-pad-min: 1em;
+		$logo-pad-max: 1.125em;
+
+		width: $width-min;
+		padding-right: $pad-min;
+
+		img {
+			height: $logo-min;
+			margin-bottom: $logo-pad-min;
+		}
 
 		@media #{$mq-smallest} {
-			width: between(20.5em, 26em, $bp-smallest, $mq-medium);
+
+			width: between($width-min, $width-max, $bp-smallest, $bp-medium);
+			padding-right: between($pad-min, $pad-max, $bp-smallest, $bp-medium);
+
+			img {
+				height: between($logo-min, $logo-max, $bp-smallest, $bp-medium);
+				margin-bottom: between($logo-pad-min, $logo-pad-max, $bp-smallest, $bp-medium);
+			}
+
 		}
 
 		@media #{$mq-medium} {
-			width: 26em;
-		}
+
+			width: $width-max;
+			padding-right: $pad-max;
 
 
-		// TODO: Change this?
-		padding-right: 20%;
+			img {
+				height: $logo-max;
+				margin-bottom: $logo-pad-max;
+			}
 
-
-
-		// width: 45%; // On desktop
-
-		h2 {
-			font-family: 'Montserrat', sans-serif;
-			font-weight: bold;
-
-			text-transform: uppercase;
-			letter-spacing: em(4);
-
-			line-height: 1.2;
-			font-size: 1.6em;
-
-			color: #649D8E;
-		}
-
-		h1 {
-			font-family: 'Montserrat', sans-serif;
-			font-weight: bold;
-
-			text-transform: uppercase;
-			letter-spacing: em(5);
-
-			line-height: 1;
-			font-size: 1em;
-
-			margin: 0.9em 0;
-
-			color: #F889A6;
 		}
 
 		.events {
@@ -99,6 +103,12 @@ section.slideshow {
 
 			.event {
 
+				$font-title-min: 0.8em;
+				$font-title-max: 1em;
+
+				$font-date-min: 0.7em;
+				$font-date-max: 0.9em;
+
 				span {
 					display: block;
 				}
@@ -108,7 +118,7 @@ section.slideshow {
 					font-family: 'Amiri', serif;
 					font-style: italic;
 
-					font-size: 0.8em;
+					font-size: $font-title-min;
 
 				}
 
@@ -119,7 +129,31 @@ section.slideshow {
 					text-transform: uppercase;
 					letter-spacing: em(1.1);
 
-					font-size: 0.7em;
+					font-size: $font-date-min;
+
+				}
+
+				@media #{$mq-smallest} {
+
+					.title {
+						font-size: between($font-title-min, $font-title-max, $bp-smallest, $bp-medium);
+					}
+
+					.date {
+						font-size: between($font-date-min, $font-date-max, $bp-smallest, $bp-medium);
+					}
+
+				}
+
+				@media #{$mq-medium} {
+
+					.title {
+						font-size: $font-title-max;
+					}
+
+					.date {
+						font-size: $font-date-max;
+					}
 
 				}
 

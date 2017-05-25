@@ -67,11 +67,16 @@ $design-context: 1024; // Desktop design width
 
 
 /**
- * Strips the units from a value, e.g. 24px -> 24
- * Used in marginalize() and between()
+ * between() requires that all of the arguments share the same unit
+ * given that we use em's throughout, this is a sanity-test function
  */
-@function strip-units($value) {
-	@return $value / ($value * 0 + 1);
+
+@function is-number($value) {
+	@return type-of($value) == 'number';
+}
+
+@function is-em($value) {
+	@return is-number($value) and index('em', unit($value)) != null;
 }
 
 /**

@@ -70,6 +70,7 @@ section {
 }
 
 // Uncle Dave's ADVANZED Padded Box
+// If $marginalize is false, $pad-min and $pad-max should be in em's!
 @mixin container-absolute( $pad-min, $pad-max, $marginalize: true ) {
 
 	position: relative;
@@ -95,6 +96,16 @@ section {
 	} @else {
 
 		padding-bottom: $pad-min;
+
+		// Try to interpolate between the minimum and maximum padding...
+		// Our breakpoints are in em's, so $pad-min and $pad-max must be em's too
+		@if is-em($pad-min) && is-em($pad-max) {
+
+			@media #{$mq-smallest} {
+				padding-bottom: between($pad-min, $pad-max, $bp-smallest, $bp-medium);
+			}
+
+		}
 
 		@media #{$mq-medium} {
 			padding-bottom: $pad-max;
@@ -173,7 +184,7 @@ section.shop {
 }
 
 .sticky {
-    
+
     position: fixed;
     top: 0;
     left: 0;
