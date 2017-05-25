@@ -31,8 +31,8 @@
 
             <div>
                 <img class="aic" src="images/logo.svg" alt="Art Institute of Chicago" />
-                <img src="images/sponsors/white_reunion-des-musees-nationaux_053483_reunion-des-musees-nationaux.png" alt="Réunion des Musées Nationaux" />
-                <img src="images/sponsors/white_musée_d'Orsay-2.png" alt="Musée d'Orsay" />
+                <img src="images/sponsors/white_reunion_des_musees_nationaux.png" alt="Réunion des Musées Nationaux" />
+                <img src="images/sponsors/white_musee_d_orsay.png" alt="Musée d'Orsay" />
             </div>
 
         </div>
