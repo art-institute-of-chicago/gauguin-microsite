@@ -108,7 +108,7 @@ section.theme {
 			line-height: 1.48;
 
 			// Last spacing stuff...
-			margin-bottom: $theme-gutter;
+			margin-bottom: $theme-gutter - .9;
 		}
 
 		p {
