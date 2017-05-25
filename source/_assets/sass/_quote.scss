@@ -42,47 +42,27 @@ section.quote {
 		border-color: white;
 		border-style: solid;
 
+		font-size: 1.3em;
 		// @320px, horizontal padding is 24px
 		// @1024px, horizontal padding is 50px
 		// We need to between() these values,
 		//   and adjust font size to match.
 
-		$border-width: 4px;
+		border-width: 4px;
 
 		// $font-min: 16px; // TODO: Scale?
-		$font-max: 40px;
 
-		$pad-min: 25px;
-		$pad-max: 50px;
+		padding: 50px; //25px
 
-		$width-min: 85%;
-		$width-max: 66%;
+		width: 85%; //width: 66%;
 
 		// The rest is automated calculation...
+/*
 		border-width: get-vw($border-width, $bp-smallest);
 		font-size: get-vw($font-max, $bp-smallest);
 		padding: get-vw($pad-min, $bp-smallest);
 		width: $width-min;
-
-		@media #{$mq-medium} {
-			border-width: get-vw($border-width, $bp-medium);
-			font-size: get-vw($font-max, $bp-medium);
-			padding: get-vw($pad-max, $bp-medium);
-			width: $width-max;
-		}
-
-		@media #{$mq-large} {
-			border-width: get-vw($border-width, $bp-large);
-			font-size: get-vw($font-max, $bp-large);
-			padding: get-vw($pad-max, $bp-large);
-		}
-
-		@media #{$mq-xlarge} {
-			border-width: get-vw($border-width, $bp-xlarge);
-			font-size: get-vw($font-max, $bp-xlarge);
-			padding: get-vw($pad-max, $bp-xlarge);
-		}
-
+*/		
 		p:first-of-type:before {
 			content: "“";
 		}
@@ -92,5 +72,54 @@ section.quote {
 		}
 
 	}
+	
+	@media #{$mq-smaller} {
+	    blockquote {
+		font-size: 1.6em;
+	    }
+	}
 
+	@media #{$mq-small} {
+	    blockquote {
+		font-size: 1.87em;
+	    }
+	}
+
+	@media #{$mq-medium} {
+	    blockquote {
+		font-size: 2.2em;
+	    }
+	}
+
+	@media #{$mq-large} {
+	    blockquote {
+		font-size: 2.5em;
+	    }
+	}
+/*
+	@media #{$mq-medium} {
+	    blockquote {
+		border-width: get-vw($border-width, $bp-medium);
+		font-size: get-vw($font-max, $bp-medium);
+		padding: get-vw($pad-max, $bp-medium);
+		width: $width-max;
+	    }
+	}
+
+	@media #{$mq-large} {
+	    blockquote {
+		border-width: get-vw($border-width, $bp-large);
+		font-size: get-vw($font-max, $bp-large);
+		padding: get-vw($pad-max, $bp-large);
+	    }
+	}
+
+	@media #{$mq-xlarge} {
+	    blockquote {
+		border-width: get-vw($border-width, $bp-xlarge);
+		font-size: get-vw($font-max, $bp-xlarge);
+		padding: get-vw($pad-max, $bp-xlarge);
+	    }
+	}
+*/
 }
