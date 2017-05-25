@@ -29,7 +29,7 @@
 
 			<span class="buttons" role="menu">
 				<a class="btn btn-small btn-member" href="https://sales.artic.edu/memberships" role="menuitem">Become a Member</a>
-				<a class="btn btn-small btn-ticket" href="https://sales.artic.edu/admissiondate" role="menuitem"><span class="verb">Get </span>Tickets</a>
+				<a class="btn btn-small btn-ticket" href="https://sales.artic.edu/admissiondate" role="menuitem"><span class="verb">Buy </span>Tickets</a>
 			</span>
 
 		</div>
