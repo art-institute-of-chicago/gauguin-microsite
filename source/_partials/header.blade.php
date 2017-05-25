@@ -13,8 +13,6 @@
 
 			<span class="exhibit">
 				<span class="title">Gauguin</span>
-				<span class="pipe" role="presentation">|</span>
-				<span class="subtitle">Artist as Alchemist</span>
 			</span>
 
 		</div>
