@@ -1,5 +1,5 @@
 // Header's breakpoints are mostly independent of the other sections
-#header-placeholder {
+#header-placeholder, #sub-header-placeholder {
 	background-color: $color-blue;
 	width: 100%;
 }
@@ -210,20 +210,14 @@ header {
 		}
 
 	}
-
-	&.sticky {
-
-		position: fixed;
-		top: 0;
-		left: 0;
-
-		padding-top: 6px;
-		padding-bottom: 6px;
-
-		.header-left a {
-			height: 44px;
-			width: 44px;
-		}
-	}
-
 }
+
+section.sub-header {
+    background-color: #CC9A2C;
+    text-align: center;
+    padding: 0.2em;
+    font-size: 0.75em;
+    width: 100%;
+    z-index: 2;
+}
+

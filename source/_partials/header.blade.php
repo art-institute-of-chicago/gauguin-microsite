@@ -1,5 +1,6 @@
 <!-- Sticky Header -->
 <div id="header-placeholder" role="presentation"></div>
+<div id="sub-header-placeholder" role="presentation"></div>
 
 <header role="banner">
 	<div class="container">
@@ -35,3 +36,9 @@
 
 	</div>
 </header>
+
+      @if ($page->subHeader)
+          <section class="sub-header">
+              {{ $page->subHeader }}
+          </section>
+      @endif

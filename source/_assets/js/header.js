@@ -3,7 +3,9 @@ $(document).ready(function() {
 	// Declaring selectors ahead of time for speed
 	var $window = $(window);
 	var $header = $('header');
-	var $placeholder = $('#header-placeholder');
+	var $subHeader = $('section.sub-header');
+        var $placeholder = $('#header-placeholder');
+	var $subPlaceholder = $('#sub-header-placeholder');
 
 	// For development, exit if the header is hidden
 	if( $header.length < 1 ) {
@@ -13,6 +15,7 @@ $(document).ready(function() {
 	// "Sticky" the navigation when the user scrolls below the header
 	var offsetHeader;
 	var heightHeader;
+	var heightSubHeader;
 
 	var updateHeaderStats = function() {
 		if( $placeholder.is(":visible") ) {
@@ -20,8 +23,10 @@ $(document).ready(function() {
 		} else {
 			offsetHeader = $header.offset().top;
 		}
-		heightHeader = $header.outerHeight();
+   	        heightHeader = $header.outerHeight();
 		$placeholder.height( heightHeader );
+   	        heightSubHeader = $subHeader.outerHeight();
+		$subPlaceholder.height( heightSubHeader );
 	};
 
 	updateHeaderStats();
@@ -30,11 +35,17 @@ $(document).ready(function() {
 
 	var stickyNavigation = function() {
 		if( $window.scrollTop() > offsetHeader ) {
-			$header.addClass('sticky');
+		        $header.addClass('sticky');
 			$placeholder.show();
+			$subPlaceholder.show();
+			$subHeader.addClass('sticky');
+ 		        $subHeader.css('top', $header.outerHeight());
 		}else{
 			$header.removeClass('sticky');
+		        $subHeader.removeClass('sticky');
+ 		        $subHeader.css('top', 'inherit');
 			$placeholder.hide();
+			$subPlaceholder.hide();
 		}
 
 	};
