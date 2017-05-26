@@ -45,6 +45,9 @@ section.quote {
 
 		border-width: 4px;
 
+		// Adds some definition to the letters
+		text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+
 		$font-min: 1.2em;
 		$font-max: 2.4em;
 

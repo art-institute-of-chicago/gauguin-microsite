@@ -1,0 +1,168 @@
+// Default lightbox - i.e. what it looks like w/o &.expandable
+// Expandable behavior is defined as @mixins and imported in @media
+#lightbox {
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: white;
+	z-index: 5;
+
+	// Relevant only once &.opened
+	// display: flex;
+	// justify-content: space-between;
+
+	// lightbox.js disables body scroll
+	overflow-y: scroll;
+
+	// lightbox.js toggles &.opened
+	// Screenreaders will read text from `visibility: hidden`
+	&:not(.opened) {
+		display: none;
+	}
+
+	.btn-close {
+
+		position: absolute;
+		right: 10px;
+		top: 10px;
+
+		line-height: 1; // prevents strange overflow
+		z-index: 1; // ensure it's above the canvas
+
+	}
+
+	// Hide all the state-related buttons
+	.btn-toggle {
+		display: none;
+	}
+
+	#viewer {
+		width: 100%;
+		height: 80vh;
+	}
+
+	#content {
+
+		@include font-copy();
+		padding: 0.75em;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		// Bottom part of tombstone
+		// Technically targets all p
+		// Overriden by more specific directives
+		p {
+			font-size: 0.75em;
+			margin: 0 0 1em;
+		}
+
+		// Top part of tombstone
+		> p:first-of-type {
+			font-size: 0.85em;
+			margin: 0;
+		}
+
+		// Title of the artwork
+		h1 {
+			@include font-heading();
+			line-height: 1.25;
+			outline: none;
+
+			font-size: 1em;
+			margin: 1em 0;
+		}
+
+		// Curatorial description
+		blockquote p {
+			font-size: 1em;
+			margin: 0 0 0.75em;
+		}
+
+		// See in our Collection
+		a.collection {
+			text-decoration: underline;
+			font-size: 1.2em;
+			color: #03568B;
+		}
+
+	}
+
+
+	// Layout for desktop screens
+	@media #{$mq-smallish} {
+
+		flex-direction: row;
+
+		#viewer, #content {
+			float: left;
+		}
+
+		#viewer {
+			height: 100%;
+			width: 60%;
+		}
+
+		#content {
+
+			position: relative;
+
+			height: 100%;
+			width: 40%;
+
+			// Remove v-pad, bump h-pad
+			padding: 0 1em;
+
+			p {
+				font-size: 0.85em;
+				margin: 0.6em 0 0;
+			}
+
+			> p:first-of-type {
+				margin: 0.3em 0;
+			}
+
+			h1 {
+				font-size: 1.35em;
+				line-height: 1.5;
+				margin: 0.5em 0;
+			}
+
+			blockquote p {
+				font-size: 1em;
+				margin: 1em 0;
+			}
+
+			a.collection {
+				font-size: 1.2em;
+			}
+
+		}
+
+	}
+
+	@media #{$mq-medium} {
+
+		#content {
+			width: 35%;
+		}
+
+	}
+
+	@media (max-width: 767px) {
+
+		@include lightbox-expandable();
+
+		&.expanded {
+			@include lightbox-expanded();
+		}
+
+	}
+
+}

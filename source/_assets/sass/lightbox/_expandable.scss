@@ -1,0 +1,122 @@
+@mixin lightbox-expandable() {
+
+	#viewer {
+		height: 100%;
+	}
+
+	#content {
+
+		// Allows the toggle to expand
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		// Override this for desktop
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		// Also mobile-only
+		background: linear-gradient(to top, white 2.25em, rgba(255, 255, 255, 0.7) );
+		width: 100%;
+
+		p {
+			// For "reveal" on show more
+			overflow: hidden;
+			max-height: 0;
+
+			font-size: 0.85em;
+			margin: 0;
+		}
+
+		h1 {
+
+			// Mid-line separation...
+			margin-bottom: 0.75em;
+			margin-top: 0;
+
+		}
+
+		blockquote {
+
+			p {
+				// Hide all non-first paragraphs
+				// For multi-paragraph descriptions
+				max-height: 0em;
+
+				font-size: 0.75em;
+				margin: 0;
+			}
+
+
+			p:first-of-type {
+
+				// Show only the first 2 lines
+				// Based on line-height: 1.5em
+				max-height: 3em;
+
+			}
+
+			// Alas, this doesn't work:
+			// word-wrap: break-word;
+			// text-overflow: ellipsis;
+
+		}
+
+	}
+
+	// Match settings to `blockquote p`
+	.btn-toggle {
+
+		// By default, this is hidden. Show it.
+		display: block;
+
+		// Tapping anywhere on the bottom thingy will expand!
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		width: 100%;
+		height: 100%;
+
+		font-size: 0.75em;
+
+		text-decoration: underline;
+		color: #03568B;
+
+		// Position "Read More" to bottom-right
+		span, &:after {
+			position: absolute;
+			bottom: 1.075em;
+		}
+
+		// Position "Read More" above the fade-out
+		span {
+			right: 2em;
+			z-index: 1;
+			white-space: nowrap;
+		}
+
+		// Used to fade out underlying text
+		&:after {
+			content: "";
+			right: 0em;
+
+			height: 1.5em;
+			width: 75%;
+
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+			pointer-events: none;
+		}
+
+		&.btn-show {
+			visibility: visible;
+		}
+
+		&.btn-hide {
+			visibility: hidden;
+		}
+
+	}
+
+}

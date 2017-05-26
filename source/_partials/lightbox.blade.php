@@ -4,7 +4,7 @@
 
 	<script id="artwork-{{ $artwork->id }}" type="text/template">
 
-		<a href="javascript:Lightbox.expand()" class="btn-expand-invisible"></a>
+		<a href="javascript:Lightbox.expand()" class="btn-toggle-invisible"></a>
 
 		<p id="lightbox-start">
 			{{ $artwork->artistName}}<br/>
@@ -30,11 +30,11 @@
 			<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
 		@endif
 
-		<a href="javascript:Lightbox.expand()" class="btn-expand btn-show">
+		<a href="javascript:Lightbox.expand()" class="btn-toggle btn-show">
 			<span>Read More</span>
 		</a>
 
-		<a href="javascript:Lightbox.expand()" class="btn-expand btn-hide">
+		<a href="javascript:Lightbox.expand()" class="btn-toggle btn-hide">
 			<span>Hide</span>
 		</a>
 
