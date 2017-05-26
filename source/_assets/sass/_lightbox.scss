@@ -69,7 +69,6 @@
 			margin: 0;
 
 			// For "reveal" on show more
-			transition: max-height 0.3s ease-out, margin 0.3s ease-out;
 			overflow: hidden;
 			max-height: 0;
 		}
@@ -187,14 +186,7 @@
 
 			p {
 
-				// Determines how long it takes for the lightbox to expand!
-				// Has interesting interactions w/ max-height proportion to actual height
-				$curve: cubic-bezier(0, 0.2, 1, 0);
-				$time: 0.25s;
-
-				transition: max-height #{$time} #{$curve}, margin #{$time} #{$curve};
-
-				max-height: 20em;
+				max-height: initial;
 				margin-bottom: 0.75em;
 
 			}
