@@ -3,7 +3,7 @@
 
 		<div class="links">
 
-            <h5>&nbsp;</h5>
+			<h5>&nbsp;</h5>
 
 			<div>
 
@@ -25,29 +25,29 @@
 
 			</div>
 
-        </div>
+		</div>
 
 		<div class="organized">
 
-            <h5>The exhibition is organized by</h5>
+			<h5>The exhibition is organized by</h5>
 
-            <div>
-                <img class="aic" src="images/logo.svg" alt="Art Institute of Chicago" />
-                <img src="images/sponsors/white_reunion_des_musees_nationaux.png" alt="Réunion des Musées Nationaux" />
-                <img src="images/sponsors/white_musee_d_orsay.png" alt="Musée d'Orsay" />
-            </div>
+			<div>
+				<img class="aic" src="images/logo.svg" alt="Art Institute of Chicago" />
+				<img src="images/sponsors/white_reunion_des_musees_nationaux.png" alt="Réunion des Musées Nationaux" />
+				<img src="images/sponsors/white_musee_d_orsay.png" alt="Musée d'Orsay" />
+			</div>
 
-        </div>
+		</div>
 
-        <div class="sponsor">
+		<div class="sponsor">
 
-            <h5>Lead Sponsor</h5>
+			<h5>Lead Sponsor</h5>
 
-            <div>
-                <img src="images/sponsors/bom_white.png" alt="Bank of America" />
-            </div>
+			<div>
+				<img src="images/sponsors/bom_white.png" alt="Bank of America" />
+			</div>
 
-        </div>
+		</div>
 
 	</div>
 </section>
