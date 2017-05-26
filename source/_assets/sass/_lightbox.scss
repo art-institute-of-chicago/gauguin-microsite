@@ -264,16 +264,12 @@
 			margin: 0;
 			padding: 0 1em;
 
-			// Undo all of the "hide" stuff
-			background: none;
-
 			.btn-expand-invisible,
 			.btn-expand {
 				display: none;
 			}
 
 			p {
-
 				transition: none;
 				max-height: initial;
 
@@ -312,8 +308,23 @@
 
 		}
 
-		.btn-close {
-			visibility: visible;
+		// Undo all of the "hide" stuff
+		&.expanded {
+
+			#content {
+				background: none;
+				height: initial;
+			}
+
+			.btn-close {
+				visibility: visible;
+			}
+
+
+			.btn-expand-invisible {
+				visibility: hidden;
+			}
+
 		}
 
 	}
