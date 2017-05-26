@@ -1,0 +1,70 @@
+@mixin lightbox-expanded() {
+
+	// User must exit expanded mode before exiting lightbox
+	.btn-close {
+		visibility: hidden;
+	}
+
+	#content {
+
+		height: 100%;
+
+		p {
+			max-height: initial;
+			margin-bottom: 0.75em;
+		}
+
+		// Special margins for the Collections link
+		> p:last-of-type {
+			margin-bottom: 1.65em;
+		}
+
+		h1 {
+			margin-top: 0.75em;
+		}
+
+		blockquote {
+
+			margin: 0;
+
+			p {
+
+			}
+
+			p:first-of-type {
+				max-height: initial;
+			}
+
+		}
+
+		a.collection {
+			position: relative;
+			z-index: 10;
+		}
+
+		> * {
+			flex-shrink: 0;
+		}
+
+	}
+
+	.btn-toggle {
+
+		width: auto;
+		height: auto;
+
+		&.btn-hide {
+			visibility: visible;
+		}
+
+		&.btn-show {
+			visibility: hidden;
+		}
+
+	}
+
+	.btn-toggle-invisible {
+		flex-grow: 1;
+	}
+
+}
