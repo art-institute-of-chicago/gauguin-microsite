@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 	stickyNavigation();
 
-	$window.scroll( stickyNavigation );
+	$window.on('scroll touchmove', stickyNavigation );
 	$window.resize( stickyNavigation );
 
 });
