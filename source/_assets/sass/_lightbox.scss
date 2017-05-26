@@ -77,6 +77,10 @@
 			font-size: 0.85em;
 			margin: 0;
 
+			// Hack to use hardware acceleration
+			transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+
 			// For "reveal" on show more
 			transition: max-height 0.3s ease-out, margin 0.3s ease-out;
 			overflow: hidden;
