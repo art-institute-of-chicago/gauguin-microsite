@@ -18,6 +18,7 @@ foreach ($data as $event) {
     $yaml .= "date: " .date('l, F j, Y', $dates) ."\n";
     $yaml .= "time: " .strtolower($event->start_time ."–" .$event->end_time) ."\n";
     $yaml .= "link: " .$event->url ."\n";
+    $yaml .= "sortOrder: " .$event->dates ."\n";
     $yaml .= "---\n";
 
     $filename = $event->dates ."-" .strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $event->title))) .".md";

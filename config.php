@@ -14,6 +14,8 @@ return [
 			'sort' => 'weight'
 		],
 		'artworks',
-		'events',
+		'events' => [
+			'sort' => 'sortOrder'
+		],
 	],
 ];
