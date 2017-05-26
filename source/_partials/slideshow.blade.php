@@ -21,7 +21,7 @@
 
 	<div class="title-card">
 
-		<img src="images/gauguin-logo.svg" />
+		<img src="images/gauguin-logo.svg" alt="Gauguin, Artist as Alchemist"/>
 
 		<div class="events">
 
