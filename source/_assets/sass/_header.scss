@@ -6,6 +6,22 @@
 
 header {
 
+	// Header is too large at smallest breakpoint
+	// This will scale it down, then up smoothly
+	$font-min: 0.8em;
+	$font-max: 1em;
+
+	font-size: $font-min;
+
+	@media #{$mq-smallest} {
+		font-size: between( $font-min, $font-max, $bp-smallest, $bp-medium );
+	}
+
+	@media #{$mq-medium} {
+		font-size: $font-max;
+	}
+
+	// TODO: Make these em-dependent?
 	@mixin break-logo {
 		@media (max-width: 960px) {
 			@content;
