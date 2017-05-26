@@ -10,9 +10,6 @@
 	background-color: white;
 	z-index: 5;
 
-	// main.js will hide body's overflow
-	overflow-y: hidden;
-
 	// Screenreaders will read text from visibility: hidden
 	display: none;
 
@@ -26,7 +23,7 @@
 
 	.btn-close {
 
-		position: fixed;
+		position: absolute;
 		top: 10px;
 		right: 10px;
 
@@ -42,8 +39,6 @@
 	}
 
 	#content {
-
-		overflow-y: scroll;
 
 		@include font-copy();
 
