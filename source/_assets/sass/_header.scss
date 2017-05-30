@@ -11,6 +11,8 @@
 
 header {
 
+	transform: translate3d(0, 0, 0);
+
 	// Header is too large at smallest breakpoint
 	// This will scale it down, then up smoothly
 	$font-min: 0.8em;
@@ -224,6 +226,8 @@ header {
 
 
 	&.sticky {
+
+		transform: translate3d(0, 0, 0);
 
 		position: fixed;
 		top: 0;
