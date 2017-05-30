@@ -15,6 +15,7 @@ $(document).ready(function() {
 	var heightHeader;
 
 	var updateHeaderStats = function() {
+
 		if( $placeholder.is(":visible") ) {
 			offsetHeader = $placeholder.offset().top;
 		} else {
@@ -31,12 +32,13 @@ $(document).ready(function() {
 	$window.resize( updateHeaderStats );
 
 	var stickyNavigation = function() {
+
 		if( $window.scrollTop() > offsetHeader ) {
 			$header.addClass('sticky');
-			$placeholder.show();
+			$placeholder.addClass('sticky');
 		}else{
 			$header.removeClass('sticky');
-			$placeholder.hide();
+			$placeholder.removeClass('sticky');
 		}
 
 	};
