@@ -159,6 +159,11 @@ section.theme-1.theme-portrait {
 			flex-direction: row;
 		}
 
+		.image {
+			padding-left: $theme-gutter/2;
+			padding-right: $theme-gutter;
+		}
+
 	}
 
 }
