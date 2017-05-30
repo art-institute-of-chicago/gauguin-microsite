@@ -38,15 +38,16 @@ function LightboxManager( ) {
 
 	});
 
-        function open( id, returnTo ) {
+	function open( id, returnTo ) {
 
 		// Find our data source container
 		var $data = $('#artwork-' + id );
 
 		// Load the data contents into lightbox
 		$content.html( $data.html() );
-	    console.log($('#artwork-' + id + '-image').data("image"));
+
 		// Load the image into OSD!
+		// console.log($('#artwork-' + id + '-image').data("image"));
 		viewer.open($('#artwork-' + id + '-image').data("image"));
 
 		// Show the lightbox

@@ -6,6 +6,10 @@
 
 		<a href="javascript:Lightbox.expand()" class="btn-toggle-invisible"></a>
 
+		<a href="javascript:Lightbox.expand()" class="btn-toggle btn-hide">
+			<span>Hide</span>
+		</a>
+
 		<p id="lightbox-start">
 			{{ $artwork->artistName}}<br/>
 			{{ $artwork->artistPlaceDates}}
@@ -15,7 +19,7 @@
 
 		<p>
 			{{ $artwork->date }}<br/>
-            {{ $artwork->materialDimensions }}, 
+			{{ $artwork->materialDimensions }},
 			{{ $artwork->creditAccessionNumber }}
 		</p>
 
@@ -30,12 +34,8 @@
 			<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
 		@endif
 
-		<a href="javascript:Lightbox.expand()" class="btn-toggle btn-show">
-			<span>Read More</span>
-		</a>
-
-		<a href="javascript:Lightbox.expand()" class="btn-toggle btn-hide">
-			<span>Hide</span>
+		<a href="javascript:Lightbox.expand()" class="btn-toggle btn-show" aria-label="Read more">
+			<span>▲</span>
 		</a>
 
 		<div id="artwork-{{ $artwork->id }}-image" data-image="{{ $artwork->image }}" />
@@ -52,12 +52,12 @@
 		<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<desc>Close lightbox</desc>
 			<defs></defs>
-			<g id="Welcome" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
-				<g id="Desktop-Copy-6" transform="translate(-974.000000, -12.000000)" stroke="#979797">
-					<g id="Group-Copy-2" transform="translate(975.000000, 13.000000)">
-						<circle id="Oval-3" stroke-opacity="0.500283062" cx="19" cy="19" r="19"></circle>
-						<path d="M11.6451613,11.6451613 L26.3548387,26.3548387" id="Line" stroke-linecap="square"></path>
-						<path d="M11.6451613,11.6451613 L26.3548387,26.3548387" id="Line-Copy" stroke-linecap="square" transform="translate(19.000000, 19.000000) scale(-1, 1) translate(-19.000000, -19.000000) "></path>
+			<g stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
+				<g stroke="#979797">
+					<g transform="translate(1,1)">
+						<circle stroke-opacity="0.8" cx="19" cy="19" r="19"></circle>
+						<path d="M11,11 L26,26" stroke-linecap="square"></path>
+						<path d="M11,11 L26,26" stroke-linecap="square" transform="translate(19, 19) scale(-1, 1) translate(-19, -19)"></path>
 					</g>
 				</g>
 			</g>
