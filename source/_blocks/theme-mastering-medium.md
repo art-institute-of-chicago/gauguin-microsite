@@ -1,8 +1,7 @@
 ---
 extends: "_partials.theme"
 weight: 400
-theme: "Brittany: Mastering the Medium"
-title: "In Brittany, Gauguin found new inspiration"
+title: "Traveling the World"
 images:
   - image: "toilette.png"
     lightbox: "toilette"
@@ -18,4 +17,4 @@ images:
     alt: "Painted in bright colors, two figures are seen sitting on a ledge overlooking brown and white sheep grazing on a farm atop a hill. Painterly brushstrokes of simplified forms in orange and green cover the trees and the roof of a barn is seen below. A view of the valley is seen in the background with mountains in the far distance."
 ---
 
-In the mid-1880s, Gauguin traveled to the French region of Brittany, where the local people and landscape inspired recurring motifs that appear throughout the rest of his career. When in Paris, he began experimenting in clay, creating what he called “ceramic sculpture.”
+Gauguin spent the first six years of his life in Peru, and as an adult lived in Paris, Brittany, Martinique, and Tahiti. In every place, he absorbed—and reinvented—the local artistic and cultural traditions.
