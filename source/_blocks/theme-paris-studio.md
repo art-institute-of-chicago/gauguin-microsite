@@ -3,7 +3,7 @@ extends: "_partials.theme"
 weight: 700
 title: "Discovering New Methods"
 images:
-  - image: "casket.png"
+  - image: "hqdefault.jpeg"
     lightbox: "casket"
     alt: ""
 ---
