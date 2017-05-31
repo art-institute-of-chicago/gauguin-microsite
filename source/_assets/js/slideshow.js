@@ -24,6 +24,7 @@ $(document).ready( function() {
 		speed: 650,
 
 		pagination: '.swiper-pagination',
+		paginationClickable: true,
 
 	});
 
