@@ -28,6 +28,12 @@ function LightboxManager( ) {
 
 		visibilityRatio: 1,
 		minZoomImageRatio: 1,
+		viewportMargins: {
+			top: 15,
+			left: 15,
+			right: 15,
+			bottom: 15,
+		},
 
 		// zoomPerClick: Math.pow(maxZoomLevel, 1/3),
 		// zoomPerScroll: Math.pow(maxZoomLevel, 1/6),
