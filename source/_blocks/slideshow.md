@@ -1,9 +1,14 @@
 ---
 extends: "_partials.slideshow"
 weight: 50
+
+# Each image requires the following two files to be present:
+# images/content/slideshow-mobile-{image}.jpg
+# images/content/slideshow-desktop-{image}.jpg
 images:
-  - "images/content/slideshow-day-of-the-god-3000.jpg"
-  - "images/content/slideshow-vase2-3000.jpg"
-  - "images/content/slideshow-trunk-3000.jpg"
-  - "images/content/slideshow-vase.jpg"
+  - "dog"
+  - "vase"
+  - "trunk"
+  - "fase"
+
 ---

@@ -8,7 +8,18 @@
 
 			<!-- Slides -->
 			@foreach ($page->images as $index => $image)
-				<div class="swiper-slide" style="background-image: url('{{$image}}')" data-hash="{{ ++$index }}">
+				<div class="swiper-slide" data-hash="{{ ++$index }}">
+
+					<div
+						class="slide-mobile"
+						style="background-image: url('images/content/slideshow-mobile-{{$image}}.jpg')"
+					></div>
+
+					<div
+						class="slide-desktop"
+						style="background-image: url('images/content/slideshow-desktop-{{$image}}.jpg')"
+					></div>
+
 				</div>
 			@endforeach
 

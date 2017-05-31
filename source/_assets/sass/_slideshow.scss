@@ -11,10 +11,37 @@ section.slideshow {
 	}
 
 	.swiper-slide {
-		// TODO: Change this depending @media
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
+
+		position: relative;
+
+		.slide-mobile, .slide-desktop {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		.slide-desktop {
+			display: none;
+		}
+
+		@media #{$mq-smallish} {
+
+			.slide-mobile {
+				display: none;
+			}
+
+			.slide-desktop {
+				display: block;
+			}
+
+		}
+
 	}
 
 	.swiper-pagination-bullet {
