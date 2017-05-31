@@ -1,3 +1,4 @@
+---
 hide: true
 extends: "_partials.theme"
 weight: 700
