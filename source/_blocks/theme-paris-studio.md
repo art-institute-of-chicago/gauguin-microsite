@@ -1,4 +1,4 @@
----
+hide: true
 extends: "_partials.theme"
 weight: 700
 theme: "Gauguin's Paris Studio"
