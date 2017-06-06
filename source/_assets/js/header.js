@@ -18,12 +18,6 @@ $(document).ready(function() {
 
 	var updateHeaderStats = function() {
 
-		if( $placeholder.is(":visible") ) {
-			offsetHeader = $placeholder.offset().top;
-		} else {
-			offsetHeader = $header.offset().top;
-		}
-
 		heightHeader = $header.outerHeight();
 		$placeholder.height( heightHeader );
 
@@ -32,6 +26,13 @@ $(document).ready(function() {
 		var height = $window.height();
 
 		$slideshow.css('padding-bottom', (height - heightHeader - 24) / width * 100 + '%');
+
+
+		if( $placeholder.is(":visible") ) {
+			offsetHeader = $placeholder.offset().top;
+		} else {
+			offsetHeader = $header.offset().top;
+		}
 
 	};
 

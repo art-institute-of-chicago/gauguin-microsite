@@ -1,5 +1,5 @@
 <!-- Sticky Header -->
-<div id="header-placeholder" role="presentation"></div>
+<div id="header-placeholder" role="presentation">
 
 <header role="banner">
 	<div class="container">
@@ -41,3 +41,6 @@
 	@endif
 
 </header>
+
+{{-- Wrapping header into the placeholder prooved to provide smoother transitions --}}
+</div>

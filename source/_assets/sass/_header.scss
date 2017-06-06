@@ -1,12 +1,9 @@
 // Header's breakpoints are mostly independent of the other sections
 #header-placeholder {
 	background-color: $color-blue;
-	display: none;
 	width: 100%;
 
-	&.sticky {
-		display: block;
-	}
+	position: relative;
 }
 
 header {
@@ -65,7 +62,7 @@ header {
 		}
 	}
 
-	position: relative;
+	position: absolute;
 	z-index: 2;
 
 	background-color: $color-blue;
