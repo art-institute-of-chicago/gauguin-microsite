@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 		// Adjust slideshow
 		var width = $slideshow.width();
-		var height = $window.height();
+		var height = $window.innerHeight();
 
 		$slideshow.css('padding-bottom', (height - heightHeader - 24) / width * 100 + '%');
 
