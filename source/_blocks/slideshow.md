@@ -6,9 +6,9 @@ weight: 50
 # images/content/slideshow-mobile-{image}.jpg
 # images/content/slideshow-desktop-{image}.jpg
 images:
+  - "god"
+  - "fase"
   - "dog"
   - "vase"
   - "trunk"
-  - "fase"
-
 ---
