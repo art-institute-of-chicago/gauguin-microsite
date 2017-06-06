@@ -6,7 +6,7 @@
 		</div>
 
 		<div class="sponsor">
-			Digital engagement support by<br/>
+			Digital Engagement support by<br/>
 			<img src="images/sponsors/bloomberg.png" alt="Bloomberg Philanthropies" />
 		</div>
 
