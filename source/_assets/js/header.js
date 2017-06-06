@@ -5,6 +5,8 @@ $(document).ready(function() {
 	var $header = $('header');
 	var $placeholder = $('#header-placeholder');
 
+	var $slideshow = $('.slideshow');
+
 	// For development, exit if the header is hidden
 	if( $header.length < 1 ) {
 		return false;
@@ -24,6 +26,12 @@ $(document).ready(function() {
 
 		heightHeader = $header.outerHeight();
 		$placeholder.height( heightHeader );
+
+		// Adjust slideshow
+		var width = $slideshow.width();
+		var height = $window.height();
+
+		$slideshow.css('padding-bottom', (height - heightHeader - 24) / width * 100 + '%');
 
 	};
 
