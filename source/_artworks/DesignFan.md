@@ -1,13 +1,11 @@
 ---
 id: "DesignFan"
 link: ""
-image: "images/dzis/PG_013r1_51M.dzi"
+image: "images/content/DesignFan.jpg"
 artistName: Paul Gauguin
-artistPlaceDates: "French, 1848–1903"
-title: "Resurrection Sarcophagus-Like Casket"
-date: "1884–85"
-materialDimensions: "Pearwood, with iron hinges, leather, and red stain, inlaid with two netsuke masks; 21 × 51.4 × 13 cm (8 1/4 × 20 1/4 × 5 in.)"
-creditAccessionNumber: "Loan courtesy of The Kelton Foundation, Santa Monica, California"
+title: "Design for a Fan"
+date: "1887-88"
+materialDimensions: "Watercolor, gouache, pastel and graphite on paper; 31.8 × 52 cm (12 1/2 × 20 1/2 in.)"
+creditAccessionNumber: "Charles Hosmer Morse Museum of American Art, Winter Park, Florida, gift of Mr. and Mrs. Arthur Taylor Aldis"
 ---
-
-The exterior of this box features Degas-like dancers and inlaid Japanese netsuke masks. Inside Gauguin carved a mummy-like figure. These elements reflect the transcultural borrowings that became his trademark.
+Although Gauguin only spent a few months in Martinique, the island remained an important inspiration for his work in a range of media. This was Gauguin’s first artistic experience of life in the tropics, anticipating his time in Tahiti.
