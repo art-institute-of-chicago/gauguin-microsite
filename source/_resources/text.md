@@ -1,7 +1,7 @@
 ---
 extends: "_partials.resource"
 weight: 30
-title: "Wall Label PDF"
-type: "Text"
+title: "Missed a label? Download them here!"
+type: "Wall Label"
 link: "http://www.artic.edu"
 ---
