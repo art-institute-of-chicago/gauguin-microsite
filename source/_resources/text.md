@@ -1,7 +1,7 @@
 ---
 extends: "_partials.resource"
 weight: 30
-title: "Missed a label? Download them here!"
+title: "Download Gallery Panels"
 type: "Exhibition Text"
 link: "http://www.artic.edu"
 ---
