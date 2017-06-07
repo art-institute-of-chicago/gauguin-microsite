@@ -3,7 +3,6 @@ extends: "_partials.theme"
 weight: 400
 title: "Traveling the World"
 images:
- 
   - image: "jardiniere.png"
     lightbox: "jardiniere"
     alt: "A large ceramic crate that stands on a sturdy base. A scene of a woman on a farm is carved and painted on the front. She is sitting in the grass holding a stick. A black dog and a white duck stand nearby, near a small wooden fence. A large, bright green field of rolling hills is seen in the background."
