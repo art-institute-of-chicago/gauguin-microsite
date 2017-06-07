@@ -1,6 +1,6 @@
 ---
 extends: "_partials.quote"
-weight: 800
+weight: 1000
 image: "images/content/quote2.png"
 ---
 
