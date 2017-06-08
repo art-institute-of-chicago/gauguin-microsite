@@ -72,11 +72,11 @@ section.quote {
 		}
 
 		@media #{$mq-medium} {
-			padding: $pad-max/2 $pad-max;
+			// padding: $pad-max/2 $pad-max;
 		}
 
 		@media #{$mq-large} {
-			font-size: $font-max;
+			// font-size: $font-max;
 		}
 
 		p:first-of-type:before {
