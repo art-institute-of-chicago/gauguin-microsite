@@ -8,7 +8,7 @@ weight: 50
 images:
   - "god"
   - "fase"
-  - "dog"
   - "vase"
   - "trunk"
+  - "dog"
 ---
