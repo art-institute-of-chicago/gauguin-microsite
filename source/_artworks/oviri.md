@@ -10,4 +10,4 @@ materialDimensions: "Partially glazed stoneware; 75 × 19 × 27 cm (29 1/2 × 7 
 creditAccessionNumber: "Musée d’Orsay, Paris"
 ---
 
-In 1894, Gauguin made his last and largest ceramic work, Oviri, inspired by a Tahitian goddess yet still very much his own creation. This figure was so important to him that he considered it to be his savage alter ego.  
+In 1894, Gauguin made his last and largest ceramic work, Oviri, inspired by a Tahitian goddess yet still very much his own creation. This figure was so important to him that he considered it to be his savage alter ego. 
