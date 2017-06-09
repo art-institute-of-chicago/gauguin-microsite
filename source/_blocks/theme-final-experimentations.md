@@ -3,6 +3,7 @@ extends: "_partials.theme"
 variant: "landscape"
 weight: 900
 title: "Experimenting to the End"
+theme: Innovation
 images:
   - image: "faa_heihe.png"
     lightbox: "faaheihe"
