@@ -1,7 +1,7 @@
 ---
 id: "Papemoe"
 link: ""
-image: "images/content/Papemoe.jpg"
+image: "images/dzis/Papemoe.dzi"
 artistName: Paul Gauguin
 artistPlaceDates: "French, 1848–1903"
 title: "Pape moe (Mysterious Water)"
