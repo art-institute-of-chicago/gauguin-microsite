@@ -10,4 +10,4 @@ materialDimensions: "Third state of four. Wood-block print in black ink, over tr
 creditAccessionNumber: "The Art Institute of Chicago, Clarence Buckingham Collection, 1948.254"
 ---
 
-In Paris, Gauguin created a series of ten prints to complement his memoir. Some imagery comes from his Tahitian paintings, but the rest he invented completely or discovered during the radical process of making them.
+In Paris, Gauguin created a series of 10 prints to complement his memoir. Some imagery comes from his Tahitian paintings, but the rest he invented completely or discovered in his radical creative process.
