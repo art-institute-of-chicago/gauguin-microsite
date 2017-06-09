@@ -16,4 +16,4 @@ images:
     alt: "A stone carving of a figure standing with slightly bent knees. A large reptilian figure sits on the ground next to them with a wide open mouth. They stand on a pedestal entitled 'Oviri.'"
 ---
 
-Gauguin didn’t just work as a painter, sculptor, ceramist, and decorator, he also created new processes. Sometimes he was responding to the physical or financial limitations of a place; sometimes it was his desire to do what no one had done before.
+Gauguin not only worked as a painter, sculptor, ceramist, printmaker, and decorator—he also invented new processes in many of these areas. Sometimes he was responding to the physical or financial limitations of a place; other times it was his desire to do what no one had done before.
