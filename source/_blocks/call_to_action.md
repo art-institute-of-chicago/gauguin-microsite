@@ -12,7 +12,7 @@ buttonThree: "Plan your visit"
 buttonThreeLink: "http://www.artic.edu/visit"
 ---
 
-Member Preview: June 23–24
+Member Previews: June 23–24
 
 Open daily 10:30–5:00  
 Thursday until 8:00
