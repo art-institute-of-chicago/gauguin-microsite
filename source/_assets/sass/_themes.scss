@@ -10,7 +10,12 @@ $theme-offset: 10%;
 	background: $color;
 
 	@media #{$mq-small} {
-		background: linear-gradient(90deg, white $theme-offset, $color $theme-offset);
+		background: linear-gradient(90deg, white 50%, $color 50%);
+
+		.container {
+			background: linear-gradient(90deg, white $theme-offset, $color $theme-offset);
+		}
+
 	}
 
 }
@@ -33,7 +38,6 @@ $theme-offset: 10%;
 section.theme {
 
 	.container {
-		position: relative;
 
 		// Spacing stuff... should be 2x .wrapper's margin
 		padding: $theme-gutter 0;
@@ -138,6 +142,13 @@ section.theme {
 
 	@media #{$mq-small} {
 
+		.container {
+
+			// Delegate this to .theme on larger screens
+			position: relative;
+
+		}
+
 		.wrapper {
 			margin-left: $theme-offset;
 			padding-left: $theme-offset;
@@ -148,19 +159,17 @@ section.theme {
 
 			position: absolute;
 			bottom: 2em;
-			left: 5%;
+			left: $theme-offset * 3/4;
 
 			transform: translateX(-50%);
 
-			// Force it to wrap
-			max-width: 10%;
 		}
 	}
 
 
-	@media #{$mq-xlarge} {
+	@media #{$mq-medium} {
 		h2 {
-			left: 10%;
+			left: $theme-offset;
 		}
 	}
 
