@@ -41,8 +41,8 @@
 				<span class="date">Jun 25 • Sept 10</span>
 			</div>
 
-			<div class="event event-preview">
-				<span class="title">Member Preview</span>
+			<div class="event event-">
+				<span class="title">Member Previews</span>
 				<span class="date">Jun 22 • Jun 24</span>
 			</div>
 
