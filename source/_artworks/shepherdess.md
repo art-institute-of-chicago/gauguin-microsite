@@ -9,5 +9,4 @@ date: "1886"
 materialDimensions: "Oil on canvas; 60.4 × 73.3 cm (23 3/4 × 28 7/8 in.)"
 creditAccessionNumber: "Laing Art Gallery, Tyne & Wear Archives & Museums, Newcastle upon Tyne"
 ---
-
-Gauguin focused on specific images of Brittany, such as young women in traditional Breton dress, cows, geese, and sheep. These images are repeated in his work in all media.
+Gauguin depicted very specific images of Brittany: young women in traditional Breton dress, cows, geese, and sheep. These images are repeated in his work in all media.
