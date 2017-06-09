@@ -4,5 +4,5 @@ weight: 100
 dates:
   start: "June 25"
   end: "Sept 10"
-subHeader: "Members preview of the exhibition: June 22–June 24"
+subHeader: "Member previews of the exhibition: June 22–June 24"
 ---
