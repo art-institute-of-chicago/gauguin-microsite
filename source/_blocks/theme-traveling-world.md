@@ -2,6 +2,7 @@
 extends: "_partials.theme"
 weight: 400
 title: "Traveling the World"
+theme: Exploration
 images:
   - image: "DesignFan.jpg"
     lightbox: "DesignFan"
