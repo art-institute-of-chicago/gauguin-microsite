@@ -2,6 +2,7 @@
 extends: "_partials.theme"
 weight: 700
 title: "Discovering New Methods"
+theme: Materials
 images:
 images:
   - image: "noanoa.png"
