@@ -3,6 +3,7 @@ extends: "_partials.theme"
 variant: "portrait"
 weight: 300
 title: "Becoming Gauguin"
+theme: Origins
 images:
   - image: "casket.png"
     lightbox: "casket"
