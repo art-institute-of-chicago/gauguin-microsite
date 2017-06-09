@@ -38,12 +38,12 @@
 
 			<div class="event event-exhibit">
 				<span class="title">Exhibition</span>
-				<span class="date">Jun 25 • Sept 10</span>
+				<span class="date">June 25 • Sept 10</span>
 			</div>
 
 			<div class="event event-">
 				<span class="title">Member Previews</span>
-				<span class="date">Jun 22 • Jun 24</span>
+				<span class="date">June 22 • June 24</span>
 			</div>
 
 		</div>
