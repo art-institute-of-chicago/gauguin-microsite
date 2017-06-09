@@ -1,7 +1,7 @@
 ---
 extends: "_partials.resource"
 weight: 20
-title: "Download here!"
+title: "Explore Our Free Audio Tour App"
 type: "Official Mobile App"
 image: "images/app-store.png"
 alt: "Download on the App Store"
