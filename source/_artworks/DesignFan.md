@@ -1,7 +1,7 @@
 ---
 id: "DesignFan"
 link: ""
-image: "images/content/DesignFan.jpg"
+image: "images/dzis/DesignFan.dzi"
 artistName: Paul Gauguin
 title: "Design for a Fan"
 date: "1887-88"
