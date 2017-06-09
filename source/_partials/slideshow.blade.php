@@ -43,7 +43,7 @@
 
 			<div class="event event-">
 				<span class="title">Member Previews</span>
-				<span class="date">June 22 • June 24</span>
+				<span class="date">June 22 • 24</span>
 			</div>
 
 		</div>
