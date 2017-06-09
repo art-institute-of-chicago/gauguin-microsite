@@ -19,9 +19,9 @@
 		<div class="header-right">
 
 			<span class="dates">
-				<span class="start">{{ $page->dates['start'] }}</span>
-				<span class="dash">–</span>
-				<span class="end">{{ $page->dates['end'] }}</span>
+				<span class="start">{{ $page->dates['start'] }}</span
+				><span class="dash">–</span
+				><span class="end">{{ $page->dates['end'] }}</span>
 			</span>
 
 			<span class="buttons" role="menu">
