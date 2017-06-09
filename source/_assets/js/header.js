@@ -27,7 +27,6 @@ $(document).ready(function() {
 
 		$slideshow.css('padding-bottom', (height - heightHeader - 24) / width * 100 + '%');
 
-
 		if( $placeholder.is(":visible") ) {
 			offsetHeader = $placeholder.offset().top;
 		} else {
@@ -40,14 +39,23 @@ $(document).ready(function() {
 
 	$window.resize( updateHeaderStats );
 
+	var stickied = false;
+
 	var stickyNavigation = function() {
 
 		if( $window.scrollTop() > offsetHeader ) {
-			$header.addClass('sticky');
-			$placeholder.addClass('sticky');
+			if( !stickied ) {
+				updateHeaderStats();
+				$header.addClass('sticky');
+				$placeholder.addClass('sticky');
+				stickied = true;
+			}
 		}else{
-			$header.removeClass('sticky');
-			$placeholder.removeClass('sticky');
+			if( stickied ) {
+				$header.removeClass('sticky');
+				$placeholder.removeClass('sticky');
+				stickied = false;
+			}
 		}
 
 	};
