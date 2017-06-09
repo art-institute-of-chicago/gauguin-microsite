@@ -10,5 +10,5 @@ materialDimensions: "Pearwood, with iron hinges, leather, and red stain, inlaid 
 creditAccessionNumber: "Loan courtesy of The Kelton Foundation, Santa Monica, California"
 ---
 
-The exterior of this box features Degas-like dancers and inlaid Japanese netsuke masks. Inside Gauguin carved a mummy-like figure. These elements reflect the transcultural borrowings that became his trademark.
+The exterior of this box features Degas-like dancers and inlaid Japanese netsuke masks. Inside Gauguin carved a figure that resembles a mummy. These elements reflect the transcultural borrowings that became his trademark.
 
