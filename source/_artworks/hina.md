@@ -10,5 +10,5 @@ materialDimensions: "Tamanu wood with gilded paint; 37.1 × 13.4 × 10.8 cm (14 
 creditAccessionNumber: "Hirshhorn Museum and Sculpture Garden, Smithsonian Institution, Washington, D.C., Museum Purchase with Funds Provided under the Smithsonian Institution Collections Acquisition Program"
 ---
 
-In his carved-wood idols, Gauguin featured important figures from Tahitian religion. These sculptures bear little resemblance to Tahitian idols but rather were the product of Gauguin’s own invention and borrowings from other cultures.
+In his carved wood idols, Gauguin featured important figures from Tahitian religion. His idols bore little resemblance to their native precedents; instead they were his own invention that borrowed from other cultures.
 
