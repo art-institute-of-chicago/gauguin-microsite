@@ -2,6 +2,7 @@
 extends: "_partials.theme"
 weight: 600
 title: "Reinventing the Past"
+theme: Vision
 images:
   - image: "tehamana.png"
     lightbox: "tehamana"
