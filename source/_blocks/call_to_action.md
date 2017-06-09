@@ -7,7 +7,7 @@ buttonOne: "Become a member"
 buttonOneLink: "https://sales.artic.edu/memberships"
 buttonTwo: "Buy tickets"
 buttonTwoLink: "https://sales.artic.edu/admissiondate"
-dates: "JUNE 25 – SEPT 10"
+dates: "JUNE 25–SEPT 10"
 buttonThree: "Plan your visit"
 buttonThreeLink: "http://www.artic.edu/visit"
 ---
