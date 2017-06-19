@@ -1,4 +1,5 @@
 <section class="video" role="landmark">
+    <a class="anchor" id="{{ $page->getFilename() }}"></a>
 	<div class="container">
 
 	@if ($page->publish)
