@@ -7,19 +7,19 @@
 
 			<div>
 
-				<a href="http://www.facebook.com/artic">
+				<a href="http://www.facebook.com/artic" target="_blank">
 					<img src="images/social_icons/facebook.png" alt="Facebook">
 				</a>
 
-				<a href="https://twitter.com/artinstitutechi">
+				<a href="https://twitter.com/artinstitutechi" target="_blank">
 					<img src="images/social_icons/twitter.png" alt="Twitter">
 				</a>
 
-				<a href="https://www.instagram.com/artinstitutechi">
+				<a href="https://www.instagram.com/artinstitutechi" target="_blank">
 					<img src="images/social_icons/instagram.png" alt="Instagram">
 				</a>
 
-				<a href="http://www.youtube.com/user/ArtInstituteChicago">
+				<a href="http://www.youtube.com/user/ArtInstituteChicago" target="_blank">
 					<img src="images/social_icons/youtube.png" alt="YouTube">
 				</a>
 

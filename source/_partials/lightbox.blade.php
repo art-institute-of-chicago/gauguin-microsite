@@ -31,7 +31,7 @@
 		{{-- Must be something to do with getters and setters--}}
 
 		@if( strlen( $artwork->link ) > 0 )
-			<p><a href="{{ $artwork->link }}" class="collection">See in our Collection</a></p>
+			<p><a href="{{ $artwork->link }}" target="_blank" class="collection">See in our Collection</a></p>
 		@endif
 
 		<a href="javascript:Lightbox.expand()" class="btn-toggle btn-show" aria-label="Read more">

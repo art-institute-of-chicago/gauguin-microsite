@@ -2,7 +2,7 @@
 
 	<h5>{{ $page->type }}</h5>
 
-	<a href="{{ $page->link }}">
+	<a href="{{ $page->link }}" target="_blank">
 		<h4>{{ $page->title }}</h4>
 	</a>
 

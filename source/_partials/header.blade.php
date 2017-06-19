@@ -6,7 +6,7 @@
 
 		<div class="header-left">
 
-			<a href="http://www.artic.edu/">
+			<a href="http://www.artic.edu/" target="_blank">
 				<img src="images/logo.svg" alt="Art Institute of Chicago">
 			</a>
 
@@ -25,8 +25,8 @@
 			</span>
 
 			<span class="buttons" role="menu">
-				<a class="btn btn-small btn-member" href="https://sales.artic.edu/memberships" role="menuitem">Become a Member</a>
-				<a class="btn btn-small btn-ticket" href="https://sales.artic.edu/admissiondate" role="menuitem"><span class="verb">Buy </span>Tickets</a>
+				<a class="btn btn-small btn-member" href="https://sales.artic.edu/memberships" target="_blank" role="menuitem">Become a Member</a>
+				<a class="btn btn-small btn-ticket" href="https://sales.artic.edu/admissiondate" target="_blank" role="menuitem"><span class="verb">Buy </span>Tickets</a>
 			</span>
 
 		</div>
