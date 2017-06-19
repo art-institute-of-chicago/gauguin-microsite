@@ -1,4 +1,5 @@
 <section class="sponsors">
+    <a class="anchor" id="{{ $page->getFilename() }}"></a>
 	<div class="container">
 
 		<div class="links">

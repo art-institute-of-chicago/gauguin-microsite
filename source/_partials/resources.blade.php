@@ -1,4 +1,5 @@
 <section class="related resources" role="landmark">
+    <a class="anchor" id="{{ $page->getFilename() }}"></a>
 	<div class="container">
 
 		<div class="title">

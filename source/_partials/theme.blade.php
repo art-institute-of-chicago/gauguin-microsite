@@ -8,6 +8,7 @@
 ?>
 
 <section class="theme theme-{{ count($page->images) }}{{ $variant }}" role="landmark">
+    <a class="anchor" id="{{ $page->getFilename() }}"></a>
 	<div class="container">
 
 		<h2>{{ $page->theme }}</h2>

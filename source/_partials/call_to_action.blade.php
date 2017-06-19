@@ -1,4 +1,5 @@
 <section class="call-to-action" role="landmark">
+    <a class="anchor" id="{{ $page->getFilename() }}"></a>
 	<div class="container">
 
 		<h1>{{ $page->title }}</h1>

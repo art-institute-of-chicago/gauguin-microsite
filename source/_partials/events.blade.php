@@ -1,4 +1,5 @@
 <section class="related events" role="landmark">
+    <a class="anchor" id="{{ $page->getFilename() }}"></a>
 	<div class="container">
 
 		<div class="title">
