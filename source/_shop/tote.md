@@ -4,5 +4,5 @@ weight: 30
 title: "Gauguin's Day of the God Tote"
 price: 40
 image: "images/shop_items/tote.jpg"
-link: "https://www.artinstituteshop.org/extranet/product/edit.aspx?mode=edit&productID=7476"
+link: "https://www.artinstituteshop.org/item.aspx?productId=7477"
 ---
