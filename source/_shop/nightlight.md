@@ -4,5 +4,5 @@ weight: 20
 title: "Gauguin's The Sacred Mountain Nightlight"
 price: 25.95
 image: "images/shop_items/nightlight.jpg"
-link: "https://www.artinstituteshop.org/extranet/product/edit.aspx?mode=edit&productID=7466"
+link: "https://www.artinstituteshop.org/item.aspx?productId=7476"
 ---
