@@ -10,6 +10,15 @@
 
 		<div class="wrapper">
 
+			<?php
+
+				// Don't show events before current date
+				$events = $events->filter( function( $event ) {
+					return date("Y-m-d", $event->sortOrder) >= date("Y-m-d");
+				});
+
+			?>
+
 			@foreach ($events->slice(0,6) as $event)
 
 				<?php $section = $event->section ?: 'content'; ?>
