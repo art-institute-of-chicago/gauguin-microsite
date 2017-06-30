@@ -41,11 +41,6 @@
 				<span class="date">June 25 • Sept 10</span>
 			</div>
 
-			<div class="event event-">
-				<span class="title">Member Previews</span>
-				<span class="date">June 22 • 24</span>
-			</div>
-
 		</div>
 
 	</div>
