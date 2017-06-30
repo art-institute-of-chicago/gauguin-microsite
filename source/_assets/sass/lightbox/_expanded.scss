@@ -3,7 +3,8 @@
 	// User must exit expanded mode before exiting lightbox
 	// Screen readers will still be able to click this button
 	.btn-close {
-		visibility: hidden;
+		// Disable so as to not confuse users into clicking back button
+		// visibility: hidden;
 	}
 
 	#content {

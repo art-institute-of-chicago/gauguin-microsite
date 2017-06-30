@@ -152,6 +152,8 @@ function LightboxManager( ) {
 		// This timeout should match css transition time
 		setTimeout( function() {
 
+			$lightbox.removeClass('expanded');
+
 			$lightbox.removeClass('opened');
 
 			$body.unbind('touchmove', disableScrollEvent);
