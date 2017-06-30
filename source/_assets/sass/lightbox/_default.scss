@@ -27,9 +27,9 @@
 
 	.btn-close {
 
-		position: absolute;
-		right: 10px;
-		top: 10px;
+		position: fixed;
+		right: 30px;
+		top: 15px;
 
 		line-height: 1; // prevents strange overflow
 		z-index: 1; // ensure it's above the canvas
