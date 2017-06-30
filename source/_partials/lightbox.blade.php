@@ -45,17 +45,21 @@
 @endforeach
 
 
-{{-- main.js manages this magic --}}
+{{-- lightbox.js manages this magic --}}
+<div id="lightbox-underlay" role="presentation">
+	<a href="javascript:;" class="btn-close"></a>
+</div>
+
 <div id="lightbox" role="dialog" aria-labelledby="lightbox-start">
 
 	<a href="javascript:Lightbox.unload()" class="btn-close">
 		<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<desc>Close lightbox</desc>
 			<defs></defs>
-			<g stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
-				<g stroke="#979797">
+			<g stroke="none" stroke-width="1.75" fill="white" fill-rule="evenodd">
+				<g stroke="#686868">
 					<g transform="translate(1,1)">
-						<circle stroke-opacity="0.8" cx="19" cy="19" r="19"></circle>
+						<circle stroke-opacity="1" cx="19" cy="19" r="19"></circle>
 						<path d="M11,11 L26,26" stroke-linecap="square"></path>
 						<path d="M11,11 L26,26" stroke-linecap="square" transform="translate(19, 19) scale(-1, 1) translate(-19, -19)"></path>
 					</g>

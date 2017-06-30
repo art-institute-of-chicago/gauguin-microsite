@@ -11,14 +11,22 @@ $(document).ready(function() {
 function LightboxManager( ) {
 
 	// Capture elements
+	$window = $(window);
 	$html = $('html');
+	$body = $('body');
 	$lightbox = $('#lightbox');
+	$underlay = $('#lightbox-underlay');
 
 	$viewer = $('#viewer');
 	$content = $('#content');
 
 	// Initialize the OSD container w/o a tileSource
 	// var maxZoomLevel = 6;
+
+	var disableScrollEvent = function(e) {
+		e.preventDefault();
+		return false;
+	};
 
 	var viewer = OpenSeadragon({
 
@@ -57,9 +65,22 @@ function LightboxManager( ) {
 		viewer.open($('#artwork-' + id + '-image').data("image"));
 
 		// Show the lightbox
-		$html.css('overflow-y','hidden');
+		// $html.css('overflow-y','hidden');
+		$underlay.show();
 		$lightbox.addClass('opened');
-		$lightbox.show();
+
+		// TODO: Disable scrolling?
+		// https://github.com/alvarotrigo/fullPage.js/issues/2362#issuecomment-262300218
+		// https://stackoverflow.com/questions/8701754/just-disable-scroll-not-hide-it
+		$body.bind('touchmove', disableScrollEvent);
+		$body.css('touch-action', 'none');
+
+
+		// We need this timeout b/c we can't toggle display + transition
+		// https://stackoverflow.com/a/3332179/1943591
+		setTimeout( function() {
+			$lightbox.addClass('transition');
+		}, 1);
 
 		// Scroll to the top of lightbox
 		$lightbox[0].scrollTop = 0;
@@ -117,16 +138,28 @@ function LightboxManager( ) {
 
 		});
 
-		$('#btn-close').attr("href", "javascript:Lightbox.unload('" + returnTo + "')");
+		$('.btn-close').attr("href", "javascript:Lightbox.unload('" + returnTo + "')");
 	}
 
 
 	function close(returnTo) {
 
 		// Hide the lightbox
-		$html.css('overflow-y','');
-		$lightbox.removeClass('opened');
-		$lightbox.hide();
+		// $html.css('overflow-y','');
+		$lightbox.removeClass('transition');
+		$underlay.hide();
+
+		// This timeout should match css transition time
+		setTimeout( function() {
+
+			$lightbox.removeClass('expanded');
+
+			$lightbox.removeClass('opened');
+
+			$body.unbind('touchmove', disableScrollEvent);
+			$body.css('touch-action', '');
+
+		}, 300);
 
 		$(returnTo).focus();
 	}

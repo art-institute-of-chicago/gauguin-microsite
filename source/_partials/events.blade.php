@@ -14,7 +14,22 @@
 
 				// Don't show events before current date
 				$events = $events->filter( function( $event ) {
-					return date("Y-m-d", $event->sortOrder) >= date("Y-m-d");
+
+					// TODO: Figure out why it's "yesterday" and not "now" or "today"
+					// For some reason, moving $now definition out of the filter loop breaks it!
+					$now = new DateTime( "yesterday" );
+					$now = $now->format('Y-m-d');
+
+					$day = new DateTime( date("Y-m-d", $event->sortOrder) );
+					$day = $day->format('Y-m-d');
+
+					$check = $day >= $now;
+
+					// DEBUGGING:
+					// print_r( $now . ' + ' . $day . ' = ' . ($check) . "\n" );
+
+					return ( $check );
+
 				});
 
 			?>
