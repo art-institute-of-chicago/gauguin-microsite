@@ -8,9 +8,6 @@
 
 	<title>Gauguin</title>
 
-	<!-- iOS banner -->
-	<meta name="apple-itunes-app" content="app-id=1130366814">
-
 	<!-- Includes -->
 	<link href="css/reset.css" rel="stylesheet">
 	<script src="//code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
