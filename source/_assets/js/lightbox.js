@@ -13,6 +13,7 @@ function LightboxManager( ) {
 	// Capture elements
 	$html = $('html');
 	$lightbox = $('#lightbox');
+	$underlay = $('#lightbox-underlay');
 
 	$viewer = $('#viewer');
 	$content = $('#content');
@@ -60,6 +61,7 @@ function LightboxManager( ) {
 		$html.css('overflow-y','hidden');
 		$lightbox.addClass('opened');
 		$lightbox.show();
+		$underlay.show();
 
 		// Scroll to the top of lightbox
 		$lightbox[0].scrollTop = 0;
@@ -117,7 +119,7 @@ function LightboxManager( ) {
 
 		});
 
-		$('#btn-close').attr("href", "javascript:Lightbox.unload('" + returnTo + "')");
+		$('.btn-close').attr("href", "javascript:Lightbox.unload('" + returnTo + "')");
 	}
 
 
@@ -127,6 +129,7 @@ function LightboxManager( ) {
 		$html.css('overflow-y','');
 		$lightbox.removeClass('opened');
 		$lightbox.hide();
+		$underlay.hide();
 
 		$(returnTo).focus();
 	}

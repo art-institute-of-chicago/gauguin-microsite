@@ -45,7 +45,11 @@
 @endforeach
 
 
-{{-- main.js manages this magic --}}
+{{-- lightbox.js manages this magic --}}
+<div id="lightbox-underlay" role="presentation">
+	<a href="javascript:;" class="btn-close"></a>
+</div>
+
 <div id="lightbox" role="dialog" aria-labelledby="lightbox-start">
 
 	<a href="javascript:Lightbox.unload()" class="btn-close">
